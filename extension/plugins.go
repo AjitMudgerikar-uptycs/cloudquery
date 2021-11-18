@@ -33,6 +33,7 @@ import (
 	"github.com/Uptycs/cloudquery/extension/aws/iam"
 	"github.com/Uptycs/cloudquery/extension/aws/kms"
 	"github.com/Uptycs/cloudquery/extension/aws/organizations"
+	"github.com/Uptycs/cloudquery/extension/aws/rds"
 	"github.com/Uptycs/cloudquery/extension/aws/s3"
 	glacier "github.com/Uptycs/cloudquery/extension/aws/s3_glacier"
 	"github.com/Uptycs/cloudquery/extension/aws/sns"
@@ -86,6 +87,7 @@ func ReadTableConfigurations(homeDir string) {
 		"aws/elb/table_config.json",
 		"aws/elbv2/table_config.json",
 		"aws/cloudtrail/table_config.json",
+		"aws/rds/table_config.json",
 	}
 
 	var gcpConfigFileList = []string{
@@ -156,7 +158,11 @@ func RegisterPlugins(server *osquery.ExtensionManagerServer) {
 	server.RegisterPlugin(table.NewPlugin("aws_codedeploy_application", codedeploy.ListApplicationsColumns(), codedeploy.ListApplicationsGenerate))
 	// AWS CODECOMMIT
 	server.RegisterPlugin(table.NewPlugin("aws_codecommit_repository", codecommit.ListRepositoriesColumns(), codecommit.ListRepositoriesGenerate))
+	//AWS RDS
+	server.RegisterPlugin(table.NewPlugin("aws_rds_instances", rds.ListInstanceColumns(), rds.DescribeDBInstances))
+
 	// AWS EC2
+
 	server.RegisterPlugin(table.NewPlugin("aws_ec2_instance", ec2.DescribeInstancesColumns(), ec2.DescribeInstancesGenerate))
 	server.RegisterPlugin(table.NewPlugin("aws_ec2_vpc", ec2.DescribeVpcsColumns(), ec2.DescribeVpcsGenerate))
 	server.RegisterPlugin(table.NewPlugin("aws_ec2_subnet", ec2.DescribeSubnetsColumns(), ec2.DescribeSubnetsGenerate))
