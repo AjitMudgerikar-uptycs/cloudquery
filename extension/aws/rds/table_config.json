@@ -1013,7 +1013,7 @@
       }
     ]
   },
-  "aws_rds_instances": {
+  "aws_rds_instance": {
     "aws": {
       "regionCodeAttribute": "region_code",
       "accountIdAttribute": "account_id"

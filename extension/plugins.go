@@ -159,7 +159,7 @@ func RegisterPlugins(server *osquery.ExtensionManagerServer) {
 	// AWS CODECOMMIT
 	server.RegisterPlugin(table.NewPlugin("aws_codecommit_repository", codecommit.ListRepositoriesColumns(), codecommit.ListRepositoriesGenerate))
 	//AWS RDS
-	server.RegisterPlugin(table.NewPlugin("aws_rds_instances", rds.ListInstanceColumns(), rds.DescribeDBInstances))
+	server.RegisterPlugin(table.NewPlugin("aws_rds_instance", rds.ListInstanceColumns(), rds.DescribeDBInstances))
 	server.RegisterPlugin(table.NewPlugin("aws_rds_cluster", rds.ListClustersColumns(), rds.DescribeClustersGenerate))
 	// AWS EC2
 

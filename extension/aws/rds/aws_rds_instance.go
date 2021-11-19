@@ -190,9 +190,9 @@ func ListInstanceColumns() []table.ColumnDefinition {
 
 func DescribeDBInstances(osqCtx context.Context, queryContext table.QueryContext) ([]map[string]string, error) {
 	resultMap := make([]map[string]string, 0)
-	if len(utilities.ExtConfiguration.ExtConfAws.Accounts) == 0 && extaws.ShouldProcessAccount("aws_rds_instances", utilities.AwsAccountID) {
+	if len(utilities.ExtConfiguration.ExtConfAws.Accounts) == 0 && extaws.ShouldProcessAccount("aws_rds_instance", utilities.AwsAccountID) {
 		utilities.GetLogger().WithFields(log.Fields{
-			"tableName": "aws_rds_instances",
+			"tableName": "aws_rds_instance",
 			"account":   "default",
 		}).Info("processing account")
 		results, err := processAccountDBInstances(osqCtx, queryContext, nil)
@@ -202,11 +202,11 @@ func DescribeDBInstances(osqCtx context.Context, queryContext table.QueryContext
 		resultMap = append(resultMap, results...)
 	} else {
 		for _, account := range utilities.ExtConfiguration.ExtConfAws.Accounts {
-			if !extaws.ShouldProcessAccount("aws_rds_instances", account.ID) {
+			if !extaws.ShouldProcessAccount("aws_rds_instance", account.ID) {
 				continue
 			}
 			utilities.GetLogger().WithFields(log.Fields{
-				"tableName": "aws_rds_instances",
+				"tableName": "aws_rds_instance",
 				"account":   account.ID,
 			}).Info("processing account")
 			results, err := processAccountDBInstances(osqCtx, queryContext, &account)
@@ -233,7 +233,7 @@ func processRegionDescribeInstance(osqCtx context.Context, queryContext table.Qu
 	}
 
 	utilities.GetLogger().WithFields(log.Fields{
-		"tableName": "aws_rds_instances",
+		"tableName": "aws_rds_instance",
 		"account":   accountId,
 		"region":    *region.RegionName,
 	}).Debug("processing region")
@@ -247,7 +247,7 @@ func processRegionDescribeInstance(osqCtx context.Context, queryContext table.Qu
 		page, err := paginator.NextPage(osqCtx)
 		if err != nil {
 			utilities.GetLogger().WithFields(log.Fields{
-				"tableName": "aws_rds_instances",
+				"tableName": "aws_rds_instance",
 				"account":   accountId,
 				"region":    *region.RegionName,
 				"task":      "DescribeDBInstances",
@@ -258,7 +258,7 @@ func processRegionDescribeInstance(osqCtx context.Context, queryContext table.Qu
 		byteArr, err := json.Marshal(page)
 		if err != nil {
 			utilities.GetLogger().WithFields(log.Fields{
-				"tableName": "aws_rds_instances",
+				"tableName": "aws_rds_instance",
 				"account":   accountId,
 				"region":    *region.RegionName,
 				"task":      "DescribeDBInstances",
@@ -268,7 +268,7 @@ func processRegionDescribeInstance(osqCtx context.Context, queryContext table.Qu
 		}
 		table := utilities.NewTable(byteArr, tableConfig)
 		for _, row := range table.Rows {
-			if !extaws.ShouldProcessRow(osqCtx, queryContext, "aws_rds_instances", accountId, *region.RegionName, row) {
+			if !extaws.ShouldProcessRow(osqCtx, queryContext, "aws_rds_instance", accountId, *region.RegionName, row) {
 				continue
 			}
 			result := extaws.RowToMap(row, accountId, *region.RegionName, tableConfig)
@@ -291,10 +291,10 @@ func processAccountDBInstances(osqCtx context.Context, queryContext table.QueryC
 	if err != nil {
 		return resultMap, err
 	}
-	tableConfig, ok := utilities.TableConfigurationMap["aws_rds_instances"]
+	tableConfig, ok := utilities.TableConfigurationMap["aws_rds_instance"]
 	if !ok {
 		utilities.GetLogger().WithFields(log.Fields{
-			"tableName": "aws_rds_instances",
+			"tableName": "aws_rds_instance",
 		}).Error("failed to get table configuration")
 		return resultMap, fmt.Errorf("table configuration not found")
 	}
@@ -303,7 +303,7 @@ func processAccountDBInstances(osqCtx context.Context, queryContext table.QueryC
 		if account != nil {
 			accountId = account.ID
 		}
-		if !extaws.ShouldProcessRegion("aws_rds_instances", accountId, *region.RegionName) {
+		if !extaws.ShouldProcessRegion("aws_rds_instance", accountId, *region.RegionName) {
 			continue
 		}
 		result, err := processRegionDescribeInstance(osqCtx, queryContext, tableConfig, account, region)
