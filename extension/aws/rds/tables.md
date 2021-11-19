@@ -1,1 +1,2 @@
 - aws_rds_instances
+- aws_rds_cluster
