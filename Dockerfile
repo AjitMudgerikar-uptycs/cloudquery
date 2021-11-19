@@ -67,6 +67,7 @@ COPY extension/aws/sns/table_config.json        /opt/cloudquery/etc/aws/sns/
 COPY extension/aws/sqs/table_config.json        /opt/cloudquery/etc/aws/sqs/
 COPY extension/aws/elb/table_config.json        /opt/cloudquery/etc/aws/elb/
 COPY extension/aws/elbv2/table_config.json      /opt/cloudquery/etc/aws/elbv2/
+COPY extension/aws/rds/table_config.json      /opt/cloudquery/etc/aws/rds/
 COPY extension/gcp/compute/table_config.json    /opt/cloudquery/etc/gcp/compute/
 COPY extension/gcp/dns/table_config.json        /opt/cloudquery/etc/gcp/dns/
 COPY extension/gcp/file/table_config.json       /opt/cloudquery/etc/gcp/file/

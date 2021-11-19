@@ -1,4 +1,1018 @@
 {
+  "aws_rds_cluster": {
+    "aws": {
+      "regionCodeAttribute": "region_code",
+      "accountIdAttribute": "account_id"
+    },
+    "gcp": {},
+    "azure": {},
+    "parsedAttributes": [
+      {
+        "sourceName": "DBClusters_ActivityStreamKinesisStreamName",
+        "targetName": "activity_stream_kinesis_stream_name",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_ActivityStreamKmsKeyId",
+        "targetName": "activity_stream_kms_key_id",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_ActivityStreamMode",
+        "targetName": "activity_stream_mode",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_ActivityStreamStatus",
+        "targetName": "activity_stream_status",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_AllocatedStorage",
+        "targetName": "allocated_storage",
+        "targetType": "BIGINT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_AssociatedRoles",
+        "targetName": "associated_roles",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_AssociatedRoles_FeatureName",
+        "targetName": "associated_roles_feature_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_AssociatedRoles_RoleArn",
+        "targetName": "associated_roles_role_arn",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_AssociatedRoles_Status",
+        "targetName": "associated_roles_status",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_AvailabilityZones",
+        "targetName": "availability_zones",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_BacktrackConsumedChangeRecords",
+        "targetName": "backtrack_consumed_change_records",
+        "targetType": "BIGINT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_BacktrackWindow",
+        "targetName": "backtrack_window",
+        "targetType": "BIGINT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_BackupRetentionPeriod",
+        "targetName": "backup_retention_period",
+        "targetType": "BIGINT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_Capacity",
+        "targetName": "capacity",
+        "targetType": "BIGINT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_CharacterSetName",
+        "targetName": "character_set_name",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_CloneGroupId",
+        "targetName": "clone_group_id",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_ClusterCreateTime",
+        "targetName": "cluster_create_time",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_ClusterCreateTime_ext",
+        "targetName": "cluster_create_time_ext",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_ClusterCreateTime_loc",
+        "targetName": "cluster_create_time_loc",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_ClusterCreateTime_loc_cacheEnd",
+        "targetName": "cluster_create_time_loc_cache_end",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_ClusterCreateTime_loc_cacheStart",
+        "targetName": "cluster_create_time_loc_cache_start",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_ClusterCreateTime_loc_cacheZone",
+        "targetName": "cluster_create_time_loc_cache_zone",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_ClusterCreateTime_loc_cacheZone_isDST",
+        "targetName": "cluster_create_time_loc_cache_zone_is_dst",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_ClusterCreateTime_loc_cacheZone_name",
+        "targetName": "cluster_create_time_loc_cache_zone_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_ClusterCreateTime_loc_cacheZone_offset",
+        "targetName": "cluster_create_time_loc_cache_zone_offset",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_ClusterCreateTime_loc_extend",
+        "targetName": "cluster_create_time_loc_extend",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_ClusterCreateTime_loc_name",
+        "targetName": "cluster_create_time_loc_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_ClusterCreateTime_loc_tx",
+        "targetName": "cluster_create_time_loc_tx",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_ClusterCreateTime_loc_tx_index",
+        "targetName": "cluster_create_time_loc_tx_index",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_ClusterCreateTime_loc_tx_isstd",
+        "targetName": "cluster_create_time_loc_tx_isstd",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_ClusterCreateTime_loc_tx_isutc",
+        "targetName": "cluster_create_time_loc_tx_isutc",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_ClusterCreateTime_loc_tx_when",
+        "targetName": "cluster_create_time_loc_tx_when",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_ClusterCreateTime_loc_zone",
+        "targetName": "cluster_create_time_loc_zone",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_ClusterCreateTime_loc_zone_isDST",
+        "targetName": "cluster_create_time_loc_zone_is_dst",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_ClusterCreateTime_loc_zone_name",
+        "targetName": "cluster_create_time_loc_zone_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_ClusterCreateTime_loc_zone_offset",
+        "targetName": "cluster_create_time_loc_zone_offset",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_ClusterCreateTime_wall",
+        "targetName": "cluster_create_time_wall",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_CopyTagsToSnapshot",
+        "targetName": "copy_tags_to_snapshot",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_CrossAccountClone",
+        "targetName": "cross_account_clone",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_CustomEndpoints",
+        "targetName": "custom_endpoints",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_DBClusterArn",
+        "targetName": "db_cluster_arn",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_DBClusterIdentifier",
+        "targetName": "db_cluster_identifier",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_DBClusterMembers",
+        "targetName": "db_cluster_members",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_DBClusterMembers_DBClusterParameterGroupStatus",
+        "targetName": "db_cluster_members_db_cluster_parameter_group_status",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_DBClusterMembers_DBInstanceIdentifier",
+        "targetName": "db_cluster_members_db_instance_identifier",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_DBClusterMembers_IsClusterWriter",
+        "targetName": "db_cluster_members_is_cluster_writer",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_DBClusterMembers_PromotionTier",
+        "targetName": "db_cluster_members_promotion_tier",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_DBClusterOptionGroupMemberships",
+        "targetName": "db_cluster_option_group_memberships",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_DBClusterOptionGroupMemberships_DBClusterOptionGroupName",
+        "targetName": "db_cluster_option_group_memberships_db_cluster_option_group_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_DBClusterOptionGroupMemberships_Status",
+        "targetName": "db_cluster_option_group_memberships_status",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_Endpoint_HostedZoneId",
+        "targetName": "endpoint_hosted_zone_id",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_Endpoint_Port",
+        "targetName": "endpoint_port",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_Engine",
+        "targetName": "engine",
+        "sourceName": "DBClusters_DBClusterParameterGroup",
+        "targetName": "db_cluster_parameter_group",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_DBSubnetGroup",
+        "targetName": "db_subnet_group",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_DatabaseName",
+        "targetName": "database_name",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_DbClusterResourceId",
+        "targetName": "db_cluster_resource_id",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_DeletionProtection",
+        "targetName": "deletion_protection",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_DomainMemberships",
+        "targetName": "domain_memberships",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_DomainMemberships_Domain",
+        "targetName": "domain_memberships_domain",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_DomainMemberships_FQDN",
+        "targetName": "domain_memberships_fqdn",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_DomainMemberships_IAMRoleName",
+        "targetName": "domain_memberships_iam_role_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_DomainMemberships_Status",
+        "targetName": "domain_memberships_status",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestBacktrackTime",
+        "targetName": "earliest_backtrack_time",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_EarliestBacktrackTime_ext",
+        "targetName": "earliest_backtrack_time_ext",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestBacktrackTime_loc",
+        "targetName": "earliest_backtrack_time_loc",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestBacktrackTime_loc_cacheEnd",
+        "targetName": "earliest_backtrack_time_loc_cache_end",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestBacktrackTime_loc_cacheStart",
+        "targetName": "earliest_backtrack_time_loc_cache_start",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestBacktrackTime_loc_cacheZone",
+        "targetName": "earliest_backtrack_time_loc_cache_zone",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestBacktrackTime_loc_cacheZone_isDST",
+        "targetName": "earliest_backtrack_time_loc_cache_zone_is_dst",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestBacktrackTime_loc_cacheZone_name",
+        "targetName": "earliest_backtrack_time_loc_cache_zone_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestBacktrackTime_loc_cacheZone_offset",
+        "targetName": "earliest_backtrack_time_loc_cache_zone_offset",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestBacktrackTime_loc_extend",
+        "targetName": "earliest_backtrack_time_loc_extend",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestBacktrackTime_loc_name",
+        "targetName": "earliest_backtrack_time_loc_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestBacktrackTime_loc_tx",
+        "targetName": "earliest_backtrack_time_loc_tx",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestBacktrackTime_loc_tx_index",
+        "targetName": "earliest_backtrack_time_loc_tx_index",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestBacktrackTime_loc_tx_isstd",
+        "targetName": "earliest_backtrack_time_loc_tx_isstd",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestBacktrackTime_loc_tx_isutc",
+        "targetName": "earliest_backtrack_time_loc_tx_isutc",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestBacktrackTime_loc_tx_when",
+        "targetName": "earliest_backtrack_time_loc_tx_when",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestBacktrackTime_loc_zone",
+        "targetName": "earliest_backtrack_time_loc_zone",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestBacktrackTime_loc_zone_isDST",
+        "targetName": "earliest_backtrack_time_loc_zone_is_dst",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestBacktrackTime_loc_zone_name",
+        "targetName": "earliest_backtrack_time_loc_zone_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestBacktrackTime_loc_zone_offset",
+        "targetName": "earliest_backtrack_time_loc_zone_offset",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestBacktrackTime_wall",
+        "targetName": "earliest_backtrack_time_wall",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestRestorableTime",
+        "targetName": "earliest_restorable_time",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_EarliestRestorableTime_ext",
+        "targetName": "earliest_restorable_time_ext",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestRestorableTime_loc",
+        "targetName": "earliest_restorable_time_loc",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestRestorableTime_loc_cacheEnd",
+        "targetName": "earliest_restorable_time_loc_cache_end",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestRestorableTime_loc_cacheStart",
+        "targetName": "earliest_restorable_time_loc_cache_start",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestRestorableTime_loc_cacheZone",
+        "targetName": "earliest_restorable_time_loc_cache_zone",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestRestorableTime_loc_cacheZone_isDST",
+        "targetName": "earliest_restorable_time_loc_cache_zone_is_dst",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestRestorableTime_loc_cacheZone_name",
+        "targetName": "earliest_restorable_time_loc_cache_zone_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestRestorableTime_loc_cacheZone_offset",
+        "targetName": "earliest_restorable_time_loc_cache_zone_offset",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestRestorableTime_loc_extend",
+        "targetName": "earliest_restorable_time_loc_extend",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestRestorableTime_loc_name",
+        "targetName": "earliest_restorable_time_loc_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestRestorableTime_loc_tx",
+        "targetName": "earliest_restorable_time_loc_tx",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestRestorableTime_loc_tx_index",
+        "targetName": "earliest_restorable_time_loc_tx_index",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestRestorableTime_loc_tx_isstd",
+        "targetName": "earliest_restorable_time_loc_tx_isstd",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestRestorableTime_loc_tx_isutc",
+        "targetName": "earliest_restorable_time_loc_tx_isutc",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestRestorableTime_loc_tx_when",
+        "targetName": "earliest_restorable_time_loc_tx_when",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestRestorableTime_loc_zone",
+        "targetName": "earliest_restorable_time_loc_zone",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestRestorableTime_loc_zone_isDST",
+        "targetName": "earliest_restorable_time_loc_zone_is_dst",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestRestorableTime_loc_zone_name",
+        "targetName": "earliest_restorable_time_loc_zone_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestRestorableTime_loc_zone_offset",
+        "targetName": "earliest_restorable_time_loc_zone_offset",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EarliestRestorableTime_wall",
+        "targetName": "earliest_restorable_time_wall",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_EnabledCloudwatchLogsExports",
+        "targetName": "enabled_cloudwatch_logs_exports",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_Endpoint",
+        "targetName": "endpoint",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_Engine",
+        "targetName": "engine",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_EngineMode",
+        "targetName": "engine_mode",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_EngineVersion",
+        "targetName": "engine_version",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_GlobalWriteForwardingRequested",
+        "targetName": "global_write_forwarding_requested",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_GlobalWriteForwardingStatus",
+        "targetName": "global_write_forwarding_status",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_HostedZoneId",
+        "targetName": "hosted_zone_id",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_HttpEndpointEnabled",
+        "targetName": "http_endpoint_enabled",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_IAMDatabaseAuthenticationEnabled",
+        "targetName": "iam_database_authentication_enabled",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_KmsKeyId",
+        "targetName": "kms_key_id",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_LatestRestorableTime",
+        "targetName": "latest_restorable_time",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_LatestRestorableTime_ext",
+        "targetName": "latest_restorable_time_ext",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_LatestRestorableTime_loc",
+        "targetName": "latest_restorable_time_loc",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_LatestRestorableTime_loc_cacheEnd",
+        "targetName": "latest_restorable_time_loc_cache_end",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_LatestRestorableTime_loc_cacheStart",
+        "targetName": "latest_restorable_time_loc_cache_start",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_LatestRestorableTime_loc_cacheZone",
+        "targetName": "latest_restorable_time_loc_cache_zone",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_LatestRestorableTime_loc_cacheZone_isDST",
+        "targetName": "latest_restorable_time_loc_cache_zone_is_dst",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_LatestRestorableTime_loc_cacheZone_name",
+        "targetName": "latest_restorable_time_loc_cache_zone_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_LatestRestorableTime_loc_cacheZone_offset",
+        "targetName": "latest_restorable_time_loc_cache_zone_offset",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_LatestRestorableTime_loc_extend",
+        "targetName": "latest_restorable_time_loc_extend",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_LatestRestorableTime_loc_name",
+        "targetName": "latest_restorable_time_loc_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_LatestRestorableTime_loc_tx",
+        "targetName": "latest_restorable_time_loc_tx",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_LatestRestorableTime_loc_tx_index",
+        "targetName": "latest_restorable_time_loc_tx_index",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_LatestRestorableTime_loc_tx_isstd",
+        "targetName": "latest_restorable_time_loc_tx_isstd",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_LatestRestorableTime_loc_tx_isutc",
+        "targetName": "latest_restorable_time_loc_tx_isutc",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_LatestRestorableTime_loc_tx_when",
+        "targetName": "latest_restorable_time_loc_tx_when",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_LatestRestorableTime_loc_zone",
+        "targetName": "latest_restorable_time_loc_zone",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_LatestRestorableTime_loc_zone_isDST",
+        "targetName": "latest_restorable_time_loc_zone_is_dst",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_LatestRestorableTime_loc_zone_name",
+        "targetName": "latest_restorable_time_loc_zone_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_LatestRestorableTime_loc_zone_offset",
+        "targetName": "latest_restorable_time_loc_zone_offset",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_LatestRestorableTime_wall",
+        "targetName": "latest_restorable_time_wall",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_MasterUsername",
+        "targetName": "master_username",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_MultiAZ",
+        "targetName": "multi_az",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_PendingModifiedValues",
+        "targetName": "pending_modified_values",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_PendingModifiedValues_DBClusterIdentifier",
+        "targetName": "pending_modified_values_db_cluster_identifier",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_PendingModifiedValues_EngineVersion",
+        "targetName": "pending_modified_values_engine_version",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_PendingModifiedValues_IAMDatabaseAuthenticationEnabled",
+        "targetName": "pending_modified_values_iam_database_authentication_enabled",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_PendingModifiedValues_MasterUserPassword",
+        "targetName": "pending_modified_values_master_user_password",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_PendingModifiedValues_PendingCloudwatchLogsExports",
+        "targetName": "pending_modified_values_pending_cloudwatch_logs_exports",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_PendingModifiedValues_PendingCloudwatchLogsExports_LogTypesToDisable",
+        "targetName": "pending_modified_values_pending_cloudwatch_logs_exports_log_types_to_disable",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_PendingModifiedValues_PendingCloudwatchLogsExports_LogTypesToEnable",
+        "targetName": "pending_modified_values_pending_cloudwatch_logs_exports_log_types_to_enable",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_PercentProgress",
+        "targetName": "percent_progress",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_Port",
+        "targetName": "port",
+        "targetType": "BIGINT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_PreferredBackupWindow",
+        "targetName": "preferred_backup_window",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_PreferredMaintenanceWindow",
+        "targetName": "preferred_maintenance_window",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_ReadReplicaIdentifiers",
+        "targetName": "read_replica_identifiers",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_ReaderEndpoint",
+        "targetName": "reader_endpoint",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_ReplicationSourceIdentifier",
+        "targetName": "replication_source_identifier",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_ScalingConfigurationInfo",
+        "targetName": "scaling_configuration_info",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_ScalingConfigurationInfo_AutoPause",
+        "targetName": "scaling_configuration_info_auto_pause",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_ScalingConfigurationInfo_MaxCapacity",
+        "targetName": "scaling_configuration_info_max_capacity",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_ScalingConfigurationInfo_MinCapacity",
+        "targetName": "scaling_configuration_info_min_capacity",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_ScalingConfigurationInfo_SecondsUntilAutoPause",
+        "targetName": "scaling_configuration_info_seconds_until_auto_pause",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_ScalingConfigurationInfo_TimeoutAction",
+        "targetName": "scaling_configuration_info_timeout_action",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_Status",
+        "targetName": "status",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_StorageEncrypted",
+        "targetName": "storage_encrypted",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_TagList",
+        "targetName": "tag_list",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_TagList_Key",
+        "targetName": "tag_list_key",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_TagList_Value",
+        "targetName": "tag_list_value",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_VpcSecurityGroups",
+        "targetName": "vpc_security_groups",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusters_VpcSecurityGroups_Status",
+        "targetName": "vpc_security_groups_status",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusters_VpcSecurityGroups_VpcSecurityGroupId",
+        "targetName": "vpc_security_groups_vpc_security_group_id",
+        "targetType": "TEXT",
+        "enabled": false
+      }
+    ]
+  },
   "aws_rds_instances": {
     "aws": {
       "regionCodeAttribute": "region_code",
@@ -328,6 +1342,20 @@
         {
           "sourceName": "DBInstances_Engine",
           "targetName": "engine",
+          "sourceName": "DBClusters_DBClusterParameterGroup",
+          "targetName": "db_cluster_parameter_group",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "DBClusters_DBSubnetGroup",
+          "targetName": "db_subnet_group",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "DBClusters_DatabaseName",
+          "targetName": "database_name",
           "targetType": "TEXT",
           "enabled": true
         },
@@ -1010,5 +2038,5 @@
           "enabled": true
         }
       ]
+    }
   }
-}

@@ -50,3 +50,4 @@
   - aws_sqs_queue
   - aws_elb_loadbalancer
   - aws_elbv2_loadbalancer
+  - aws_rds_cluster
