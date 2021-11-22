@@ -1,4 +1,4 @@
-{
+{ 
   "aws_rds_cluster": {
     "aws": {
       "regionCodeAttribute": "region_code",
@@ -1013,7 +1013,11 @@
       }
     ]
   },
+<<<<<<< HEAD
   "aws_rds_instances": {
+=======
+  "aws_rds_instance": {
+>>>>>>> 4954cd4e2e37e5817858f79655a0dee14c21ffae
     "aws": {
       "regionCodeAttribute": "region_code",
       "accountIdAttribute": "account_id"
@@ -1512,16 +1516,28 @@
         {
           "sourceName": "DBInstances_KmsKeyId",
           "targetName": "kms_key_id",
+<<<<<<< HEAD
           "targetType": "TEXT",
           "enabled": true
         },
         {
           "sourceName": "DBInstances_LatestRestorableTime",
           "targetName": "latest_restorable_time",
+=======
+>>>>>>> 4954cd4e2e37e5817858f79655a0dee14c21ffae
           "targetType": "TEXT",
           "enabled": true
         },
         {
+<<<<<<< HEAD
+=======
+          "sourceName": "DBInstances_LatestRestorableTime",
+          "targetName": "latest_restorable_time",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+>>>>>>> 4954cd4e2e37e5817858f79655a0dee14c21ffae
           "sourceName": "DBInstances_LatestRestorableTime_ext",
           "targetName": "latest_restorable_time_ext",
           "targetType": "BIGINT",
@@ -2038,5 +2054,418 @@
           "enabled": true
         }
       ]
-    }
-  }
+    },
+  "aws_rds_snapshot": {
+  "aws": {
+    "regionCodeAttribute": "region_code",
+    "accountIdAttribute": "account_id"
+  },
+  "gcp": {},
+  "azure": {},
+  "parsedAttributes": [
+    {
+      "sourceName": "DBClusterSnapshots_DBClusterIdentifier",
+      "targetName": "DBClusterIdentifier",
+      "targetType": "TEXT",
+      "enabled": true
+    },
+    {
+      "sourceName": "DBClusterSnapshots_DBClusterSnapshotIdentifier",
+      "targetName": "DBClusterSnapshotIdentifier",
+      "targetType": "TEXT",
+      "enabled": true
+    },
+    
+    {
+      "sourceName": "DBClusterSnapshots_PercentProgress",
+      "targetName": "PercentProgress",
+      "targetType": "TEXT",
+      "enabled": true
+    },
+    {
+      "sourceName": "DBClusterSnapshots_StorageEncrypted",
+      "targetName": "StorageEncryption",
+      "targetType": "TEXT",
+      "enabled": true
+    },
+    {
+      "sourceName": "DBClusterSnapshots_Engine",
+      "targetName": "Engine",
+      "targetType": "TEXT",
+      "enabled": true
+    },
+    {
+      "sourceName": "DBClusterSnapshots_SnapshotCreateTime",
+      "targetName": "SnapshotCreateTime",
+      "targetType": "TEXT",
+      "enabled": true
+    },
+    {
+      "sourceName": "DBClusterSnapshots_VpcId",
+      "targetName": "VpcId",
+      "targetType": "TEXT",
+      "enabled": true
+    },
+    {
+      "sourceName": "DBClusterSnapshots_ClusterCreateTime",
+      "targetName": "ClusterCreateTime",
+      "targetType": "TEXT",
+      "enabled": true
+    },
+    {
+      "sourceName": "DBClusterSnapshots_SnapshotType",
+      "targetName": "SnapshotType",
+      "targetType": "TEXT",
+      "enabled": true
+    },
+    {
+      "sourceName": "DBClusterSnapshots_Status",
+      "targetName": "Status",
+      "targetType": "TEXT",
+      "enabled": true
+    },
+    
+      {
+        "sourceName": "DBClusterSnapshots_AllocatedStorage",
+        "targetName": "allocated_storage",
+        "targetType": "INTEGER",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusterSnapshots_AvailabilityZones",
+        "targetName": "availability_zones",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+     
+      {
+        "sourceName": "DBClusterSnapshots_ClusterCreateTime_ext",
+        "targetName": "cluster_create_time_ext",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_ClusterCreateTime_loc",
+        "targetName": "cluster_create_time_loc",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_ClusterCreateTime_loc_cacheEnd",
+        "targetName": "cluster_create_time_loc_cache_end",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_ClusterCreateTime_loc_cacheStart",
+        "targetName": "cluster_create_time_loc_cache_start",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_ClusterCreateTime_loc_cacheZone",
+        "targetName": "cluster_create_time_loc_cache_zone",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_ClusterCreateTime_loc_cacheZone_isDST",
+        "targetName": "cluster_create_time_loc_cache_zone_is_dst",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_ClusterCreateTime_loc_cacheZone_name",
+        "targetName": "cluster_create_time_loc_cache_zone_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_ClusterCreateTime_loc_cacheZone_offset",
+        "targetName": "cluster_create_time_loc_cache_zone_offset",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_ClusterCreateTime_loc_extend",
+        "targetName": "cluster_create_time_loc_extend",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_ClusterCreateTime_loc_name",
+        "targetName": "cluster_create_time_loc_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_ClusterCreateTime_loc_tx",
+        "targetName": "cluster_create_time_loc_tx",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_ClusterCreateTime_loc_tx_index",
+        "targetName": "cluster_create_time_loc_tx_index",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_ClusterCreateTime_loc_tx_isstd",
+        "targetName": "cluster_create_time_loc_tx_isstd",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_ClusterCreateTime_loc_tx_isutc",
+        "targetName": "cluster_create_time_loc_tx_isutc",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_ClusterCreateTime_loc_tx_when",
+        "targetName": "cluster_create_time_loc_tx_when",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_ClusterCreateTime_loc_zone",
+        "targetName": "cluster_create_time_loc_zone",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_ClusterCreateTime_loc_zone_isDST",
+        "targetName": "cluster_create_time_loc_zone_is_dst",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_ClusterCreateTime_loc_zone_name",
+        "targetName": "cluster_create_time_loc_zone_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_ClusterCreateTime_loc_zone_offset",
+        "targetName": "cluster_create_time_loc_zone_offset",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_ClusterCreateTime_wall",
+        "targetName": "cluster_create_time_wall",
+        "targetType": "BIGINT",
+        "enabled": true
+      },
+     
+      {
+        "sourceName": "DBClusterSnapshots_DBClusterSnapshotArn",
+        "targetName": "db_cluster_snapshot_arn",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      
+      
+      {
+        "sourceName": "DBClusterSnapshots_EngineMode",
+        "targetName": "engine_mode",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusterSnapshots_EngineVersion",
+        "targetName": "engine_version",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusterSnapshots_IAMDatabaseAuthenticationEnabled",
+        "targetName": "iam_database_authentication_enabled",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusterSnapshots_KmsKeyId",
+        "targetName": "kms_key_id",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusterSnapshots_LicenseModel",
+        "targetName": "license_model",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusterSnapshots_MasterUsername",
+        "targetName": "master_username",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      
+      {
+        "sourceName": "DBClusterSnapshots_Port",
+        "targetName": "port",
+        "targetType": "INTEGER",
+        "enabled": true
+      },
+     
+      {
+        "sourceName": "DBClusterSnapshots_SnapshotCreateTime_ext",
+        "targetName": "snapshot_create_time_ext",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_SnapshotCreateTime_loc",
+        "targetName": "snapshot_create_time_loc",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_SnapshotCreateTime_loc_cacheEnd",
+        "targetName": "snapshot_create_time_loc_cache_end",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_SnapshotCreateTime_loc_cacheStart",
+        "targetName": "snapshot_create_time_loc_cache_start",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_SnapshotCreateTime_loc_cacheZone",
+        "targetName": "snapshot_create_time_loc_cache_zone",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_SnapshotCreateTime_loc_cacheZone_isDST",
+        "targetName": "snapshot_create_time_loc_cache_zone_is_dst",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_SnapshotCreateTime_loc_cacheZone_name",
+        "targetName": "snapshot_create_time_loc_cache_zone_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_SnapshotCreateTime_loc_cacheZone_offset",
+        "targetName": "snapshot_create_time_loc_cache_zone_offset",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_SnapshotCreateTime_loc_extend",
+        "targetName": "snapshot_create_time_loc_extend",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_SnapshotCreateTime_loc_name",
+        "targetName": "snapshot_create_time_loc_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_SnapshotCreateTime_loc_tx",
+        "targetName": "snapshot_create_time_loc_tx",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_SnapshotCreateTime_loc_tx_index",
+        "targetName": "snapshot_create_time_loc_tx_index",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_SnapshotCreateTime_loc_tx_isstd",
+        "targetName": "snapshot_create_time_loc_tx_isstd",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_SnapshotCreateTime_loc_tx_isutc",
+        "targetName": "snapshot_create_time_loc_tx_isutc",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_SnapshotCreateTime_loc_tx_when",
+        "targetName": "snapshot_create_time_loc_tx_when",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_SnapshotCreateTime_loc_zone",
+        "targetName": "snapshot_create_time_loc_zone",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_SnapshotCreateTime_loc_zone_isDST",
+        "targetName": "snapshot_create_time_loc_zone_is_dst",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_SnapshotCreateTime_loc_zone_name",
+        "targetName": "snapshot_create_time_loc_zone_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_SnapshotCreateTime_loc_zone_offset",
+        "targetName": "snapshot_create_time_loc_zone_offset",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_SnapshotCreateTime_wall",
+        "targetName": "snapshot_create_time_wall",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      
+      {
+        "sourceName": "DBClusterSnapshots_SourceDBClusterSnapshotArn",
+        "targetName": "source_db_cluster_snapshot_arn",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      
+      {
+        "sourceName": "DBClusterSnapshots_TagList",
+        "targetName": "tag_list",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusterSnapshots_TagList_Key",
+        "targetName": "tag_list_key",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBClusterSnapshots_TagList_Value",
+        "targetName": "tag_list_value",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      
+      {
+        "sourceName": "ResultMetadata_values",
+        "targetName": "values",
+        "targetType": "TEXT",
+        "enabled": true
+      }
+    
+  
+  ]
+}
+}
