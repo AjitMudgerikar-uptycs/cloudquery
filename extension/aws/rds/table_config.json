@@ -1013,11 +1013,7 @@
       }
     ]
   },
-<<<<<<< HEAD
-  "aws_rds_instances": {
-=======
   "aws_rds_instance": {
->>>>>>> 4954cd4e2e37e5817858f79655a0dee14c21ffae
     "aws": {
       "regionCodeAttribute": "region_code",
       "accountIdAttribute": "account_id"
@@ -1516,28 +1512,16 @@
         {
           "sourceName": "DBInstances_KmsKeyId",
           "targetName": "kms_key_id",
-<<<<<<< HEAD
           "targetType": "TEXT",
           "enabled": true
         },
         {
           "sourceName": "DBInstances_LatestRestorableTime",
           "targetName": "latest_restorable_time",
-=======
->>>>>>> 4954cd4e2e37e5817858f79655a0dee14c21ffae
           "targetType": "TEXT",
           "enabled": true
         },
         {
-<<<<<<< HEAD
-=======
-          "sourceName": "DBInstances_LatestRestorableTime",
-          "targetName": "latest_restorable_time",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
->>>>>>> 4954cd4e2e37e5817858f79655a0dee14c21ffae
           "sourceName": "DBInstances_LatestRestorableTime_ext",
           "targetName": "latest_restorable_time_ext",
           "targetType": "BIGINT",

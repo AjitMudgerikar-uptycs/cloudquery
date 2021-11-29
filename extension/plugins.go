@@ -251,6 +251,7 @@ func RegisterPlugins(server *osquery.ExtensionManagerServer) {
 	// Azure Compute
 	server.RegisterPlugin(table.NewPlugin("azure_compute_vm", azurecompute.VirtualMachinesColumns(), azurecompute.VirtualMachinesGenerate))
 	server.RegisterPlugin(table.NewPlugin("azure_compute_networkinterface", azurecompute.InterfacesColumns(), azurecompute.InterfacesGenerate))
+	server.RegisterPlugin(table.NewPlugin("azure_compute_virtual_network", azurecompute.VirtualNetworkColumns(), azurecompute.VirtualNetworksGenerate))
 	// Event tables
 	registerEventTables(server)
 }

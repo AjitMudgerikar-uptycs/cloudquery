@@ -40,7 +40,6 @@ ENV CLOUDQUERY_EXT_HOME /opt/cloudquery/etc
 WORKDIR /opt/cloudquery
 
 COPY osquery.flags osquery.conf                 /opt/cloudquery/etc/
-COPY extension/aws/rds/table_config.json        /opt/cloudquery/etc/aws/rds/
 COPY extension/aws/ec2/table_config.json        /opt/cloudquery/etc/aws/ec2/
 COPY extension/aws/iam/table_config.json        /opt/cloudquery/etc/aws/iam/
 COPY extension/aws/s3/table_config.json         /opt/cloudquery/etc/aws/s3/
