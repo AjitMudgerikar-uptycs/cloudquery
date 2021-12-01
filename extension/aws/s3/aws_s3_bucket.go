@@ -13,6 +13,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+
 	"github.com/Uptycs/cloudquery/utilities"
 
 	log "github.com/sirupsen/logrus"
@@ -191,8 +192,8 @@ func (bucket *s3BucketInfo) getBucketWebsite(osqCtx context.Context, queryContex
 	}
 	if output != nil {
 		bucket.WebsiteEnabled = true
+		bucket.WebsiteRedirection = output.RedirectAllRequestsTo
 	}
-	bucket.WebsiteRedirection = output.RedirectAllRequestsTo
 }
 
 func (bucket *s3BucketInfo) getBucketPublicAccessBlock(osqCtx context.Context, queryContext table.QueryContext, svc *s3.Client) {

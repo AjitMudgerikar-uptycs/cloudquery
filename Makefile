@@ -9,10 +9,14 @@
 
 INSTALL-DIR ?= /opt/cloudquery
 
-all: deps test build
+all: deps lint test build
 
 deps:
 	@go mod download
+
+lint:
+	@go install honnef.co/go/tools/cmd/staticcheck@latest
+	@staticcheck ./...
 
 test:
 	@go test -v -race -cover ./...

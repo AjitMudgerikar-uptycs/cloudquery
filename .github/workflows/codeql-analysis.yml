@@ -26,12 +26,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up Go 1.15
+      - name: Set up Go 1.17
         uses: actions/setup-go@v2
         with:
           # Please keep this line in sync with the go-version in
           # .github/workflows/go.yml
-          go-version: 1.15
+          go-version: 1.17
 
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v1
@@ -49,12 +49,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Set up Go 1.15
+      - name: Set up Go 1.17
         uses: actions/setup-go@v2
         with:
           # Please keep this line in sync with the go-version in
           # .github/workflows/go.yml
-          go-version: 1.15
+          go-version: 1.17
 
       - name: Add GOPATH to GITHUB_ENV
         run: echo "GOPATH=$(go env GOPATH)" >>"$GITHUB_ENV"

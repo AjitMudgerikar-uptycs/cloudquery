@@ -13,11 +13,11 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	log "github.com/sirupsen/logrus"
 	"sync"
 
+	log "github.com/sirupsen/logrus"
+
 	"github.com/Uptycs/cloudquery/extension/azure"
-	extazure "github.com/Uptycs/cloudquery/extension/azure"
 
 	"github.com/Uptycs/basequery-go/plugin/table"
 	"github.com/Uptycs/cloudquery/utilities"
@@ -321,7 +321,7 @@ func getVirtualMachines(session *azure.AzureSession, rg string, wg *sync.WaitGro
 		}
 		table := utilities.NewTable(byteArr, tableConfig)
 		for _, row := range table.Rows {
-			result := extazure.RowToMap(row, session.SubscriptionId, "", rg, tableConfig)
+			result := azure.RowToMap(row, session.SubscriptionId, "", rg, tableConfig)
 			*resultMap = append(*resultMap, result)
 		}
 	}

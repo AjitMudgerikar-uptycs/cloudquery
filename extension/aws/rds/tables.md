@@ -1,2 +1,3 @@
 - aws_rds_instance
 - aws_rds_cluster
+- aws_rds_snapshot

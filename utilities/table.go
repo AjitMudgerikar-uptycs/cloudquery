@@ -46,13 +46,13 @@ func (tab *Table) init(jsonStr []byte, maxLevel int, parsedAttributeConfigMap ma
 		tab.MaxLevel = maxLevel + 1
 	}
 	tab.ParsedAttributeConfigMap = parsedAttributeConfigMap
-	switch fields.(type) {
+	switch fields := fields.(type) {
 	case map[string]interface{}:
-		tab.flattenMap(0, "", fields.(map[string]interface{}))
+		tab.flattenMap(0, "", fields)
 	case []interface{}:
-		tab.flattenList(0, "", fields.([]interface{}))
+		tab.flattenList(0, "", fields)
 	case reflect.Value:
-		tab.flattenValue(0, "", fields.(reflect.Value))
+		tab.flattenValue(0, "", fields)
 	default:
 		GetLogger().WithFields(log.Fields{
 			"type": reflect.TypeOf(fields),
@@ -65,6 +65,7 @@ func (tab *Table) init(jsonStr []byte, maxLevel int, parsedAttributeConfigMap ma
 	//tab.print()
 }
 
+//lint:ignore U1000 sometimes used for debugging
 func (tab *Table) print() {
 	GetLogger().Info("===========================START-TABLE")
 	for index, row := range tab.Rows {
@@ -99,9 +100,7 @@ func (tab *Table) addRows(newRows []map[string]interface{}) {
 		return
 	}
 
-	for _, row := range newRows {
-		tab.Rows = append(tab.Rows, row)
-	}
+	tab.Rows = append(tab.Rows, newRows...)
 }
 
 func (tab *Table) addRowsAndFlatten(newRows []map[string]interface{}) {
@@ -211,6 +210,7 @@ func getAdjustedValue(value reflect.Value) reflect.Value {
 func (tab *Table) addAttributeForPrefix(prefix string, value reflect.Value) {
 	_, ok := tab.ParsedAttributeConfigMap[prefix]
 	if ok || (len(tab.ParsedAttributeConfigMap) == 0) {
+		//lint:ignore SA9005 Runtime has exported struct fields?
 		byteArr, err := json.Marshal(value)
 		if err == nil {
 			tab.addAttribute(prefix, string(byteArr))

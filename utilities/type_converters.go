@@ -19,20 +19,20 @@ func GetStringValue(value interface{}) string {
 	if value == nil {
 		return ""
 	}
-	switch value.(type) {
+	switch value := value.(type) {
 	case string:
-		strIn := []rune(value.(string))
+		strIn := []rune(value)
 		if len(strIn) >= 2 && strIn[0] == '"' && strIn[len(strIn)-1] == '"' {
 			// Remove quotes
 			noLeadingQuotes := strIn[1:]
 			return string(noLeadingQuotes[:len(noLeadingQuotes)-1])
 		}
-		return value.(string)
+		return value
 	case json.Number:
-		val, _ := value.(json.Number).Int64()
+		val, _ := value.Int64()
 		return strconv.FormatInt(val, 10)
 	case bool:
-		return strconv.FormatBool(value.(bool))
+		return strconv.FormatBool(value)
 	}
 
 	return getNumericStringValue(value)
