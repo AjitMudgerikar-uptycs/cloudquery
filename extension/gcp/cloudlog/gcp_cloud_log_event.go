@@ -19,16 +19,18 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"sort"
+
 	osquery "github.com/Uptycs/basequery-go"
 	extgcp "github.com/Uptycs/cloudquery/extension/gcp"
 	"google.golang.org/api/iterator"
 	"google.golang.org/api/option"
-	"sort"
+
+	"sync"
+	"time"
 
 	"github.com/patrickmn/go-cache"
 	log "github.com/sirupsen/logrus"
-	"sync"
-	"time"
 
 	"github.com/Uptycs/cloudquery/utilities"
 
@@ -231,8 +233,7 @@ func (cl *CloudLogEventTable) getObjectReader(account *utilities.ExtensionConfig
 		}).Error("failed to read object data")
 		return nil, err
 	}
-	var stringData string
-	stringData = string(objectBytes[:])
+	stringData := string(objectBytes[:])
 	if strings.HasSuffix(obj.Name, "gz") {
 		reader, err := gzip.NewReader(strings.NewReader(stringData))
 		if err != nil {
@@ -439,7 +440,6 @@ func (cl *CloudLogEventTable) processBucket(account *utilities.ExtensionConfigur
 		storageObjects := cl.getObjectList(client, bucket.Name, dirPath)
 		cl.processObjects(client, account, bucket, storageObjects, dirPath, logName)
 	}
-	return
 }
 
 func (cl *CloudLogEventTable) processAccountLookupEvents(account *utilities.ExtensionConfigurationGcpAccount) {
@@ -456,6 +456,4 @@ func (cl *CloudLogEventTable) processAccountLookupEvents(account *utilities.Exte
 	for _, bucket := range account.CloudLogStorageBuckets {
 		cl.processBucket(account, bucket)
 	}
-
-	return
 }

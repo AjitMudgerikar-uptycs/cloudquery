@@ -20,7 +20,6 @@ import (
 var (
 	stdoutOnce         sync.Once
 	logsingleton       *log.Logger
-	primaryLogFile     string
 	stdoutLogSingleton *log.Logger
 )
 
@@ -47,15 +46,12 @@ func CreateLogger(isDebug bool, maxSize int, maxBackups int, maxAge int, fileNam
 		return stdoutLogSingleton
 	} else if logsingleton == nil {
 		logsingleton = createLogger(isDebug, maxSize, maxBackups, maxAge, fileName[0])
-		primaryLogFile = fileName[0]
 	}
 	return logsingleton
 }
 
 func createLogger(isDebug bool, maxSize int, maxBackups int, maxAge int, logFile string) *log.Logger {
-	var newInstance *log.Logger
-
-	newInstance = log.New()
+	newInstance := log.New()
 	rotateLogger := &lumberjack.Logger{
 		Filename:   logFile,
 		MaxSize:    maxSize, // megabytes

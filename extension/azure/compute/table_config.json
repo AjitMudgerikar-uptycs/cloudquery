@@ -1,501 +1,11 @@
 {
-    "azure_compute_subnet": {
-      "aws": {},
-      "gcp": {},
-      "azure": {
-        "subscriptionIdAttribute": "subscription_id"
-      },
-      "parsedAttributes": [
-        {
-          "sourceName": "etag",
-          "targetName": "etag",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "id",
-          "targetName": "id",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "name",
-          "targetName": "name",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties",
-          "targetName": "properties",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_addressPrefix",
-          "targetName": "address_prefix",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_addressPrefixes",
-          "targetName": "address_prefixes",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_applicationGatewayIpConfigurations",
-          "targetName": "application_gateway_ip_configurations",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_applicationGatewayIpConfigurations_etag",
-          "targetName": "application_gateway_ip_configurations_etag",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_applicationGatewayIpConfigurations_id",
-          "targetName": "application_gateway_ip_configurations_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_applicationGatewayIpConfigurations_name",
-          "targetName": "application_gateway_ip_configurations_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_applicationGatewayIpConfigurations_type",
-          "targetName": "application_gateway_ip_configurations_type",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_delegations",
-          "targetName": "delegations",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_delegations_etag",
-          "targetName": "delegations_etag",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_delegations_id",
-          "targetName": "delegations_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_delegations_name",
-          "targetName": "delegations_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_delegations_type",
-          "targetName": "delegations_type",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_ipAllocations",
-          "targetName": "ip_allocations",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_ipAllocations_id",
-          "targetName": "ip_allocations_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_ipConfigurationProfiles",
-          "targetName": "ip_configuration_profiles",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_ipConfigurationProfiles_etag",
-          "targetName": "ip_configuration_profiles_etag",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_ipConfigurationProfiles_id",
-          "targetName": "ip_configuration_profiles_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_ipConfigurationProfiles_name",
-          "targetName": "ip_configuration_profiles_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_ipConfigurationProfiles_type",
-          "targetName": "ip_configuration_profiles_type",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_ipConfigurations",
-          "targetName": "ip_configurations",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_ipConfigurations_etag",
-          "targetName": "ip_configurations_etag",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_ipConfigurations_id",
-          "targetName": "ip_configurations_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_ipConfigurations_name",
-          "targetName": "ip_configurations_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_natGateway",
-          "targetName": "nat_gateway",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_natGateway_id",
-          "targetName": "nat_gateway_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_networkSecurityGroup",
-          "targetName": "network_security_group",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_networkSecurityGroup_etag",
-          "targetName": "network_security_group_etag",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_networkSecurityGroup_id",
-          "targetName": "network_security_group_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_networkSecurityGroup_location",
-          "targetName": "network_security_group_location",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_networkSecurityGroup_name",
-          "targetName": "network_security_group_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_networkSecurityGroup_tags",
-          "targetName": "network_security_group_tags",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_networkSecurityGroup_type",
-          "targetName": "network_security_group_type",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_privateEndpointNetworkPolicies",
-          "targetName": "private_endpoint_network_policies",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_privateEndpoints",
-          "targetName": "private_endpoints",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_privateEndpoints_etag",
-          "targetName": "private_endpoints_etag",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_privateEndpoints_extendedLocation",
-          "targetName": "private_endpoints_extended_location",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_privateEndpoints_extendedLocation_name",
-          "targetName": "private_endpoints_extended_location_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_privateEndpoints_extendedLocation_type",
-          "targetName": "private_endpoints_extended_location_type",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_privateEndpoints_id",
-          "targetName": "private_endpoints_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_privateEndpoints_location",
-          "targetName": "private_endpoints_location",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_privateEndpoints_name",
-          "targetName": "private_endpoints_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_privateEndpoints_tags",
-          "targetName": "private_endpoints_tags",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_privateEndpoints_type",
-          "targetName": "private_endpoints_type",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_privateLinkServiceNetworkPolicies",
-          "targetName": "private_link_service_network_policies",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_provisioningState",
-          "targetName": "provisioning_state",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_purpose",
-          "targetName": "purpose",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_resourceNavigationLinks",
-          "targetName": "resource_navigation_links",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_resourceNavigationLinks_etag",
-          "targetName": "resource_navigation_links_etag",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_resourceNavigationLinks_id",
-          "targetName": "resource_navigation_links_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_resourceNavigationLinks_name",
-          "targetName": "resource_navigation_links_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_resourceNavigationLinks_type",
-          "targetName": "resource_navigation_links_type",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_routeTable",
-          "targetName": "route_table",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_routeTable_etag",
-          "targetName": "route_table_etag",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_routeTable_id",
-          "targetName": "route_table_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_routeTable_location",
-          "targetName": "route_table_location",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_routeTable_name",
-          "targetName": "route_table_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_routeTable_tags",
-          "targetName": "route_table_tags",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_routeTable_type",
-          "targetName": "route_table_type",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_serviceAssociationLinks",
-          "targetName": "service_association_links",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_serviceAssociationLinks_etag",
-          "targetName": "service_association_links_etag",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_serviceAssociationLinks_id",
-          "targetName": "service_association_links_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_serviceAssociationLinks_name",
-          "targetName": "service_association_links_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_serviceAssociationLinks_type",
-          "targetName": "service_association_links_type",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_serviceEndpointPolicies",
-          "targetName": "service_endpoint_policies",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_serviceEndpointPolicies_etag",
-          "targetName": "service_endpoint_policies_etag",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_serviceEndpointPolicies_id",
-          "targetName": "service_endpoint_policies_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_serviceEndpointPolicies_kind",
-          "targetName": "service_endpoint_policies_kind",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_serviceEndpointPolicies_location",
-          "targetName": "service_endpoint_policies_location",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_serviceEndpointPolicies_name",
-          "targetName": "service_endpoint_policies_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_serviceEndpointPolicies_tags",
-          "targetName": "service_endpoint_policies_tags",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_serviceEndpointPolicies_type",
-          "targetName": "service_endpoint_policies_type",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_serviceEndpoints",
-          "targetName": "service_endpoints",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_serviceEndpoints_locations",
-          "targetName": "service_endpoints_locations",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_serviceEndpoints_provisioningState",
-          "targetName": "service_endpoints_provisioning_state",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_serviceEndpoints_service",
-          "targetName": "service_endpoints_service",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "type",
-          "targetName": "type",
-          "targetType": "TEXT",
-          "enabled": true
-        }
-      ]
-    },
-  "azure_compute_virtual_network": {
-    "aws": {},
-    "gcp": {},
-    "azure": {
-      "subscriptionIdAttribute": "subscription_id"
-    },
-    "parsedAttributes": 
-  [
+  "azure_compute_subnet": {
+  "aws": {},
+  "gcp": {},
+  "azure": {
+    "subscriptionIdAttribute": "subscription_id"
+  },
+  "parsedAttributes": [
     {
       "sourceName": "etag",
       "targetName": "etag",
@@ -505,12 +15,6 @@
     {
       "sourceName": "id",
       "targetName": "id",
-      "targetType": "TEXT",
-      "enabled": true
-    },
-    {
-      "sourceName": "location",
-      "targetName": "location",
       "targetType": "TEXT",
       "enabled": true
     },
@@ -527,38 +31,266 @@
       "enabled": false
     },
     {
-      "sourceName": "properties_addressSpace",
-      "targetName": "address_space",
+      "sourceName": "properties_addressPrefix",
+      "targetName": "address_prefix",
       "targetType": "TEXT",
       "enabled": true
     },
     {
-      "sourceName": "properties_addressSpace_addressPrefixes",
-      "targetName": "address_space_address_prefixes",
+      "sourceName": "properties_addressPrefixes",
+      "targetName": "address_prefixes",
+      "targetType": "TEXT",
+      "enabled": true
+    },
+    {
+      "sourceName": "properties_applicationGatewayIpConfigurations",
+      "targetName": "application_gateway_ip_configurations",
+      "targetType": "TEXT",
+      "enabled": true
+    },
+    {
+      "sourceName": "properties_applicationGatewayIpConfigurations_etag",
+      "targetName": "application_gateway_ip_configurations_etag",
       "targetType": "TEXT",
       "enabled": false
     },
     {
-      "sourceName": "properties_dhcpOptions",
-      "targetName": "dhcp_options",
-      "targetType": "TEXT",
-      "enabled": true
-    },
-    {
-      "sourceName": "properties_dhcpOptions_dnsServers",
-      "targetName": "dhcp_options_dns_servers",
+      "sourceName": "properties_applicationGatewayIpConfigurations_id",
+      "targetName": "application_gateway_ip_configurations_id",
       "targetType": "TEXT",
       "enabled": false
     },
     {
-      "sourceName": "properties_enableDdosProtection",
-      "targetName": "enable_ddos_protection",
+      "sourceName": "properties_applicationGatewayIpConfigurations_name",
+      "targetName": "application_gateway_ip_configurations_name",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_applicationGatewayIpConfigurations_type",
+      "targetName": "application_gateway_ip_configurations_type",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_delegations",
+      "targetName": "delegations",
       "targetType": "TEXT",
       "enabled": true
     },
     {
-      "sourceName": "properties_enableVmProtection",
-      "targetName": "enable_vm_protection",
+      "sourceName": "properties_delegations_etag",
+      "targetName": "delegations_etag",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_delegations_id",
+      "targetName": "delegations_id",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_delegations_name",
+      "targetName": "delegations_name",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_delegations_type",
+      "targetName": "delegations_type",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_ipAllocations",
+      "targetName": "ip_allocations",
+      "targetType": "TEXT",
+      "enabled": true
+    },
+    {
+      "sourceName": "properties_ipAllocations_id",
+      "targetName": "ip_allocations_id",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_ipConfigurationProfiles",
+      "targetName": "ip_configuration_profiles",
+      "targetType": "TEXT",
+      "enabled": true
+    },
+    {
+      "sourceName": "properties_ipConfigurationProfiles_etag",
+      "targetName": "ip_configuration_profiles_etag",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_ipConfigurationProfiles_id",
+      "targetName": "ip_configuration_profiles_id",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_ipConfigurationProfiles_name",
+      "targetName": "ip_configuration_profiles_name",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_ipConfigurationProfiles_type",
+      "targetName": "ip_configuration_profiles_type",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_ipConfigurations",
+      "targetName": "ip_configurations",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_ipConfigurations_etag",
+      "targetName": "ip_configurations_etag",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_ipConfigurations_id",
+      "targetName": "ip_configurations_id",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_ipConfigurations_name",
+      "targetName": "ip_configurations_name",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_natGateway",
+      "targetName": "nat_gateway",
+      "targetType": "TEXT",
+      "enabled": true
+    },
+    {
+      "sourceName": "properties_natGateway_id",
+      "targetName": "nat_gateway_id",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_networkSecurityGroup",
+      "targetName": "network_security_group",
+      "targetType": "TEXT",
+      "enabled": true
+    },
+    {
+      "sourceName": "properties_networkSecurityGroup_etag",
+      "targetName": "network_security_group_etag",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_networkSecurityGroup_id",
+      "targetName": "network_security_group_id",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_networkSecurityGroup_location",
+      "targetName": "network_security_group_location",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_networkSecurityGroup_name",
+      "targetName": "network_security_group_name",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_networkSecurityGroup_tags",
+      "targetName": "network_security_group_tags",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_networkSecurityGroup_type",
+      "targetName": "network_security_group_type",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_privateEndpointNetworkPolicies",
+      "targetName": "private_endpoint_network_policies",
+      "targetType": "TEXT",
+      "enabled": true
+    },
+    {
+      "sourceName": "properties_privateEndpoints",
+      "targetName": "private_endpoints",
+      "targetType": "TEXT",
+      "enabled": true
+    },
+    {
+      "sourceName": "properties_privateEndpoints_etag",
+      "targetName": "private_endpoints_etag",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_privateEndpoints_extendedLocation",
+      "targetName": "private_endpoints_extended_location",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_privateEndpoints_extendedLocation_name",
+      "targetName": "private_endpoints_extended_location_name",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_privateEndpoints_extendedLocation_type",
+      "targetName": "private_endpoints_extended_location_type",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_privateEndpoints_id",
+      "targetName": "private_endpoints_id",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_privateEndpoints_location",
+      "targetName": "private_endpoints_location",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_privateEndpoints_name",
+      "targetName": "private_endpoints_name",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_privateEndpoints_tags",
+      "targetName": "private_endpoints_tags",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_privateEndpoints_type",
+      "targetName": "private_endpoints_type",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_privateLinkServiceNetworkPolicies",
+      "targetName": "private_link_service_network_policies",
       "targetType": "TEXT",
       "enabled": true
     },
@@ -566,67 +298,187 @@
       "sourceName": "properties_provisioningState",
       "targetName": "provisioning_state",
       "targetType": "TEXT",
-      "enabled": true
+      "enabled": false
     },
     {
-      "sourceName": "properties_resourceGuid",
-      "targetName": "resource_guid",
-      "targetType": "TEXT",
-      "enabled": true
-    },
-    {
-      "sourceName": "properties_subnets",
-      "targetName": "subnets",
+      "sourceName": "properties_purpose",
+      "targetName": "purpose",
       "targetType": "TEXT",
       "enabled": true
     },
     {
-      "sourceName": "properties_subnets_etag",
-      "targetName": "subnets_etag",
-      "targetType": "TEXT",
-      "enabled": false
-    },
-    {
-      "sourceName": "properties_subnets_id",
-      "targetName": "subnets_id",
-      "targetType": "TEXT",
-      "enabled": false
-    },
-    {
-      "sourceName": "properties_subnets_name",
-      "targetName": "subnets_name",
-      "targetType": "TEXT",
-      "enabled": false
-    },
-    {
-      "sourceName": "properties_virtualNetworkPeerings",
-      "targetName": "virtual_network_peerings",
+      "sourceName": "properties_resourceNavigationLinks",
+      "targetName": "resource_navigation_links",
       "targetType": "TEXT",
       "enabled": true
     },
     {
-      "sourceName": "properties_virtualNetworkPeerings_etag",
-      "targetName": "virtual_network_peerings_etag",
+      "sourceName": "properties_resourceNavigationLinks_etag",
+      "targetName": "resource_navigation_links_etag",
       "targetType": "TEXT",
       "enabled": false
     },
     {
-      "sourceName": "properties_virtualNetworkPeerings_id",
-      "targetName": "virtual_network_peerings_id",
+      "sourceName": "properties_resourceNavigationLinks_id",
+      "targetName": "resource_navigation_links_id",
       "targetType": "TEXT",
       "enabled": false
     },
     {
-      "sourceName": "properties_virtualNetworkPeerings_name",
-      "targetName": "virtual_network_peerings_name",
+      "sourceName": "properties_resourceNavigationLinks_name",
+      "targetName": "resource_navigation_links_name",
       "targetType": "TEXT",
       "enabled": false
     },
     {
-      "sourceName": "tags",
-      "targetName": "tags",
+      "sourceName": "properties_resourceNavigationLinks_type",
+      "targetName": "resource_navigation_links_type",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_routeTable",
+      "targetName": "route_table",
       "targetType": "TEXT",
       "enabled": true
+    },
+    {
+      "sourceName": "properties_routeTable_etag",
+      "targetName": "route_table_etag",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_routeTable_id",
+      "targetName": "route_table_id",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_routeTable_location",
+      "targetName": "route_table_location",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_routeTable_name",
+      "targetName": "route_table_name",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_routeTable_tags",
+      "targetName": "route_table_tags",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_routeTable_type",
+      "targetName": "route_table_type",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_serviceAssociationLinks",
+      "targetName": "service_association_links",
+      "targetType": "TEXT",
+      "enabled": true
+    },
+    {
+      "sourceName": "properties_serviceAssociationLinks_etag",
+      "targetName": "service_association_links_etag",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_serviceAssociationLinks_id",
+      "targetName": "service_association_links_id",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_serviceAssociationLinks_name",
+      "targetName": "service_association_links_name",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_serviceAssociationLinks_type",
+      "targetName": "service_association_links_type",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_serviceEndpointPolicies",
+      "targetName": "service_endpoint_policies",
+      "targetType": "TEXT",
+      "enabled": true
+    },
+    {
+      "sourceName": "properties_serviceEndpointPolicies_etag",
+      "targetName": "service_endpoint_policies_etag",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_serviceEndpointPolicies_id",
+      "targetName": "service_endpoint_policies_id",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_serviceEndpointPolicies_kind",
+      "targetName": "service_endpoint_policies_kind",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_serviceEndpointPolicies_location",
+      "targetName": "service_endpoint_policies_location",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_serviceEndpointPolicies_name",
+      "targetName": "service_endpoint_policies_name",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_serviceEndpointPolicies_tags",
+      "targetName": "service_endpoint_policies_tags",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_serviceEndpointPolicies_type",
+      "targetName": "service_endpoint_policies_type",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_serviceEndpoints",
+      "targetName": "service_endpoints",
+      "targetType": "TEXT",
+      "enabled": true
+    },
+    {
+      "sourceName": "properties_serviceEndpoints_locations",
+      "targetName": "service_endpoints_locations",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_serviceEndpoints_provisioningState",
+      "targetName": "service_endpoints_provisioning_state",
+      "targetType": "TEXT",
+      "enabled": true
+    },
+    {
+      "sourceName": "properties_serviceEndpoints_service",
+      "targetName": "service_endpoints_service",
+      "targetType": "TEXT",
+      "enabled": false
     },
     {
       "sourceName": "type",
@@ -636,6 +488,610 @@
     }
   ]
 },
+"azure_compute_virtual_network": {
+"aws": {},
+"gcp": {},
+"azure": {
+  "subscriptionIdAttribute": "subscription_id"
+},
+"parsedAttributes": 
+[
+{
+  "sourceName": "etag",
+  "targetName": "etag",
+  "targetType": "TEXT",
+  "enabled": true
+},
+{
+  "sourceName": "id",
+  "targetName": "id",
+  "targetType": "TEXT",
+  "enabled": true
+},
+{
+  "sourceName": "location",
+  "targetName": "location",
+  "targetType": "TEXT",
+  "enabled": true
+},
+{
+  "sourceName": "name",
+  "targetName": "name",
+  "targetType": "TEXT",
+  "enabled": true
+},
+{
+  "sourceName": "properties",
+  "targetName": "properties",
+  "targetType": "TEXT",
+  "enabled": false
+},
+{
+  "sourceName": "properties_addressSpace",
+  "targetName": "address_space",
+  "targetType": "TEXT",
+  "enabled": true
+},
+{
+  "sourceName": "properties_addressSpace_addressPrefixes",
+  "targetName": "address_space_address_prefixes",
+  "targetType": "TEXT",
+  "enabled": false
+},
+{
+  "sourceName": "properties_dhcpOptions",
+  "targetName": "dhcp_options",
+  "targetType": "TEXT",
+  "enabled": true
+},
+{
+  "sourceName": "properties_dhcpOptions_dnsServers",
+  "targetName": "dhcp_options_dns_servers",
+  "targetType": "TEXT",
+  "enabled": false
+},
+{
+  "sourceName": "properties_enableDdosProtection",
+  "targetName": "enable_ddos_protection",
+  "targetType": "TEXT",
+  "enabled": true
+},
+{
+  "sourceName": "properties_enableVmProtection",
+  "targetName": "enable_vm_protection",
+  "targetType": "TEXT",
+  "enabled": true
+},
+{
+  "sourceName": "properties_provisioningState",
+  "targetName": "provisioning_state",
+  "targetType": "TEXT",
+  "enabled": true
+},
+{
+  "sourceName": "properties_resourceGuid",
+  "targetName": "resource_guid",
+  "targetType": "TEXT",
+  "enabled": true
+},
+{
+  "sourceName": "properties_subnets",
+  "targetName": "subnets",
+  "targetType": "TEXT",
+  "enabled": true
+},
+{
+  "sourceName": "properties_subnets_etag",
+  "targetName": "subnets_etag",
+  "targetType": "TEXT",
+  "enabled": false
+},
+{
+  "sourceName": "properties_subnets_id",
+  "targetName": "subnets_id",
+  "targetType": "TEXT",
+  "enabled": false
+},
+{
+  "sourceName": "properties_subnets_name",
+  "targetName": "subnets_name",
+  "targetType": "TEXT",
+  "enabled": false
+},
+{
+  "sourceName": "properties_virtualNetworkPeerings",
+  "targetName": "virtual_network_peerings",
+  "targetType": "TEXT",
+  "enabled": true
+},
+{
+  "sourceName": "properties_virtualNetworkPeerings_etag",
+  "targetName": "virtual_network_peerings_etag",
+  "targetType": "TEXT",
+  "enabled": false
+},
+{
+  "sourceName": "properties_virtualNetworkPeerings_id",
+  "targetName": "virtual_network_peerings_id",
+  "targetType": "TEXT",
+  "enabled": false
+},
+{
+  "sourceName": "properties_virtualNetworkPeerings_name",
+  "targetName": "virtual_network_peerings_name",
+  "targetType": "TEXT",
+  "enabled": false
+},
+{
+  "sourceName": "tags",
+  "targetName": "tags",
+  "targetType": "TEXT",
+  "enabled": true
+},
+{
+  "sourceName": "type",
+  "targetName": "type",
+  "targetType": "TEXT",
+  "enabled": true
+}
+]
+},
+"azure_compute_networkinterface": {
+"aws": {},
+"gcp": {},
+"azure": {
+  "subscriptionIdAttribute": "subscription_id"
+},
+"parsedAttributes": [
+  {
+    "sourceName": "etag",
+    "targetName": "etag",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "id",
+    "targetName": "id",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "location",
+    "targetName": "location",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "name",
+    "targetName": "name",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties",
+    "targetName": "properties",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_dnsSettings",
+    "targetName": "dns_settings",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_dnsSettings_appliedDnsServers",
+    "targetName": "dns_settings_applied_dns_servers",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_dnsSettings_dnsServers",
+    "targetName": "dns_settings_dns_servers",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_dnsSettings_internalDnsNameLabel",
+    "targetName": "dns_settings_internal_dns_name_label",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_dnsSettings_internalDomainNameSuffix",
+    "targetName": "dns_settings_internal_domain_name_suffix",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_dnsSettings_internalFqdn",
+    "targetName": "dns_settings_internal_fqdn",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_enableAcceleratedNetworking",
+    "targetName": "enable_accelerated_networking",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_enableIPForwarding",
+    "targetName": "enable_ip_forwarding",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_ipConfigurations",
+    "targetName": "ip_configurations",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_ipConfigurations_etag",
+    "targetName": "ip_configurations_etag",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_ipConfigurations_id",
+    "targetName": "ip_configurations_id",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_ipConfigurations_name",
+    "targetName": "ip_configurations_name",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_macAddress",
+    "targetName": "mac_address",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_networkSecurityGroup",
+    "targetName": "network_security_group",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_networkSecurityGroup_etag",
+    "targetName": "network_security_group_etag",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_networkSecurityGroup_id",
+    "targetName": "network_security_group_id",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_networkSecurityGroup_location",
+    "targetName": "network_security_group_location",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_networkSecurityGroup_name",
+    "targetName": "network_security_group_name",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_networkSecurityGroup_tags",
+    "targetName": "network_security_group_tags",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_networkSecurityGroup_type",
+    "targetName": "network_security_group_type",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_primary",
+    "targetName": "primary",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_provisioningState",
+    "targetName": "provisioning_state",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_resourceGuid",
+    "targetName": "resource_guid",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_virtualMachine",
+    "targetName": "virtual_machine",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_virtualMachine_id",
+    "targetName": "virtual_machine_id",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "tags",
+    "targetName": "tags",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "type",
+    "targetName": "type",
+    "targetType": "TEXT",
+    "enabled": true
+  }
+]
+},
+  "azure_compute_security_group": {
+    "aws": {},
+    "gcp": {},
+    "azure": {
+      "subscriptionIdAttribute": "subscription_id"
+    },
+    "parsedAttributes":[
+        {
+          "sourceName": "etag",
+          "targetName": "etag",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "id",
+          "targetName": "id",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "location",
+          "targetName": "location",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "name",
+          "targetName": "name",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties",
+          "targetName": "properties",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_defaultSecurityRules",
+          "targetName": "default_security_rules",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_defaultSecurityRules_etag",
+          "targetName": "default_security_rules_etag",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_defaultSecurityRules_id",
+          "targetName": "default_security_rules_id",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_defaultSecurityRules_name",
+          "targetName": "default_security_rules_name",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_defaultSecurityRules_type",
+          "targetName": "default_security_rules_type",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_flowLogs",
+          "targetName": "flow_logs",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_flowLogs_etag",
+          "targetName": "flow_logs_etag",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_flowLogs_id",
+          "targetName": "flow_logs_id",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_flowLogs_location",
+          "targetName": "flow_logs_location",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_flowLogs_name",
+          "targetName": "flow_logs_name",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_flowLogs_tags",
+          "targetName": "flow_logs_tags",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_flowLogs_type",
+          "targetName": "flow_logs_type",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_networkInterfaces",
+          "targetName": "network_interfaces",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_networkInterfaces_etag",
+          "targetName": "network_interfaces_etag",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_networkInterfaces_extendedLocation",
+          "targetName": "network_interfaces_extended_location",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_networkInterfaces_extendedLocation_name",
+          "targetName": "network_interfaces_extended_location_name",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_networkInterfaces_extendedLocation_type",
+          "targetName": "network_interfaces_extended_location_type",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_networkInterfaces_id",
+          "targetName": "network_interfaces_id",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_networkInterfaces_location",
+          "targetName": "network_interfaces_location",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_networkInterfaces_name",
+          "targetName": "network_interfaces_name",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_networkInterfaces_tags",
+          "targetName": "network_interfaces_tags",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_networkInterfaces_type",
+          "targetName": "network_interfaces_type",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_provisioningState",
+          "targetName": "provisioning_state",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_resourceGuid",
+          "targetName": "resource_guid",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_securityRules",
+          "targetName": "security_rules",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_securityRules_etag",
+          "targetName": "security_rules_etag",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_securityRules_id",
+          "targetName": "security_rules_id",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_securityRules_name",
+          "targetName": "security_rules_name",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_securityRules_type",
+          "targetName": "security_rules_type",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_subnets",
+          "targetName": "subnets",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_subnets_etag",
+          "targetName": "subnets_etag",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_subnets_id",
+          "targetName": "subnets_id",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_subnets_name",
+          "targetName": "subnets_name",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_subnets_type",
+          "targetName": "subnets_type",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "tags",
+          "targetName": "tags",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "type",
+          "targetName": "type",
+          "targetType": "TEXT",
+          "enabled": true
+        }
+      ]
+    },
   "azure_compute_networkinterface": {
     "aws": {},
     "gcp": {},
@@ -2051,5 +2507,452 @@
         "enabled": true
       }
     ]
+  },
+  "azure_compute_disk": {
+    "aws": {},
+    "gcp": {},
+    "azure": {
+      "subscriptionIdAttribute": "subscription_id"
+    },
+    "parsedAttributes": [
+  {
+    "sourceName": "extendedLocation",
+    "targetName": "extended_location",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "extendedLocation_name",
+    "targetName": "extended_location_name",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "extendedLocation_type",
+    "targetName": "extended_location_type",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "id",
+    "targetName": "id",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "location",
+    "targetName": "location",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "managedBy",
+    "targetName": "managed_by",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "managedByExtended",
+    "targetName": "managed_by_extended",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "name",
+    "targetName": "name",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties",
+    "targetName": "properties",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_burstingEnabled",
+    "targetName": "bursting_enabled",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_creationData",
+    "targetName": "creation_data",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_creationData_createOption",
+    "targetName": "creation_data_create_option",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_creationData_galleryImageReference",
+    "targetName": "creation_data_gallery_image_reference",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_creationData_galleryImageReference_id",
+    "targetName": "creation_data_gallery_image_reference_id",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_creationData_galleryImageReference_lun",
+    "targetName": "creation_data_gallery_image_reference_lun",
+    "targetType": "INTEGER",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_creationData_imageReference",
+    "targetName": "creation_data_image_reference",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_creationData_imageReference_id",
+    "targetName": "creation_data_image_reference_id",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_creationData_imageReference_lun",
+    "targetName": "creation_data_image_reference_lun",
+    "targetType": "INTEGER",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_creationData_logicalSectorSize",
+    "targetName": "creation_data_logical_sector_size",
+    "targetType": "INTEGER",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_creationData_sourceResourceId",
+    "targetName": "creation_data_source_resource_id",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_creationData_sourceUniqueId",
+    "targetName": "creation_data_source_unique_id",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_creationData_sourceUri",
+    "targetName": "creation_data_source_uri",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_creationData_storageAccountId",
+    "targetName": "creation_data_storage_account_id",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_creationData_uploadSizeBytes",
+    "targetName": "creation_data_upload_size_bytes",
+    "targetType": "BIGINT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_diskAccessId",
+    "targetName": "disk_access_id",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_diskIOPSReadOnly",
+    "targetName": "disk_iops_read_only",
+    "targetType": "BIGINT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_diskIOPSReadWrite",
+    "targetName": "disk_iops_read_write",
+    "targetType": "BIGINT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_diskMBpsReadOnly",
+    "targetName": "disk_m_bps_read_only",
+    "targetType": "BIGINT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_diskMBpsReadWrite",
+    "targetName": "disk_m_bps_read_write",
+    "targetType": "BIGINT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_diskSizeBytes",
+    "targetName": "disk_size_bytes",
+    "targetType": "BIGINT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_diskSizeGB",
+    "targetName": "disk_size_gb",
+    "targetType": "INTEGER",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_diskState",
+    "targetName": "disk_state",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_encryption",
+    "targetName": "encryption",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_encryptionSettingsCollection",
+    "targetName": "encryption_settings_collection",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_encryptionSettingsCollection_enabled",
+    "targetName": "encryption_settings_collection_enabled",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_encryptionSettingsCollection_encryptionSettings",
+    "targetName": "encryption_settings_collection_encryption_settings",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_encryptionSettingsCollection_encryptionSettingsVersion",
+    "targetName": "encryption_settings_collection_encryption_settings_version",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_encryptionSettingsCollection_encryptionSettings_diskEncryptionKey",
+    "targetName": "encryption_settings_collection_encryption_settings_disk_encryption_key",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_encryptionSettingsCollection_encryptionSettings_diskEncryptionKey_secretUrl",
+    "targetName": "encryption_settings_collection_encryption_settings_disk_encryption_key_secret_url",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_encryptionSettingsCollection_encryptionSettings_diskEncryptionKey_sourceVault",
+    "targetName": "encryption_settings_collection_encryption_settings_disk_encryption_key_source_vault",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_encryptionSettingsCollection_encryptionSettings_diskEncryptionKey_sourceVault_id",
+    "targetName": "encryption_settings_collection_encryption_settings_disk_encryption_key_source_vault_id",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_encryptionSettingsCollection_encryptionSettings_keyEncryptionKey",
+    "targetName": "encryption_settings_collection_encryption_settings_key_encryption_key",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_encryptionSettingsCollection_encryptionSettings_keyEncryptionKey_keyUrl",
+    "targetName": "encryption_settings_collection_encryption_settings_key_encryption_key_key_url",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_encryptionSettingsCollection_encryptionSettings_keyEncryptionKey_sourceVault",
+    "targetName": "encryption_settings_collection_encryption_settings_key_encryption_key_source_vault",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_encryptionSettingsCollection_encryptionSettings_keyEncryptionKey_sourceVault_id",
+    "targetName": "encryption_settings_collection_encryption_settings_key_encryption_key_source_vault_id",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_encryption_diskEncryptionSetId",
+    "targetName": "encryption_disk_encryption_set_id",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_encryption_type",
+    "targetName": "encryption_type",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_hyperVGeneration",
+    "targetName": "hyper_v_generation",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_maxShares",
+    "targetName": "max_shares",
+    "targetType": "INTEGER",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_networkAccessPolicy",
+    "targetName": "network_access_policy",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_osType",
+    "targetName": "os_type",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_propertyUpdatesInProgress",
+    "targetName": "property_updates_in_progress",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_propertyUpdatesInProgress_targetTier",
+    "targetName": "property_updates_in_progress_target_tier",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_provisioningState",
+    "targetName": "provisioning_state",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_purchasePlan",
+    "targetName": "purchase_plan",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_purchasePlan_name",
+    "targetName": "purchase_plan_name",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_purchasePlan_product",
+    "targetName": "purchase_plan_product",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_purchasePlan_promotionCode",
+    "targetName": "purchase_plan_promotion_code",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_purchasePlan_publisher",
+    "targetName": "purchase_plan_publisher",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_securityProfile",
+    "targetName": "security_profile",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_securityProfile_securityType",
+    "targetName": "security_profile_security_type",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_shareInfo",
+    "targetName": "share_info",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_shareInfo_vmUri",
+    "targetName": "share_info_vm_uri",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "properties_supportsHibernation",
+    "targetName": "supports_hibernation",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_tier",
+    "targetName": "tier",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_timeCreated",
+    "targetName": "time_created",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "properties_uniqueId",
+    "targetName": "unique_id",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "sku",
+    "targetName": "sku",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "sku_name",
+    "targetName": "sku_name",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "sku_tier",
+    "targetName": "sku_tier",
+    "targetType": "TEXT",
+    "enabled": false
+  },
+  {
+    "sourceName": "tags",
+    "targetName": "tags",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "type",
+    "targetName": "type",
+    "targetType": "TEXT",
+    "enabled": true
+  },
+  {
+    "sourceName": "zones",
+    "targetName": "zones",
+    "targetType": "TEXT",
+    "enabled": true
   }
+]
+}
 }

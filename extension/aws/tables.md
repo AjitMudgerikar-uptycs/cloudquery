@@ -1,4 +1,4 @@
-* AWS
+- AWS
   - aws_acm_certificate
   - aws_codepipeline_pipeline
   - aws_directoryservice_directory

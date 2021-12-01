@@ -1,4 +1,4 @@
-{ 
+{
   "aws_rds_cluster": {
     "aws": {
       "regionCodeAttribute": "region_code",
@@ -308,20 +308,6 @@
         "enabled": false
       },
       {
-        "sourceName": "DBInstances_Endpoint_HostedZoneId",
-        "targetName": "endpoint_hosted_zone_id",
-        "targetType": "TEXT",
-        "enabled": false
-      },
-      {
-        "sourceName": "DBInstances_Endpoint_Port",
-        "targetName": "endpoint_port",
-        "targetType": "INTEGER",
-        "enabled": false
-      },
-      {
-        "sourceName": "DBInstances_Engine",
-        "targetName": "engine",
         "sourceName": "DBClusters_DBClusterParameterGroup",
         "targetName": "db_cluster_parameter_group",
         "targetType": "TEXT",
@@ -1021,1094 +1007,1080 @@
     "gcp": {},
     "azure": {},
     "parsedAttributes": [
-        {
-          "sourceName": "DBInstances_AllocatedStorage",
-          "targetName": "allocated_storage",
-          "targetType": "INTEGER",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_AssociatedRoles",
-          "targetName": "associated_roles",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_AssociatedRoles_FeatureName",
-          "targetName": "associated_roles_feature_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_AssociatedRoles_RoleArn",
-          "targetName": "associated_roles_role_arn",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_AssociatedRoles_Status",
-          "targetName": "associated_roles_status",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_AutoMinorVersionUpgrade",
-          "targetName": "auto_minor_version_upgrade",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_AvailabilityZone",
-          "targetName": "availability_zone",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_AwsBackupRecoveryPointArn",
-          "targetName": "aws_backup_recovery_point_arn",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_BackupRetentionPeriod",
-          "targetName": "backup_retention_period",
-          "targetType": "INTEGER",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_CACertificateIdentifier",
-          "targetName": "ca_certificate_identifier",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_CharacterSetName",
-          "targetName": "character_set_name",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_CopyTagsToSnapshot",
-          "targetName": "copy_tags_to_snapshot",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_CustomerOwnedIpEnabled",
-          "targetName": "customer_owned_ip_enabled",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_DBClusterIdentifier",
-          "targetName": "db_cluster_identifier",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_DBInstanceArn",
-          "targetName": "db_instance_arn",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_DBInstanceAutomatedBackupsReplications",
-          "targetName": "db_instance_automated_backups_replications",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_DBInstanceAutomatedBackupsReplications_DBInstanceAutomatedBackupsArn",
-          "targetName": "db_instance_automated_backups_replications_db_instance_automated_backups_arn",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_DBInstanceClass",
-          "targetName": "db_instance_class",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_DBInstanceIdentifier",
-          "targetName": "db_instance_identifier",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_DBInstanceStatus",
-          "targetName": "db_instance_status",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_DBName",
-          "targetName": "db_name",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_DBParameterGroups",
-          "targetName": "db_parameter_groups",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_DBParameterGroups_DBParameterGroupName",
-          "targetName": "db_parameter_groups_db_parameter_group_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_DBParameterGroups_ParameterApplyStatus",
-          "targetName": "db_parameter_groups_parameter_apply_status",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_DBSecurityGroups",
-          "targetName": "db_security_groups",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_DBSecurityGroups_DBSecurityGroupName",
-          "targetName": "db_security_groups_db_security_group_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_DBSecurityGroups_Status",
-          "targetName": "db_security_groups_status",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_DBSubnetGroup",
-          "targetName": "db_subnet_group",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_DBSubnetGroup_DBSubnetGroupArn",
-          "targetName": "db_subnet_group_db_subnet_group_arn",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_DBSubnetGroup_DBSubnetGroupDescription",
-          "targetName": "db_subnet_group_db_subnet_group_description",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_DBSubnetGroup_DBSubnetGroupName",
-          "targetName": "db_subnet_group_db_subnet_group_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_DBSubnetGroup_SubnetGroupStatus",
-          "targetName": "db_subnet_group_subnet_group_status",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_DBSubnetGroup_Subnets",
-          "targetName": "db_subnet_group_subnets",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_DBSubnetGroup_Subnets_SubnetAvailabilityZone",
-          "targetName": "db_subnet_group_subnets_subnet_availability_zone",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_DBSubnetGroup_Subnets_SubnetAvailabilityZone_Name",
-          "targetName": "db_subnet_group_subnets_subnet_availability_zone_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_DBSubnetGroup_Subnets_SubnetIdentifier",
-          "targetName": "db_subnet_group_subnets_subnet_identifier",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_DBSubnetGroup_Subnets_SubnetOutpost",
-          "targetName": "db_subnet_group_subnets_subnet_outpost",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_DBSubnetGroup_Subnets_SubnetOutpost_Arn",
-          "targetName": "db_subnet_group_subnets_subnet_outpost_arn",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_DBSubnetGroup_Subnets_SubnetStatus",
-          "targetName": "db_subnet_group_subnets_subnet_status",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_DBSubnetGroup_VpcId",
-          "targetName": "db_subnet_group_vpc_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_DbInstancePort",
-          "targetName": "db_instance_port",
-          "targetType": "INTEGER",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_DbiResourceId",
-          "targetName": "dbi_resource_id",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_DeletionProtection",
-          "targetName": "deletion_protection",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_DomainMemberships",
-          "targetName": "domain_memberships",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_DomainMemberships_Domain",
-          "targetName": "domain_memberships_domain",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_DomainMemberships_FQDN",
-          "targetName": "domain_memberships_fqdn",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_DomainMemberships_IAMRoleName",
-          "targetName": "domain_memberships_iam_role_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_DomainMemberships_Status",
-          "targetName": "domain_memberships_status",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_EnabledCloudwatchLogsExports",
-          "targetName": "enabled_cloudwatch_logs_exports",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_Endpoint",
-          "targetName": "endpoint",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_Endpoint_Address",
-          "targetName": "endpoint_address",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_Endpoint_HostedZoneId",
-          "targetName": "endpoint_hosted_zone_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_Endpoint_Port",
-          "targetName": "endpoint_port",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_Engine",
-          "targetName": "engine",
-          "sourceName": "DBClusters_DBClusterParameterGroup",
-          "targetName": "db_cluster_parameter_group",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBClusters_DBSubnetGroup",
-          "targetName": "db_subnet_group",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBClusters_DatabaseName",
-          "targetName": "database_name",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_EngineVersion",
-          "targetName": "engine_version",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_EnhancedMonitoringResourceArn",
-          "targetName": "enhanced_monitoring_resource_arn",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_IAMDatabaseAuthenticationEnabled",
-          "targetName": "iam_database_authentication_enabled",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_InstanceCreateTime",
-          "targetName": "instance_create_time",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_InstanceCreateTime_ext",
-          "targetName": "instance_create_time_ext",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_InstanceCreateTime_loc",
-          "targetName": "instance_create_time_loc",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_InstanceCreateTime_loc_cacheEnd",
-          "targetName": "instance_create_time_loc_cache_end",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_InstanceCreateTime_loc_cacheStart",
-          "targetName": "instance_create_time_loc_cache_start",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_InstanceCreateTime_loc_cacheZone",
-          "targetName": "instance_create_time_loc_cache_zone",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_InstanceCreateTime_loc_cacheZone_isDST",
-          "targetName": "instance_create_time_loc_cache_zone_is_dst",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_InstanceCreateTime_loc_cacheZone_name",
-          "targetName": "instance_create_time_loc_cache_zone_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_InstanceCreateTime_loc_cacheZone_offset",
-          "targetName": "instance_create_time_loc_cache_zone_offset",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_InstanceCreateTime_loc_extend",
-          "targetName": "instance_create_time_loc_extend",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_InstanceCreateTime_loc_name",
-          "targetName": "instance_create_time_loc_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_InstanceCreateTime_loc_tx",
-          "targetName": "instance_create_time_loc_tx",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_InstanceCreateTime_loc_tx_index",
-          "targetName": "instance_create_time_loc_tx_index",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_InstanceCreateTime_loc_tx_isstd",
-          "targetName": "instance_create_time_loc_tx_isstd",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_InstanceCreateTime_loc_tx_isutc",
-          "targetName": "instance_create_time_loc_tx_isutc",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_InstanceCreateTime_loc_tx_when",
-          "targetName": "instance_create_time_loc_tx_when",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_InstanceCreateTime_loc_zone",
-          "targetName": "instance_create_time_loc_zone",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_InstanceCreateTime_loc_zone_isDST",
-          "targetName": "instance_create_time_loc_zone_is_dst",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_InstanceCreateTime_loc_zone_name",
-          "targetName": "instance_create_time_loc_zone_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_InstanceCreateTime_loc_zone_offset",
-          "targetName": "instance_create_time_loc_zone_offset",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_InstanceCreateTime_wall",
-          "targetName": "instance_create_time_wall",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_Iops",
-          "targetName": "iops",
-          "targetType": "INTEGER",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_KmsKeyId",
-          "targetName": "kms_key_id",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_LatestRestorableTime",
-          "targetName": "latest_restorable_time",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_LatestRestorableTime_ext",
-          "targetName": "latest_restorable_time_ext",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_LatestRestorableTime_loc",
-          "targetName": "latest_restorable_time_loc",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_LatestRestorableTime_loc_cacheEnd",
-          "targetName": "latest_restorable_time_loc_cache_end",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_LatestRestorableTime_loc_cacheStart",
-          "targetName": "latest_restorable_time_loc_cache_start",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_LatestRestorableTime_loc_cacheZone",
-          "targetName": "latest_restorable_time_loc_cache_zone",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_LatestRestorableTime_loc_cacheZone_isDST",
-          "targetName": "latest_restorable_time_loc_cache_zone_is_dst",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_LatestRestorableTime_loc_cacheZone_name",
-          "targetName": "latest_restorable_time_loc_cache_zone_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_LatestRestorableTime_loc_cacheZone_offset",
-          "targetName": "latest_restorable_time_loc_cache_zone_offset",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_LatestRestorableTime_loc_extend",
-          "targetName": "latest_restorable_time_loc_extend",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_LatestRestorableTime_loc_name",
-          "targetName": "latest_restorable_time_loc_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_LatestRestorableTime_loc_tx",
-          "targetName": "latest_restorable_time_loc_tx",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_LatestRestorableTime_loc_tx_index",
-          "targetName": "latest_restorable_time_loc_tx_index",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_LatestRestorableTime_loc_tx_isstd",
-          "targetName": "latest_restorable_time_loc_tx_isstd",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_LatestRestorableTime_loc_tx_isutc",
-          "targetName": "latest_restorable_time_loc_tx_isutc",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_LatestRestorableTime_loc_tx_when",
-          "targetName": "latest_restorable_time_loc_tx_when",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_LatestRestorableTime_loc_zone",
-          "targetName": "latest_restorable_time_loc_zone",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_LatestRestorableTime_loc_zone_isDST",
-          "targetName": "latest_restorable_time_loc_zone_is_dst",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_LatestRestorableTime_loc_zone_name",
-          "targetName": "latest_restorable_time_loc_zone_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_LatestRestorableTime_loc_zone_offset",
-          "targetName": "latest_restorable_time_loc_zone_offset",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_LatestRestorableTime_wall",
-          "targetName": "latest_restorable_time_wall",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_LicenseModel",
-          "targetName": "license_model",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_ListenerEndpoint",
-          "targetName": "listener_endpoint",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_ListenerEndpoint_Address",
-          "targetName": "listener_endpoint_address",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_ListenerEndpoint_HostedZoneId",
-          "targetName": "listener_endpoint_hosted_zone_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_ListenerEndpoint_Port",
-          "targetName": "listener_endpoint_port",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_MasterUsername",
-          "targetName": "master_username",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_MaxAllocatedStorage",
-          "targetName": "max_allocated_storage",
-          "targetType": "INTEGER",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_MonitoringInterval",
-          "targetName": "monitoring_interval",
-          "targetType": "INTEGER",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_MonitoringRoleArn",
-          "targetName": "monitoring_role_arn",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_MultiAZ",
-          "targetName": "multi_az",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_NcharCharacterSetName",
-          "targetName": "nchar_character_set_name",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_OptionGroupMemberships",
-          "targetName": "option_group_memberships",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_OptionGroupMemberships_OptionGroupName",
-          "targetName": "option_group_memberships_option_group_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_OptionGroupMemberships_Status",
-          "targetName": "option_group_memberships_status",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_PendingModifiedValues",
-          "targetName": "pending_modified_values",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_PendingModifiedValues_AllocatedStorage",
-          "targetName": "pending_modified_values_allocated_storage",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_PendingModifiedValues_BackupRetentionPeriod",
-          "targetName": "pending_modified_values_backup_retention_period",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_PendingModifiedValues_CACertificateIdentifier",
-          "targetName": "pending_modified_values_ca_certificate_identifier",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_PendingModifiedValues_DBInstanceClass",
-          "targetName": "pending_modified_values_db_instance_class",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_PendingModifiedValues_DBInstanceIdentifier",
-          "targetName": "pending_modified_values_db_instance_identifier",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_PendingModifiedValues_DBSubnetGroupName",
-          "targetName": "pending_modified_values_db_subnet_group_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_PendingModifiedValues_EngineVersion",
-          "targetName": "pending_modified_values_engine_version",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_PendingModifiedValues_IAMDatabaseAuthenticationEnabled",
-          "targetName": "pending_modified_values_iam_database_authentication_enabled",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_PendingModifiedValues_Iops",
-          "targetName": "pending_modified_values_iops",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_PendingModifiedValues_LicenseModel",
-          "targetName": "pending_modified_values_license_model",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_PendingModifiedValues_MasterUserPassword",
-          "targetName": "pending_modified_values_master_user_password",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_PendingModifiedValues_MultiAZ",
-          "targetName": "pending_modified_values_multi_az",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_PendingModifiedValues_PendingCloudwatchLogsExports",
-          "targetName": "pending_modified_values_pending_cloudwatch_logs_exports",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_PendingModifiedValues_PendingCloudwatchLogsExports_LogTypesToDisable",
-          "targetName": "pending_modified_values_pending_cloudwatch_logs_exports_log_types_to_disable",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_PendingModifiedValues_PendingCloudwatchLogsExports_LogTypesToEnable",
-          "targetName": "pending_modified_values_pending_cloudwatch_logs_exports_log_types_to_enable",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_PendingModifiedValues_Port",
-          "targetName": "pending_modified_values_port",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_PendingModifiedValues_ProcessorFeatures",
-          "targetName": "pending_modified_values_processor_features",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_PendingModifiedValues_ProcessorFeatures_Name",
-          "targetName": "pending_modified_values_processor_features_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_PendingModifiedValues_ProcessorFeatures_Value",
-          "targetName": "pending_modified_values_processor_features_value",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_PendingModifiedValues_StorageType",
-          "targetName": "pending_modified_values_storage_type",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_PerformanceInsightsEnabled",
-          "targetName": "performance_insights_enabled",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_PerformanceInsightsKMSKeyId",
-          "targetName": "performance_insights_kms_key_id",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_PerformanceInsightsRetentionPeriod",
-          "targetName": "performance_insights_retention_period",
-          "targetType": "INTEGER",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_PreferredBackupWindow",
-          "targetName": "preferred_backup_window",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_PreferredMaintenanceWindow",
-          "targetName": "preferred_maintenance_window",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_ProcessorFeatures",
-          "targetName": "processor_features",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_ProcessorFeatures_Name",
-          "targetName": "processor_features_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_ProcessorFeatures_Value",
-          "targetName": "processor_features_value",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_PromotionTier",
-          "targetName": "promotion_tier",
-          "targetType": "INTEGER",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_PubliclyAccessible",
-          "targetName": "publicly_accessible",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_ReadReplicaDBClusterIdentifiers",
-          "targetName": "read_replica_db_cluster_identifiers",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_ReadReplicaDBInstanceIdentifiers",
-          "targetName": "read_replica_db_instance_identifiers",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_ReadReplicaSourceDBInstanceIdentifier",
-          "targetName": "read_replica_source_db_instance_identifier",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_ReplicaMode",
-          "targetName": "replica_mode",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_SecondaryAvailabilityZone",
-          "targetName": "secondary_availability_zone",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_StatusInfos",
-          "targetName": "status_infos",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_StatusInfos_Message",
-          "targetName": "status_infos_message",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_StatusInfos_Normal",
-          "targetName": "status_infos_normal",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_StatusInfos_Status",
-          "targetName": "status_infos_status",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_StatusInfos_StatusType",
-          "targetName": "status_infos_status_type",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_StorageEncrypted",
-          "targetName": "storage_encrypted",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_StorageType",
-          "targetName": "storage_type",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_TagList",
-          "targetName": "tag_list",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_TagList_Key",
-          "targetName": "tag_list_key",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_TagList_Value",
-          "targetName": "tag_list_value",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_TdeCredentialArn",
-          "targetName": "tde_credential_arn",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_Timezone",
-          "targetName": "timezone",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_VpcSecurityGroups",
-          "targetName": "vpc_security_groups",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "DBInstances_VpcSecurityGroups_Status",
-          "targetName": "vpc_security_groups_status",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "DBInstances_VpcSecurityGroups_VpcSecurityGroupId",
-          "targetName": "vpc_security_groups_vpc_security_group_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "ResultMetadata_values",
-          "targetName": "values",
-          "targetType": "TEXT",
-          "enabled": true
-        }
-      ]
-    },
-  "aws_rds_snapshot": {
-  "aws": {
-    "regionCodeAttribute": "region_code",
-    "accountIdAttribute": "account_id"
+      {
+        "sourceName": "DBInstances_AllocatedStorage",
+        "targetName": "allocated_storage",
+        "targetType": "INTEGER",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_AssociatedRoles",
+        "targetName": "associated_roles",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_AssociatedRoles_FeatureName",
+        "targetName": "associated_roles_feature_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_AssociatedRoles_RoleArn",
+        "targetName": "associated_roles_role_arn",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_AssociatedRoles_Status",
+        "targetName": "associated_roles_status",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_AutoMinorVersionUpgrade",
+        "targetName": "auto_minor_version_upgrade",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_AvailabilityZone",
+        "targetName": "availability_zone",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_AwsBackupRecoveryPointArn",
+        "targetName": "aws_backup_recovery_point_arn",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_BackupRetentionPeriod",
+        "targetName": "backup_retention_period",
+        "targetType": "INTEGER",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_CACertificateIdentifier",
+        "targetName": "ca_certificate_identifier",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_CharacterSetName",
+        "targetName": "character_set_name",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_CopyTagsToSnapshot",
+        "targetName": "copy_tags_to_snapshot",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_CustomerOwnedIpEnabled",
+        "targetName": "customer_owned_ip_enabled",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_DBClusterIdentifier",
+        "targetName": "db_cluster_identifier",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_DBInstanceArn",
+        "targetName": "db_instance_arn",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_DBInstanceAutomatedBackupsReplications",
+        "targetName": "db_instance_automated_backups_replications",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_DBInstanceAutomatedBackupsReplications_DBInstanceAutomatedBackupsArn",
+        "targetName": "db_instance_automated_backups_replications_db_instance_automated_backups_arn",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_DBInstanceClass",
+        "targetName": "db_instance_class",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_DBInstanceIdentifier",
+        "targetName": "db_instance_identifier",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_DBInstanceStatus",
+        "targetName": "db_instance_status",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_DBName",
+        "targetName": "db_name",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_DBParameterGroups",
+        "targetName": "db_parameter_groups",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_DBParameterGroups_DBParameterGroupName",
+        "targetName": "db_parameter_groups_db_parameter_group_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_DBParameterGroups_ParameterApplyStatus",
+        "targetName": "db_parameter_groups_parameter_apply_status",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_DBSecurityGroups",
+        "targetName": "db_security_groups",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_DBSecurityGroups_DBSecurityGroupName",
+        "targetName": "db_security_groups_db_security_group_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_DBSecurityGroups_Status",
+        "targetName": "db_security_groups_status",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_DBSubnetGroup",
+        "targetName": "db_subnet_group",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_DBSubnetGroup_DBSubnetGroupArn",
+        "targetName": "db_subnet_group_db_subnet_group_arn",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_DBSubnetGroup_DBSubnetGroupDescription",
+        "targetName": "db_subnet_group_db_subnet_group_description",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_DBSubnetGroup_DBSubnetGroupName",
+        "targetName": "db_subnet_group_db_subnet_group_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_DBSubnetGroup_SubnetGroupStatus",
+        "targetName": "db_subnet_group_subnet_group_status",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_DBSubnetGroup_Subnets",
+        "targetName": "db_subnet_group_subnets",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_DBSubnetGroup_Subnets_SubnetAvailabilityZone",
+        "targetName": "db_subnet_group_subnets_subnet_availability_zone",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_DBSubnetGroup_Subnets_SubnetAvailabilityZone_Name",
+        "targetName": "db_subnet_group_subnets_subnet_availability_zone_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_DBSubnetGroup_Subnets_SubnetIdentifier",
+        "targetName": "db_subnet_group_subnets_subnet_identifier",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_DBSubnetGroup_Subnets_SubnetOutpost",
+        "targetName": "db_subnet_group_subnets_subnet_outpost",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_DBSubnetGroup_Subnets_SubnetOutpost_Arn",
+        "targetName": "db_subnet_group_subnets_subnet_outpost_arn",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_DBSubnetGroup_Subnets_SubnetStatus",
+        "targetName": "db_subnet_group_subnets_subnet_status",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_DBSubnetGroup_VpcId",
+        "targetName": "db_subnet_group_vpc_id",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_DbInstancePort",
+        "targetName": "db_instance_port",
+        "targetType": "INTEGER",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_DbiResourceId",
+        "targetName": "dbi_resource_id",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_DeletionProtection",
+        "targetName": "deletion_protection",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_DomainMemberships",
+        "targetName": "domain_memberships",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_DomainMemberships_Domain",
+        "targetName": "domain_memberships_domain",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_DomainMemberships_FQDN",
+        "targetName": "domain_memberships_fqdn",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_DomainMemberships_IAMRoleName",
+        "targetName": "domain_memberships_iam_role_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_DomainMemberships_Status",
+        "targetName": "domain_memberships_status",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_EnabledCloudwatchLogsExports",
+        "targetName": "enabled_cloudwatch_logs_exports",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_Endpoint",
+        "targetName": "endpoint",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_Endpoint_Address",
+        "targetName": "endpoint_address",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_Endpoint_HostedZoneId",
+        "targetName": "endpoint_hosted_zone_id",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_Endpoint_Port",
+        "targetName": "endpoint_port",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_Engine",
+        "targetName": "engine",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_EngineVersion",
+        "targetName": "engine_version",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_EnhancedMonitoringResourceArn",
+        "targetName": "enhanced_monitoring_resource_arn",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_IAMDatabaseAuthenticationEnabled",
+        "targetName": "iam_database_authentication_enabled",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_InstanceCreateTime",
+        "targetName": "instance_create_time",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_InstanceCreateTime_ext",
+        "targetName": "instance_create_time_ext",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_InstanceCreateTime_loc",
+        "targetName": "instance_create_time_loc",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_InstanceCreateTime_loc_cacheEnd",
+        "targetName": "instance_create_time_loc_cache_end",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_InstanceCreateTime_loc_cacheStart",
+        "targetName": "instance_create_time_loc_cache_start",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_InstanceCreateTime_loc_cacheZone",
+        "targetName": "instance_create_time_loc_cache_zone",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_InstanceCreateTime_loc_cacheZone_isDST",
+        "targetName": "instance_create_time_loc_cache_zone_is_dst",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_InstanceCreateTime_loc_cacheZone_name",
+        "targetName": "instance_create_time_loc_cache_zone_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_InstanceCreateTime_loc_cacheZone_offset",
+        "targetName": "instance_create_time_loc_cache_zone_offset",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_InstanceCreateTime_loc_extend",
+        "targetName": "instance_create_time_loc_extend",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_InstanceCreateTime_loc_name",
+        "targetName": "instance_create_time_loc_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_InstanceCreateTime_loc_tx",
+        "targetName": "instance_create_time_loc_tx",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_InstanceCreateTime_loc_tx_index",
+        "targetName": "instance_create_time_loc_tx_index",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_InstanceCreateTime_loc_tx_isstd",
+        "targetName": "instance_create_time_loc_tx_isstd",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_InstanceCreateTime_loc_tx_isutc",
+        "targetName": "instance_create_time_loc_tx_isutc",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_InstanceCreateTime_loc_tx_when",
+        "targetName": "instance_create_time_loc_tx_when",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_InstanceCreateTime_loc_zone",
+        "targetName": "instance_create_time_loc_zone",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_InstanceCreateTime_loc_zone_isDST",
+        "targetName": "instance_create_time_loc_zone_is_dst",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_InstanceCreateTime_loc_zone_name",
+        "targetName": "instance_create_time_loc_zone_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_InstanceCreateTime_loc_zone_offset",
+        "targetName": "instance_create_time_loc_zone_offset",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_InstanceCreateTime_wall",
+        "targetName": "instance_create_time_wall",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_Iops",
+        "targetName": "iops",
+        "targetType": "INTEGER",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_KmsKeyId",
+        "targetName": "kms_key_id",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_LatestRestorableTime",
+        "targetName": "latest_restorable_time",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_LatestRestorableTime_ext",
+        "targetName": "latest_restorable_time_ext",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_LatestRestorableTime_loc",
+        "targetName": "latest_restorable_time_loc",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_LatestRestorableTime_loc_cacheEnd",
+        "targetName": "latest_restorable_time_loc_cache_end",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_LatestRestorableTime_loc_cacheStart",
+        "targetName": "latest_restorable_time_loc_cache_start",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_LatestRestorableTime_loc_cacheZone",
+        "targetName": "latest_restorable_time_loc_cache_zone",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_LatestRestorableTime_loc_cacheZone_isDST",
+        "targetName": "latest_restorable_time_loc_cache_zone_is_dst",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_LatestRestorableTime_loc_cacheZone_name",
+        "targetName": "latest_restorable_time_loc_cache_zone_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_LatestRestorableTime_loc_cacheZone_offset",
+        "targetName": "latest_restorable_time_loc_cache_zone_offset",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_LatestRestorableTime_loc_extend",
+        "targetName": "latest_restorable_time_loc_extend",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_LatestRestorableTime_loc_name",
+        "targetName": "latest_restorable_time_loc_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_LatestRestorableTime_loc_tx",
+        "targetName": "latest_restorable_time_loc_tx",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_LatestRestorableTime_loc_tx_index",
+        "targetName": "latest_restorable_time_loc_tx_index",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_LatestRestorableTime_loc_tx_isstd",
+        "targetName": "latest_restorable_time_loc_tx_isstd",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_LatestRestorableTime_loc_tx_isutc",
+        "targetName": "latest_restorable_time_loc_tx_isutc",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_LatestRestorableTime_loc_tx_when",
+        "targetName": "latest_restorable_time_loc_tx_when",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_LatestRestorableTime_loc_zone",
+        "targetName": "latest_restorable_time_loc_zone",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_LatestRestorableTime_loc_zone_isDST",
+        "targetName": "latest_restorable_time_loc_zone_is_dst",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_LatestRestorableTime_loc_zone_name",
+        "targetName": "latest_restorable_time_loc_zone_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_LatestRestorableTime_loc_zone_offset",
+        "targetName": "latest_restorable_time_loc_zone_offset",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_LatestRestorableTime_wall",
+        "targetName": "latest_restorable_time_wall",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_LicenseModel",
+        "targetName": "license_model",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_ListenerEndpoint",
+        "targetName": "listener_endpoint",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_ListenerEndpoint_Address",
+        "targetName": "listener_endpoint_address",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_ListenerEndpoint_HostedZoneId",
+        "targetName": "listener_endpoint_hosted_zone_id",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_ListenerEndpoint_Port",
+        "targetName": "listener_endpoint_port",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_MasterUsername",
+        "targetName": "master_username",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_MaxAllocatedStorage",
+        "targetName": "max_allocated_storage",
+        "targetType": "INTEGER",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_MonitoringInterval",
+        "targetName": "monitoring_interval",
+        "targetType": "INTEGER",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_MonitoringRoleArn",
+        "targetName": "monitoring_role_arn",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_MultiAZ",
+        "targetName": "multi_az",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_NcharCharacterSetName",
+        "targetName": "nchar_character_set_name",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_OptionGroupMemberships",
+        "targetName": "option_group_memberships",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_OptionGroupMemberships_OptionGroupName",
+        "targetName": "option_group_memberships_option_group_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_OptionGroupMemberships_Status",
+        "targetName": "option_group_memberships_status",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_PendingModifiedValues",
+        "targetName": "pending_modified_values",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_PendingModifiedValues_AllocatedStorage",
+        "targetName": "pending_modified_values_allocated_storage",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_PendingModifiedValues_BackupRetentionPeriod",
+        "targetName": "pending_modified_values_backup_retention_period",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_PendingModifiedValues_CACertificateIdentifier",
+        "targetName": "pending_modified_values_ca_certificate_identifier",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_PendingModifiedValues_DBInstanceClass",
+        "targetName": "pending_modified_values_db_instance_class",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_PendingModifiedValues_DBInstanceIdentifier",
+        "targetName": "pending_modified_values_db_instance_identifier",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_PendingModifiedValues_DBSubnetGroupName",
+        "targetName": "pending_modified_values_db_subnet_group_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_PendingModifiedValues_EngineVersion",
+        "targetName": "pending_modified_values_engine_version",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_PendingModifiedValues_IAMDatabaseAuthenticationEnabled",
+        "targetName": "pending_modified_values_iam_database_authentication_enabled",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_PendingModifiedValues_Iops",
+        "targetName": "pending_modified_values_iops",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_PendingModifiedValues_LicenseModel",
+        "targetName": "pending_modified_values_license_model",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_PendingModifiedValues_MasterUserPassword",
+        "targetName": "pending_modified_values_master_user_password",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_PendingModifiedValues_MultiAZ",
+        "targetName": "pending_modified_values_multi_az",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_PendingModifiedValues_PendingCloudwatchLogsExports",
+        "targetName": "pending_modified_values_pending_cloudwatch_logs_exports",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_PendingModifiedValues_PendingCloudwatchLogsExports_LogTypesToDisable",
+        "targetName": "pending_modified_values_pending_cloudwatch_logs_exports_log_types_to_disable",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_PendingModifiedValues_PendingCloudwatchLogsExports_LogTypesToEnable",
+        "targetName": "pending_modified_values_pending_cloudwatch_logs_exports_log_types_to_enable",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_PendingModifiedValues_Port",
+        "targetName": "pending_modified_values_port",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_PendingModifiedValues_ProcessorFeatures",
+        "targetName": "pending_modified_values_processor_features",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_PendingModifiedValues_ProcessorFeatures_Name",
+        "targetName": "pending_modified_values_processor_features_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_PendingModifiedValues_ProcessorFeatures_Value",
+        "targetName": "pending_modified_values_processor_features_value",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_PendingModifiedValues_StorageType",
+        "targetName": "pending_modified_values_storage_type",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_PerformanceInsightsEnabled",
+        "targetName": "performance_insights_enabled",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_PerformanceInsightsKMSKeyId",
+        "targetName": "performance_insights_kms_key_id",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_PerformanceInsightsRetentionPeriod",
+        "targetName": "performance_insights_retention_period",
+        "targetType": "INTEGER",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_PreferredBackupWindow",
+        "targetName": "preferred_backup_window",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_PreferredMaintenanceWindow",
+        "targetName": "preferred_maintenance_window",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_ProcessorFeatures",
+        "targetName": "processor_features",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_ProcessorFeatures_Name",
+        "targetName": "processor_features_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_ProcessorFeatures_Value",
+        "targetName": "processor_features_value",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_PromotionTier",
+        "targetName": "promotion_tier",
+        "targetType": "INTEGER",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_PubliclyAccessible",
+        "targetName": "publicly_accessible",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_ReadReplicaDBClusterIdentifiers",
+        "targetName": "read_replica_db_cluster_identifiers",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_ReadReplicaDBInstanceIdentifiers",
+        "targetName": "read_replica_db_instance_identifiers",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_ReadReplicaSourceDBInstanceIdentifier",
+        "targetName": "read_replica_source_db_instance_identifier",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_ReplicaMode",
+        "targetName": "replica_mode",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_SecondaryAvailabilityZone",
+        "targetName": "secondary_availability_zone",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_StatusInfos",
+        "targetName": "status_infos",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_StatusInfos_Message",
+        "targetName": "status_infos_message",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_StatusInfos_Normal",
+        "targetName": "status_infos_normal",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_StatusInfos_Status",
+        "targetName": "status_infos_status",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_StatusInfos_StatusType",
+        "targetName": "status_infos_status_type",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_StorageEncrypted",
+        "targetName": "storage_encrypted",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_StorageType",
+        "targetName": "storage_type",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_TagList",
+        "targetName": "tag_list",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_TagList_Key",
+        "targetName": "tag_list_key",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_TagList_Value",
+        "targetName": "tag_list_value",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_TdeCredentialArn",
+        "targetName": "tde_credential_arn",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_Timezone",
+        "targetName": "timezone",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_VpcSecurityGroups",
+        "targetName": "vpc_security_groups",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBInstances_VpcSecurityGroups_Status",
+        "targetName": "vpc_security_groups_status",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "DBInstances_VpcSecurityGroups_VpcSecurityGroupId",
+        "targetName": "vpc_security_groups_vpc_security_group_id",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "ResultMetadata_values",
+        "targetName": "values",
+        "targetType": "TEXT",
+        "enabled": true
+      }
+    ]
   },
-  "gcp": {},
-  "azure": {},
-  "parsedAttributes": [
-    {
-      "sourceName": "DBClusterSnapshots_DBClusterIdentifier",
-      "targetName": "DBClusterIdentifier",
-      "targetType": "TEXT",
-      "enabled": true
+  "aws_rds_snapshot": {
+    "aws": {
+      "regionCodeAttribute": "region_code",
+      "accountIdAttribute": "account_id"
     },
-    {
-      "sourceName": "DBClusterSnapshots_DBClusterSnapshotIdentifier",
-      "targetName": "DBClusterSnapshotIdentifier",
-      "targetType": "TEXT",
-      "enabled": true
-    },
-    
-    {
-      "sourceName": "DBClusterSnapshots_PercentProgress",
-      "targetName": "PercentProgress",
-      "targetType": "TEXT",
-      "enabled": true
-    },
-    {
-      "sourceName": "DBClusterSnapshots_StorageEncrypted",
-      "targetName": "StorageEncryption",
-      "targetType": "TEXT",
-      "enabled": true
-    },
-    {
-      "sourceName": "DBClusterSnapshots_Engine",
-      "targetName": "Engine",
-      "targetType": "TEXT",
-      "enabled": true
-    },
-    {
-      "sourceName": "DBClusterSnapshots_SnapshotCreateTime",
-      "targetName": "SnapshotCreateTime",
-      "targetType": "TEXT",
-      "enabled": true
-    },
-    {
-      "sourceName": "DBClusterSnapshots_VpcId",
-      "targetName": "VpcId",
-      "targetType": "TEXT",
-      "enabled": true
-    },
-    {
-      "sourceName": "DBClusterSnapshots_ClusterCreateTime",
-      "targetName": "ClusterCreateTime",
-      "targetType": "TEXT",
-      "enabled": true
-    },
-    {
-      "sourceName": "DBClusterSnapshots_SnapshotType",
-      "targetName": "SnapshotType",
-      "targetType": "TEXT",
-      "enabled": true
-    },
-    {
-      "sourceName": "DBClusterSnapshots_Status",
-      "targetName": "Status",
-      "targetType": "TEXT",
-      "enabled": true
-    },
-    
+    "gcp": {},
+    "azure": {},
+    "parsedAttributes": [
+      {
+        "sourceName": "DBClusterSnapshots_DBClusterIdentifier",
+        "targetName": "DBClusterIdentifier",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusterSnapshots_DBClusterSnapshotIdentifier",
+        "targetName": "DBClusterSnapshotIdentifier",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+
+      {
+        "sourceName": "DBClusterSnapshots_PercentProgress",
+        "targetName": "PercentProgress",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusterSnapshots_StorageEncrypted",
+        "targetName": "StorageEncryption",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusterSnapshots_Engine",
+        "targetName": "Engine",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusterSnapshots_SnapshotCreateTime",
+        "targetName": "SnapshotCreateTime",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusterSnapshots_VpcId",
+        "targetName": "VpcId",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusterSnapshots_ClusterCreateTime",
+        "targetName": "ClusterCreateTime",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusterSnapshots_SnapshotType",
+        "targetName": "SnapshotType",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "DBClusterSnapshots_Status",
+        "targetName": "Status",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+
       {
         "sourceName": "DBClusterSnapshots_AllocatedStorage",
         "targetName": "allocated_storage",
@@ -2121,7 +2093,7 @@
         "targetType": "TEXT",
         "enabled": true
       },
-     
+
       {
         "sourceName": "DBClusterSnapshots_ClusterCreateTime_ext",
         "targetName": "cluster_create_time_ext",
@@ -2242,15 +2214,14 @@
         "targetType": "BIGINT",
         "enabled": true
       },
-     
+
       {
         "sourceName": "DBClusterSnapshots_DBClusterSnapshotArn",
         "targetName": "db_cluster_snapshot_arn",
         "targetType": "TEXT",
         "enabled": true
       },
-      
-      
+
       {
         "sourceName": "DBClusterSnapshots_EngineMode",
         "targetName": "engine_mode",
@@ -2287,14 +2258,14 @@
         "targetType": "TEXT",
         "enabled": true
       },
-      
+
       {
         "sourceName": "DBClusterSnapshots_Port",
         "targetName": "port",
         "targetType": "INTEGER",
         "enabled": true
       },
-     
+
       {
         "sourceName": "DBClusterSnapshots_SnapshotCreateTime_ext",
         "targetName": "snapshot_create_time_ext",
@@ -2415,14 +2386,14 @@
         "targetType": "BIGINT",
         "enabled": false
       },
-      
+
       {
         "sourceName": "DBClusterSnapshots_SourceDBClusterSnapshotArn",
         "targetName": "source_db_cluster_snapshot_arn",
         "targetType": "TEXT",
         "enabled": true
       },
-      
+
       {
         "sourceName": "DBClusterSnapshots_TagList",
         "targetName": "tag_list",
@@ -2441,15 +2412,13 @@
         "targetType": "TEXT",
         "enabled": false
       },
-      
+
       {
         "sourceName": "ResultMetadata_values",
         "targetName": "values",
         "targetType": "TEXT",
         "enabled": true
       }
-    
-  
-  ]
-}
+    ]
+  }
 }

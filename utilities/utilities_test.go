@@ -25,7 +25,7 @@ var tableJSON1 = `
 				"type": "text",
 				"size": 2
 			},
-			"attr4": [ 
+			"attr4": [
 				{
 					"attr5": "val51"
 				},
@@ -165,8 +165,7 @@ func TestRowToMap(t *testing.T) {
 	outRow := make(map[string]string)
 	outRow = RowToMap(outRow, inRow, tabConfig)
 	for _, entry := range rowToMapTestIput {
-		var valStr string
-		valStr = fmt.Sprintf("%v", entry.Val)
+		valStr := fmt.Sprintf("%v", entry.Val)
 		assert.Equal(t, valStr, outRow[entry.Dst])
 	}
 }

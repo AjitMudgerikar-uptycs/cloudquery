@@ -15,17 +15,18 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	osquery "github.com/Uptycs/basequery-go"
-	"github.com/aws/aws-sdk-go-v2/service/s3"
-	"github.com/aws/aws-sdk-go-v2/service/s3/types"
-	"github.com/patrickmn/go-cache"
-	log "github.com/sirupsen/logrus"
 	"io"
 	"io/ioutil"
 	"sort"
 	"strings"
 	"sync"
 	"time"
+
+	osquery "github.com/Uptycs/basequery-go"
+	"github.com/aws/aws-sdk-go-v2/service/s3"
+	"github.com/aws/aws-sdk-go-v2/service/s3/types"
+	"github.com/patrickmn/go-cache"
+	log "github.com/sirupsen/logrus"
 
 	"github.com/Uptycs/cloudquery/utilities"
 
@@ -143,7 +144,6 @@ func (ct *CloudTrailEventTable) Start(ctx context.Context, wg *sync.WaitGroup, s
 			timer1 = time.NewTimer(time.Duration(LOOP_TIMER_SECONDS) * time.Second)
 		}
 	}
-	return
 }
 
 // DescribeInstancesGenerate returns the rows in the table for all configured accounts
@@ -229,8 +229,8 @@ func (ct *CloudTrailEventTable) getObjectReader(account *utilities.ExtensionConf
 		}).Error("failed to read S3 object data")
 		return nil, err
 	}
-	var stringData string
-	stringData = string(s3objectBytes[:])
+
+	stringData := string(s3objectBytes[:])
 	if strings.HasSuffix(*obj.Key, "gz") {
 		reader, err := gzip.NewReader(strings.NewReader(stringData))
 		if err != nil {
@@ -381,9 +381,7 @@ func (ct *CloudTrailEventTable) getS3Objects(svc *s3.Client, accountId string, b
 			}).Error("failed to process region")
 			return s3Objects
 		}
-		for _, obj := range page.Contents {
-			s3Objects = append(s3Objects, obj)
-		}
+		s3Objects = append(s3Objects, page.Contents...)
 		if !paginator.HasMorePages() {
 			break
 		}
@@ -406,19 +404,14 @@ func (ct *CloudTrailEventTable) processBucket(account *utilities.ExtensionConfig
 		// we just moved to new day, but we need to process last few files in past day as well
 		s3Objects := make([]types.Object, 0)
 		results := ct.getS3Objects(svc, accountId, bucket, pastPrefix)
-		for _, obj := range results {
-			s3Objects = append(s3Objects, obj)
-		}
+		s3Objects = append(s3Objects, results...)
 		ct.processObjects(svc, account, tableConfig, bucket, s3Objects, pastPrefix)
 	}
 	// process current day
 	s3Objects := make([]types.Object, 0)
 	results := ct.getS3Objects(svc, accountId, bucket, prefix)
-	for _, obj := range results {
-		s3Objects = append(s3Objects, obj)
-	}
+	s3Objects = append(s3Objects, results...)
 	ct.processObjects(svc, account, tableConfig, bucket, s3Objects, prefix)
-	return
 }
 
 func (ct *CloudTrailEventTable) processAccountLookupEvents(account *utilities.ExtensionConfigurationAwsAccount) {
@@ -435,6 +428,4 @@ func (ct *CloudTrailEventTable) processAccountLookupEvents(account *utilities.Ex
 	for _, bucket := range account.CtS3Buckets {
 		ct.processBucket(account, tableConfig, bucket)
 	}
-
-	return
 }

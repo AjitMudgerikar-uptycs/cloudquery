@@ -182,7 +182,6 @@ func ListClustersColumns() []table.ColumnDefinition {
 		table.TextColumn("vpc_security_groups"),
 		// table.TextColumn("vpc_security_groups_status"),
 		// table.TextColumn("vpc_security_groups_vpc_security_group_id"),
-
 	}
 }
 

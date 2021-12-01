@@ -20,18 +20,18 @@ ADD https://uptycs-basequery.s3.amazonaws.com/${BASEQUERY_VERSION}/basequery_${B
 COPY cloudquery /usr/local/bin/cloudquery.ext
 
 RUN set -ex; \
-    DEBIAN_FRONTEND=noninteractive apt-get update -y && \
-    DEBIAN_FRONTEND=noninteractive apt-get upgrade -y && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends ca-certificates && \
-    dpkg -i /tmp/basequery.deb && \
-    /etc/init.d/osqueryd stop && \
-    rm -rf /var/osquery/* /var/log/osquery/* /var/lib/apt/lists/* /var/cache/apt/* /tmp/* && \
-    groupadd -g 1000 cloudquery && \
-    useradd -m -g cloudquery -u 1000 -d /opt/cloudquery -s /bin/bash cloudquery && \
-    mkdir /opt/cloudquery/etc /opt/cloudquery/logs /opt/cloudquery/var && \
-    echo "/usr/local/bin/cloudquery.ext" > /opt/cloudquery/etc/extensions.load && \
-    chmod 700 /usr/local/bin/cloudquery.ext && \
-    chown cloudquery:cloudquery /usr/bin/osquery? /usr/local/bin/cloudquery.ext /opt/cloudquery/etc/extensions.load /opt/cloudquery/etc /opt/cloudquery/logs /opt/cloudquery/var
+  DEBIAN_FRONTEND=noninteractive apt-get update -y && \
+  DEBIAN_FRONTEND=noninteractive apt-get upgrade -y && \
+  DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends ca-certificates && \
+  dpkg -i /tmp/basequery.deb && \
+  /etc/init.d/osqueryd stop && \
+  rm -rf /var/osquery/* /var/log/osquery/* /var/lib/apt/lists/* /var/cache/apt/* /tmp/* && \
+  groupadd -g 1000 cloudquery && \
+  useradd -m -g cloudquery -u 1000 -d /opt/cloudquery -s /bin/bash cloudquery && \
+  mkdir /opt/cloudquery/etc /opt/cloudquery/logs /opt/cloudquery/var && \
+  echo "/usr/local/bin/cloudquery.ext" > /opt/cloudquery/etc/extensions.load && \
+  chmod 700 /usr/local/bin/cloudquery.ext && \
+  chown cloudquery:cloudquery /usr/bin/osquery? /usr/local/bin/cloudquery.ext /opt/cloudquery/etc/extensions.load /opt/cloudquery/etc /opt/cloudquery/logs /opt/cloudquery/var
 
 USER cloudquery
 
@@ -57,7 +57,6 @@ COPY extension/aws/directoryservice/table_config.json  /opt/cloudquery/etc/aws/d
 COPY extension/aws/guardduty/table_config.json /opt/cloudquery/etc/aws/guardduty/
 COPY extension/aws/ecs/table_config.json        /opt/cloudquery/etc/aws/ecs/
 COPY extension/aws/ecr/table_config.json     /opt/cloudquery/etc/aws/ecr/
-COPY extension/azure/compute/table_config.json  /opt/cloudquery/etc/azure/compute/
 COPY extension/aws/organizations/table_config.json /opt/cloudquery/etc/aws/organizations/
 COPY extension/aws/workspaces/table_config.json /opt/cloudquery/etc/aws/workspaces/
 COPY extension/aws/efs/table_config.json        /opt/cloudquery/etc/aws/efs/
@@ -68,6 +67,7 @@ COPY extension/aws/sqs/table_config.json        /opt/cloudquery/etc/aws/sqs/
 COPY extension/aws/elb/table_config.json        /opt/cloudquery/etc/aws/elb/
 COPY extension/aws/elbv2/table_config.json      /opt/cloudquery/etc/aws/elbv2/
 COPY extension/aws/rds/table_config.json        /opt/cloudquery/etc/aws/rds/
+
 COPY extension/gcp/compute/table_config.json    /opt/cloudquery/etc/gcp/compute/
 COPY extension/gcp/dns/table_config.json        /opt/cloudquery/etc/gcp/dns/
 COPY extension/gcp/file/table_config.json       /opt/cloudquery/etc/gcp/file/
@@ -79,11 +79,15 @@ COPY extension/gcp/function/table_config.json   /opt/cloudquery/etc/gcp/function
 COPY extension/gcp/run/table_config.json        /opt/cloudquery/etc/gcp/run/
 COPY extension/gcp/cloudlog/table_config.json   /opt/cloudquery/etc/gcp/cloudlog/
 
+COPY extension/azure/compute/table_config.json  /opt/cloudquery/etc/azure/compute/
+COPY extension/azure/storage/table_config.json  /opt/cloudquery/etc/azure/storage/
+
+
 CMD ["/usr/bin/osqueryd", \
-    "--flagfile=/opt/cloudquery/etc/osquery.flags", \
-    "--config_path=/opt/cloudquery/etc/osquery.conf", \
-    "--ephemeral", \
-    "--logger_path=/opt/cloudquery/logs", \
-    "--database_path=/opt/cloudquery/osquery.db", \
-    "--extensions_socket=/opt/cloudquery/var/osquery.em", \
-    "--extensions_autoload=/opt/cloudquery/etc/extensions.load"]
+  "--flagfile=/opt/cloudquery/etc/osquery.flags", \
+  "--config_path=/opt/cloudquery/etc/osquery.conf", \
+  "--ephemeral", \
+  "--logger_path=/opt/cloudquery/logs", \
+  "--database_path=/opt/cloudquery/osquery.db", \
+  "--extensions_socket=/opt/cloudquery/var/osquery.em", \
+  "--extensions_autoload=/opt/cloudquery/etc/extensions.load"]
