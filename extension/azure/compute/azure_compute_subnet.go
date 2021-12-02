@@ -159,7 +159,7 @@ func processAccountVirtualSubnets(account *utilities.ExtensionConfigurationAzure
 
 	wg.Add(len(groups))
 
-	tableConfig, ok := utilities.TableConfigurationMap[tableName]
+	tableConfig, ok := utilities.TableConfigurationMap[tableName2]
 	if !ok {
 		utilities.GetLogger().WithFields(log.Fields{
 			"tableName": tableName2,
