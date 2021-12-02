@@ -26,7 +26,7 @@ import (
 	"github.com/fatih/structs"
 )
 
-var tableName2 string = "azure_compute_subnet"
+var azureComputeSubnet string = "azure_compute_subnet"
 
 // VirtualSubnetColumns returns the list of columns in the table
 func VirtualSubnetColumns() []table.ColumnDefinition {
@@ -119,7 +119,7 @@ func VirtualSubnetsGenerate(osqCtx context.Context, queryContext table.QueryCont
 	resultMap := make([]map[string]string, 0)
 	if len(utilities.ExtConfiguration.ExtConfAzure.Accounts) == 0 {
 		utilities.GetLogger().WithFields(log.Fields{
-			"tableName": tableName2,
+			"tableName": azureComputeSubnet,
 			"account":   "default",
 		}).Info("processing account")
 		results, err := processAccountVirtualSubnets(nil)
@@ -130,7 +130,7 @@ func VirtualSubnetsGenerate(osqCtx context.Context, queryContext table.QueryCont
 	} else {
 		for _, account := range utilities.ExtConfiguration.ExtConfAzure.Accounts {
 			utilities.GetLogger().WithFields(log.Fields{
-				"tableName": tableName2,
+				"tableName": azureComputeSubnet,
 				"account":   account.SubscriptionID,
 			}).Info("processing account")
 			results, err := processAccountVirtualSubnets(&account)
@@ -159,10 +159,10 @@ func processAccountVirtualSubnets(account *utilities.ExtensionConfigurationAzure
 
 	wg.Add(len(groups))
 
-	tableConfig, ok := utilities.TableConfigurationMap[tableName2]
+	tableConfig, ok := utilities.TableConfigurationMap[azureComputeSubnet]
 	if !ok {
 		utilities.GetLogger().WithFields(log.Fields{
-			"tableName": tableName2,
+			"tableName": azureComputeSubnet,
 		}).Error("failed to get table configuration")
 		return resultMap, fmt.Errorf("table configuration not found")
 	}
@@ -182,7 +182,7 @@ func getVirtualNetworksForSubnet(session *azure.AzureSession, rg string, wg *syn
 	for resourceItr, err := svcClient.ListComplete(context.Background(), rg); resourceItr.NotDone(); err = resourceItr.Next() {
 		if err != nil {
 			utilities.GetLogger().WithFields(log.Fields{
-				"tableName":     tableName2,
+				"tableName":     azureComputeSubnet,
 				"resourceGroup": rg,
 				"errString":     err.Error(),
 			}).Error("failed to get resource list")
@@ -204,7 +204,7 @@ func getVirtualSubnets(session *azure.AzureSession, rg string, wg *sync.WaitGrou
 	for resourceItr, err := svcClient.ListComplete(context.Background(), rg, networkName); resourceItr.NotDone(); err = resourceItr.Next() {
 		if err != nil {
 			utilities.GetLogger().WithFields(log.Fields{
-				"tableName":     tableName2,
+				"tableName":     azureComputeSubnet,
 				"resourceGroup": rg,
 				"errString":     err.Error(),
 			}).Error("failed to get resource list")
@@ -219,7 +219,7 @@ func getVirtualSubnets(session *azure.AzureSession, rg string, wg *sync.WaitGrou
 		byteArr, err := json.Marshal(resMap)
 		if err != nil {
 			utilities.GetLogger().WithFields(log.Fields{
-				"tableName":     tableName2,
+				"tableName":     azureComputeSubnet,
 				"resourceGroup": rg,
 				"errString":     err.Error(),
 			}).Error("failed to marshal response")

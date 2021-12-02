@@ -26,7 +26,7 @@ import (
 	"github.com/fatih/structs"
 )
 
-var tableName string = "azure_compute_virtual_network"
+var azureComputeVirtualNetwork string = "azure_compute_virtual_network"
 
 // VirtualNetworkColumns returns the list of columns in the table
 func VirtualNetworkColumns() []table.ColumnDefinition {
@@ -62,7 +62,7 @@ func VirtualNetworksGenerate(osqCtx context.Context, queryContext table.QueryCon
 	resultMap := make([]map[string]string, 0)
 	if len(utilities.ExtConfiguration.ExtConfAzure.Accounts) == 0 {
 		utilities.GetLogger().WithFields(log.Fields{
-			"tableName": tableName,
+			"tableName": azureComputeVirtualNetwork,
 			"account":   "default",
 		}).Info("processing account")
 		results, err := processAccountVirtualNetworks(nil)
@@ -73,7 +73,7 @@ func VirtualNetworksGenerate(osqCtx context.Context, queryContext table.QueryCon
 	} else {
 		for _, account := range utilities.ExtConfiguration.ExtConfAzure.Accounts {
 			utilities.GetLogger().WithFields(log.Fields{
-				"tableName": tableName,
+				"tableName": azureComputeVirtualNetwork,
 				"account":   account.SubscriptionID,
 			}).Info("processing account")
 			results, err := processAccountVirtualNetworks(&account)
@@ -102,10 +102,10 @@ func processAccountVirtualNetworks(account *utilities.ExtensionConfigurationAzur
 
 	wg.Add(len(groups))
 
-	tableConfig, ok := utilities.TableConfigurationMap[tableName]
+	tableConfig, ok := utilities.TableConfigurationMap[azureComputeVirtualNetwork]
 	if !ok {
 		utilities.GetLogger().WithFields(log.Fields{
-			"tableName": tableName,
+			"tableName": azureComputeVirtualNetwork,
 		}).Error("failed to get table configuration")
 		return resultMap, fmt.Errorf("table configuration not found")
 	}
@@ -126,7 +126,7 @@ func getVirtualNetworks(session *azure.AzureSession, rg string, wg *sync.WaitGro
 	for resourceItr, err := svcClient.ListComplete(context.Background(), rg); resourceItr.NotDone(); err = resourceItr.Next() {
 		if err != nil {
 			utilities.GetLogger().WithFields(log.Fields{
-				"tableName":     tableName,
+				"tableName":     azureComputeVirtualNetwork,
 				"resourceGroup": rg,
 				"errString":     err.Error(),
 			}).Error("failed to get resource list")
@@ -140,7 +140,7 @@ func getVirtualNetworks(session *azure.AzureSession, rg string, wg *sync.WaitGro
 		byteArr, err := json.Marshal(resMap)
 		if err != nil {
 			utilities.GetLogger().WithFields(log.Fields{
-				"tableName":     tableName,
+				"tableName":     azureComputeVirtualNetwork,
 				"resourceGroup": rg,
 				"errString":     err.Error(),
 			}).Error("failed to marshal response")

@@ -24,7 +24,7 @@ import (
 	"github.com/fatih/structs"
 )
 
-var tableName3 = "azure_compute_security_group"
+var azureComputeSecurityGroup = "azure_compute_security_group"
 
 // SecurityGroupsColumns returns the list of columns in the table
 func SecurityGroupsColumns() []table.ColumnDefinition {
@@ -78,7 +78,7 @@ func SecurityGroupsGenerate(osqCtx context.Context, queryContext table.QueryCont
 	resultMap := make([]map[string]string, 0)
 	if len(utilities.ExtConfiguration.ExtConfAzure.Accounts) == 0 {
 		utilities.GetLogger().WithFields(log.Fields{
-			"tableName": tableName3,
+			"tableName": azureComputeSecurityGroup,
 			"account":   "default",
 		}).Info("processing account")
 		results, err := processAccountSecurityGroups(nil)
@@ -89,7 +89,7 @@ func SecurityGroupsGenerate(osqCtx context.Context, queryContext table.QueryCont
 	} else {
 		for _, account := range utilities.ExtConfiguration.ExtConfAzure.Accounts {
 			utilities.GetLogger().WithFields(log.Fields{
-				"tableName": tableName3,
+				"tableName": azureComputeSecurityGroup,
 				"account":   account.SubscriptionID,
 			}).Info("processing account")
 			results, err := processAccountSecurityGroups(&account)
@@ -118,10 +118,10 @@ func processAccountSecurityGroups(account *utilities.ExtensionConfigurationAzure
 
 	wg.Add(len(groups))
 
-	tableConfig, ok := utilities.TableConfigurationMap[tableName]
+	tableConfig, ok := utilities.TableConfigurationMap[azureComputeSecurityGroup]
 	if !ok {
 		utilities.GetLogger().WithFields(log.Fields{
-			"tableName": tableName3,
+			"tableName": azureComputeSecurityGroup,
 		}).Error("failed to get table configuration")
 		return resultMap, fmt.Errorf("table configuration not found")
 	}
@@ -142,7 +142,7 @@ func getSecurityGroups(session *extazure.AzureSession, rg string, wg *sync.WaitG
 	for resourceItr, err := svcClient.ListComplete(context.Background(), rg); resourceItr.NotDone(); err = resourceItr.Next() {
 		if err != nil {
 			utilities.GetLogger().WithFields(log.Fields{
-				"tableName":     tableName3,
+				"tableName":     azureComputeSecurityGroup,
 				"resourceGroup": rg,
 				"errString":     err.Error(),
 			}).Error("failed to get resource list")
@@ -157,7 +157,7 @@ func getSecurityGroups(session *extazure.AzureSession, rg string, wg *sync.WaitG
 		byteArr, err := json.Marshal(resMap)
 		if err != nil {
 			utilities.GetLogger().WithFields(log.Fields{
-				"tableName":     tableName3,
+				"tableName":     azureComputeSecurityGroup,
 				"resourceGroup": rg,
 				"errString":     err.Error(),
 			}).Error("failed to marshal response")
