@@ -150,6 +150,7 @@ func getStorageAccountsForBlobContainer(session *azure.AzureSession, rg string, 
 		}
 
 		resource := resourceItr.Value()
+		//fmt.Println(*resource.Name)
 		getStorageBlobContainer(session, rg, wg, resultMap, tableConfig, *resource.Name)
 	}
 }

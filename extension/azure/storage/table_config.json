@@ -1,4 +1,163 @@
 { 
+    "azure_storage_file_service": {
+        "aws": {},
+        "gcp": {},
+        "azure": {
+          "subscriptionIdAttribute": "subscription_id"
+        },
+        "parsedAttributes":[
+            {
+              "sourceName": "id",
+              "targetName": "id",
+              "targetType": "TEXT",
+              "enabled": true
+            },
+            {
+              "sourceName": "name",
+              "targetName": "name",
+              "targetType": "TEXT",
+              "enabled": true
+            },
+            {
+              "sourceName": "properties",
+              "targetName": "properties",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_cors",
+              "targetName": "cors",
+              "targetType": "TEXT",
+              "enabled": true
+            },
+            {
+              "sourceName": "properties_cors_corsRules",
+              "targetName": "cors_cors_rules",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_cors_corsRules_allowedHeaders",
+              "targetName": "cors_cors_rules_allowed_headers",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_cors_corsRules_allowedMethods",
+              "targetName": "cors_cors_rules_allowed_methods",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_cors_corsRules_allowedOrigins",
+              "targetName": "cors_cors_rules_allowed_origins",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_cors_corsRules_exposedHeaders",
+              "targetName": "cors_cors_rules_exposed_headers",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_cors_corsRules_maxAgeInSeconds",
+              "targetName": "cors_cors_rules_max_age_in_seconds",
+              "targetType": "INTEGER",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_protocolSettings",
+              "targetName": "protocol_settings",
+              "targetType": "TEXT",
+              "enabled": true
+            },
+            {
+              "sourceName": "properties_protocolSettings_smb",
+              "targetName": "protocol_settings_smb",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_protocolSettings_smb_authenticationMethods",
+              "targetName": "protocol_settings_smb_authentication_methods",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_protocolSettings_smb_channelEncryption",
+              "targetName": "protocol_settings_smb_channel_encryption",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_protocolSettings_smb_kerberosTicketEncryption",
+              "targetName": "protocol_settings_smb_kerberos_ticket_encryption",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_protocolSettings_smb_multichannel",
+              "targetName": "protocol_settings_smb_multichannel",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_protocolSettings_smb_multichannel_enabled",
+              "targetName": "protocol_settings_smb_multichannel_enabled",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_protocolSettings_smb_versions",
+              "targetName": "protocol_settings_smb_versions",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_shareDeleteRetentionPolicy",
+              "targetName": "share_delete_retention_policy",
+              "targetType": "TEXT",
+              "enabled": true
+            },
+            {
+              "sourceName": "properties_shareDeleteRetentionPolicy_days",
+              "targetName": "share_delete_retention_policy_days",
+              "targetType": "INTEGER",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_shareDeleteRetentionPolicy_enabled",
+              "targetName": "share_delete_retention_policy_enabled",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "sku",
+              "targetName": "sku",
+              "targetType": "TEXT",
+              "enabled": true
+            },
+            {
+              "sourceName": "sku_name",
+              "targetName": "sku_name",
+              "targetType": "TEXT",
+              "enabled": true
+            },
+            {
+              "sourceName": "sku_tier",
+              "targetName": "sku_tier",
+              "targetType": "TEXT",
+              "enabled": true
+            },
+            {
+              "sourceName": "type",
+              "targetName": "type",
+              "targetType": "TEXT",
+              "enabled": true
+            }
+          ]
+    },
     "azure_storage_account": {
       "aws": {},
       "gcp": {},
