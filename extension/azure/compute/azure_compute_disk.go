@@ -26,7 +26,7 @@ import (
 	"github.com/fatih/structs"
 )
 
-var table_name = "azure_compute_disk"
+var azureComputeDisk = "azure_compute_disk"
 
 // DiskColumns returns the list of columns in the table
 func DiskColumns() []table.ColumnDefinition {
@@ -112,7 +112,7 @@ func DiskGenerate(osqCtx context.Context, queryContext table.QueryContext) ([]ma
 	resultMap := make([]map[string]string, 0)
 	if len(utilities.ExtConfiguration.ExtConfAzure.Accounts) == 0 {
 		utilities.GetLogger().WithFields(log.Fields{
-			"tableName": table_name,
+			"tableName": azureComputeDisk,
 			"account":   "default",
 		}).Info("processing account")
 		results, err := processAccountDisk(nil)
@@ -123,7 +123,7 @@ func DiskGenerate(osqCtx context.Context, queryContext table.QueryContext) ([]ma
 	} else {
 		for _, account := range utilities.ExtConfiguration.ExtConfAzure.Accounts {
 			utilities.GetLogger().WithFields(log.Fields{
-				"tableName": table_name,
+				"tableName": azureComputeDisk,
 				"account":   account.SubscriptionID,
 			}).Info("processing account")
 			results, err := processAccountDisk(&account)
@@ -152,10 +152,10 @@ func processAccountDisk(account *utilities.ExtensionConfigurationAzureAccount) (
 
 	wg.Add(len(groups))
 
-	tableConfig, ok := utilities.TableConfigurationMap[table_name]
+	tableConfig, ok := utilities.TableConfigurationMap[azureComputeDisk]
 	if !ok {
 		utilities.GetLogger().WithFields(log.Fields{
-			"tableName": table_name,
+			"tableName": azureComputeDisk,
 		}).Error("failed to get table configuration")
 		return resultMap, fmt.Errorf("table configuration not found")
 	}
@@ -176,7 +176,7 @@ func getDisk(session *extazure.AzureSession, rg string, wg *sync.WaitGroup, resu
 	for resourceItr, err := svcClient.ListByResourceGroupComplete(context.Background(), rg); resourceItr.NotDone(); err = resourceItr.Next() {
 		if err != nil {
 			utilities.GetLogger().WithFields(log.Fields{
-				"tableName":     table_name,
+				"tableName":     azureComputeDisk,
 				"resourceGroup": rg,
 				"errString":     err.Error(),
 			}).Error("failed to get resource list")
@@ -190,7 +190,7 @@ func getDisk(session *extazure.AzureSession, rg string, wg *sync.WaitGroup, resu
 		byteArr, err := json.Marshal(resMap)
 		if err != nil {
 			utilities.GetLogger().WithFields(log.Fields{
-				"tableName":     table_name,
+				"tableName":     azureComputeDisk,
 				"resourceGroup": rg,
 				"errString":     err.Error(),
 			}).Error("failed to marshal response")

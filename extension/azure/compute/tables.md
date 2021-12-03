@@ -1,4 +1,6 @@
 - azure_compute_networkinterface
 - azure_compute_vm
+- azure_compute_virtual_network
+- azure_compute_subnet
 - azure_compute_disk
 - azure_compute_security_group

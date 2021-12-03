@@ -257,6 +257,8 @@ func RegisterPlugins(server *osquery.ExtensionManagerServer) {
 	// Azure Compute
 	server.RegisterPlugin(table.NewPlugin("azure_compute_vm", azurecompute.VirtualMachinesColumns(), azurecompute.VirtualMachinesGenerate))
 	server.RegisterPlugin(table.NewPlugin("azure_compute_networkinterface", azurecompute.InterfacesColumns(), azurecompute.InterfacesGenerate))
+	server.RegisterPlugin(table.NewPlugin("azure_compute_virtual_network", azurecompute.VirtualNetworkColumns(), azurecompute.VirtualNetworksGenerate))
+	server.RegisterPlugin(table.NewPlugin("azure_compute_subnet", azurecompute.VirtualSubnetColumns(), azurecompute.VirtualSubnetsGenerate))
 	server.RegisterPlugin(table.NewPlugin("azure_compute_disk", azurecompute.DiskColumns(), azurecompute.DiskGenerate))
 	server.RegisterPlugin(table.NewPlugin("azure_compute_security_group", azurecompute.SecurityGroupsColumns(), azurecompute.SecurityGroupsGenerate))
 	// Azure Storage
