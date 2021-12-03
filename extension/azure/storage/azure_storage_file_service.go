@@ -12,9 +12,9 @@ import (
 
 	"github.com/Uptycs/basequery-go/plugin/table"
 	"github.com/Uptycs/cloudquery/utilities"
+	"github.com/fatih/structs"
 
 	"github.com/Azure/azure-sdk-for-go/services/storage/mgmt/2021-04-01/storage"
-	"github.com/fatih/structs"
 )
 
 const storageFileService string = "azure_storage_file_service"
@@ -112,10 +112,10 @@ func processAccountStorageFileServices(account *utilities.ExtensionConfiguration
 
 func getAccountsForStorageFileServices(session *azure.AzureSession, rg string, wg *sync.WaitGroup, resultMap *[]map[string]string, tableConfig *utilities.TableConfig) {
 	defer wg.Done()
-
+	var resMap map[string]interface{}
 	svcClient := storage.NewAccountsClient(session.SubscriptionId)
 	svcClient.Authorizer = session.Authorizer
-
+	var fileServices []storage.FileServiceProperties
 	for resourceItr, err := svcClient.ListByResourceGroupComplete(context.Background(), rg); resourceItr.NotDone(); err = resourceItr.Next() {
 		if err != nil {
 			utilities.GetLogger().WithFields(log.Fields{
@@ -127,48 +127,51 @@ func getAccountsForStorageFileServices(session *azure.AzureSession, rg string, w
 		}
 
 		resource := resourceItr.Value()
-		// b, _ := json.MarshalIndent(resource, "", " ")
-		// fmt.Println(string(b))
-		fmt.Println(*resource.Name)
-		getStorageFileServicesHelper(session, rg, wg, resultMap, tableConfig, *resource.Name)
+		fileService, err := getStorageFileServicesHelper(session, rg, wg, resultMap, tableConfig, *resource.Name)
+		if err != nil {
+			utilities.GetLogger().WithFields(log.Fields{
+				"tableName":     storageFileService,
+				"resourceGroup": rg,
+				"errString":     err.Error(),
+			}).Error("failed to get resource list")
+			continue
+		}
+		fileServices = append(fileServices, *fileService...)
 	}
+	for _, fileService := range fileServices {
+		structs.DefaultTagName = "json"
+		resMap = structs.Map(fileService)
+		byteArr, err := json.Marshal(resMap)
+		if err != nil {
+			utilities.GetLogger().WithFields(log.Fields{
+				"tableName":     storageFileService,
+				"resourceGroup": rg,
+				"errString":     err.Error(),
+			}).Error("failed to marshal response")
+			continue
+		}
+		table := utilities.NewTable(byteArr, tableConfig)
+		for _, row := range table.Rows {
+			result := azure.RowToMap(row, session.SubscriptionId, "", rg, tableConfig)
+			*resultMap = append(*resultMap, result)
+		}
+	}
+
 }
-func getStorageFileServicesHelper(session *azure.AzureSession, rg string, wg *sync.WaitGroup, resultMap *[]map[string]string, tableConfig *utilities.TableConfig, accountName string) {
-	//defer wg.Done()
+func getStorageFileServicesHelper(session *azure.AzureSession, rg string, wg *sync.WaitGroup, resultMap *[]map[string]string, tableConfig *utilities.TableConfig, accountName string) (*[]storage.FileServiceProperties, error) {
 
 	svcClient := storage.NewFileServicesClient(session.SubscriptionId)
 	svcClient.Authorizer = session.Authorizer
 
-	resourceItr, err := svcClient.List(context.Background(), rg, accountName) //resourceItr.NotDone(); err = resourceItr.Next() {
+	resourceItr, err := svcClient.List(context.Background(), rg, accountName)
 	if err != nil {
 		utilities.GetLogger().WithFields(log.Fields{
 			"tableName":     storageFileService,
 			"resourceGroup": rg,
 			"errString":     err.Error(),
 		}).Error("failed to get resource list")
-		//continue
+		return nil, err
 	}
-
-	//resource := resourceItr.Value()
-
-	structs.DefaultTagName = "json"
-	resMap := structs.Map(resourceItr)
-	byteArr, err := json.Marshal(resMap)
-	//b, _ := json.MarshalIndent(byteArr, "", " ")
-	//fmt.Println(string(byteArr))
-	if err != nil {
-		utilities.GetLogger().WithFields(log.Fields{
-			"tableName":     storageFileService,
-			"resourceGroup": rg,
-			"errString":     err.Error(),
-		}).Error("failed to marshal response")
-		//continue
-	}
-
-	table := utilities.NewTable(byteArr, tableConfig)
-
-	for _, row := range table.Rows {
-		result := azure.RowToMap(row, session.SubscriptionId, "", rg, tableConfig)
-		*resultMap = append(*resultMap, result)
-	}
+	resource := resourceItr.Value
+	return resource, nil
 }
