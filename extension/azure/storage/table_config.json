@@ -1351,5 +1351,230 @@
                 "enabled":true
             }
         ]
+    },
+    "azure_storage_blob_service": {
+        "aws": {},
+        "gcp": {},
+        "azure": {
+          "subscriptionIdAttribute": "subscription_id"
+        },
+        "parsedAttributes":[
+            {
+              "sourceName": "id",
+              "targetName": "id",
+              "targetType": "TEXT",
+              "enabled": true
+            },
+            {
+              "sourceName": "name",
+              "targetName": "name",
+              "targetType": "TEXT",
+              "enabled": true
+            },
+            {
+              "sourceName": "properties",
+              "targetName": "properties",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_automaticSnapshotPolicyEnabled",
+              "targetName": "automatic_snapshot_policy_enabled",
+              "targetType": "TEXT",
+              "enabled": true
+            },
+            {
+              "sourceName": "properties_changeFeed",
+              "targetName": "change_feed",
+              "targetType": "TEXT",
+              "enabled": true
+            },
+            {
+              "sourceName": "properties_changeFeed_enabled",
+              "targetName": "change_feed_enabled",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_changeFeed_retentionInDays",
+              "targetName": "change_feed_retention_in_days",
+              "targetType": "INTEGER",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_containerDeleteRetentionPolicy",
+              "targetName": "container_delete_retention_policy",
+              "targetType": "TEXT",
+              "enabled": true
+            },
+            {
+              "sourceName": "properties_containerDeleteRetentionPolicy_days",
+              "targetName": "container_delete_retention_policy_days",
+              "targetType": "INTEGER",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_containerDeleteRetentionPolicy_enabled",
+              "targetName": "container_delete_retention_policy_enabled",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_cors",
+              "targetName": "cors",
+              "targetType": "TEXT",
+              "enabled": true
+            },
+            {
+              "sourceName": "properties_cors_corsRules",
+              "targetName": "cors_cors_rules",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_cors_corsRules_allowedHeaders",
+              "targetName": "cors_cors_rules_allowed_headers",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_cors_corsRules_allowedMethods",
+              "targetName": "cors_cors_rules_allowed_methods",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_cors_corsRules_allowedOrigins",
+              "targetName": "cors_cors_rules_allowed_origins",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_cors_corsRules_exposedHeaders",
+              "targetName": "cors_cors_rules_exposed_headers",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_cors_corsRules_maxAgeInSeconds",
+              "targetName": "cors_cors_rules_max_age_in_seconds",
+              "targetType": "INTEGER",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_defaultServiceVersion",
+              "targetName": "default_service_version",
+              "targetType": "TEXT",
+              "enabled": true
+            },
+            {
+              "sourceName": "properties_deleteRetentionPolicy",
+              "targetName": "delete_retention_policy",
+              "targetType": "TEXT",
+              "enabled": true
+            },
+            {
+              "sourceName": "properties_deleteRetentionPolicy_days",
+              "targetName": "delete_retention_policy_days",
+              "targetType": "INTEGER",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_deleteRetentionPolicy_enabled",
+              "targetName": "delete_retention_policy_enabled",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_isVersioningEnabled",
+              "targetName": "is_versioning_enabled",
+              "targetType": "TEXT",
+              "enabled": true
+            },
+            {
+              "sourceName": "properties_lastAccessTimeTrackingPolicy",
+              "targetName": "last_access_time_tracking_policy",
+              "targetType": "TEXT",
+              "enabled": true
+            },
+            {
+              "sourceName": "properties_lastAccessTimeTrackingPolicy_blobType",
+              "targetName": "last_access_time_tracking_policy_blob_type",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_lastAccessTimeTrackingPolicy_enable",
+              "targetName": "last_access_time_tracking_policy_enable",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_lastAccessTimeTrackingPolicy_name",
+              "targetName": "last_access_time_tracking_policy_name",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_lastAccessTimeTrackingPolicy_trackingGranularityInDays",
+              "targetName": "last_access_time_tracking_policy_tracking_granularity_in_days",
+              "targetType": "INTEGER",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_restorePolicy",
+              "targetName": "restore_policy",
+              "targetType": "TEXT",
+              "enabled": true
+            },
+            {
+              "sourceName": "properties_restorePolicy_days",
+              "targetName": "restore_policy_days",
+              "targetType": "INTEGER",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_restorePolicy_enabled",
+              "targetName": "restore_policy_enabled",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_restorePolicy_lastEnabledTime",
+              "targetName": "restore_policy_last_enabled_time",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_restorePolicy_minRestoreTime",
+              "targetName": "restore_policy_min_restore_time",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "sku",
+              "targetName": "sku",
+              "targetType": "TEXT",
+              "enabled": true
+            },
+            {
+              "sourceName": "sku_name",
+              "targetName": "sku_name",
+              "targetType": "TEXT",
+              "enabled": true
+            },
+            {
+              "sourceName": "sku_tier",
+              "targetName": "sku_tier",
+              "targetType": "TEXT",
+              "enabled": true
+            },
+            {
+              "sourceName": "type",
+              "targetName": "type",
+              "targetType": "TEXT",
+              "enabled": true
+            }
+          ]
     }
 }

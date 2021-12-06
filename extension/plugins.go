@@ -265,7 +265,7 @@ func RegisterPlugins(server *osquery.ExtensionManagerServer) {
 	server.RegisterPlugin(table.NewPlugin("azure_storage_account", azurestorage.StorageAccountColumns(), azurestorage.StorageAccountsGenerate))
 	server.RegisterPlugin(table.NewPlugin("azure_storage_blob_container", azurestorage.StorageBlobContainerColumns(), azurestorage.StorageBlobContainerGenerate))
 	server.RegisterPlugin(table.NewPlugin("azure_storage_file_service", azurestorage.StorageFileServiceColumns(), azurestorage.StorageFileServicesGenerate))
-
+	server.RegisterPlugin(table.NewPlugin("azure_storage_blob_service", azurestorage.StorageBlobServiceColumns(), azurestorage.StorageBlobServicesGenerate))
 	// Event tables
 	registerEventTables(server)
 }

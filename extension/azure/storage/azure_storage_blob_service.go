@@ -10,21 +10,27 @@ import (
 
 	"github.com/Uptycs/cloudquery/extension/azure"
 
+	"github.com/Azure/azure-sdk-for-go/profiles/latest/storage/mgmt/storage"
 	"github.com/Uptycs/basequery-go/plugin/table"
 	"github.com/Uptycs/cloudquery/utilities"
 	"github.com/fatih/structs"
-
-	"github.com/Azure/azure-sdk-for-go/services/storage/mgmt/2021-04-01/storage"
 )
 
-const storageFileService string = "azure_storage_file_service"
+const storageBlobService string = "azure_storage_blob_service"
 
-// StorageFileServiceColumns returns the list of columns in the table
-func StorageFileServiceColumns() []table.ColumnDefinition {
+// StorageBlobServiceColumns returns the list of columns in the table
+func StorageBlobServiceColumns() []table.ColumnDefinition {
 	return []table.ColumnDefinition{
 		table.TextColumn("id"),
 		table.TextColumn("name"),
 		// table.TextColumn("properties"),
+		table.TextColumn("automatic_snapshot_policy_enabled"),
+		table.TextColumn("change_feed"),
+		// table.TextColumn("change_feed_enabled"),
+		// table.IntegerColumn("change_feed_retention_in_days"),
+		table.TextColumn("container_delete_retention_policy"),
+		// table.IntegerColumn("container_delete_retention_policy_days"),
+		// table.TextColumn("container_delete_retention_policy_enabled"),
 		table.TextColumn("cors"),
 		// table.TextColumn("cors_cors_rules"),
 		// table.TextColumn("cors_cors_rules_allowed_headers"),
@@ -32,17 +38,21 @@ func StorageFileServiceColumns() []table.ColumnDefinition {
 		// table.TextColumn("cors_cors_rules_allowed_origins"),
 		// table.TextColumn("cors_cors_rules_exposed_headers"),
 		// table.IntegerColumn("cors_cors_rules_max_age_in_seconds"),
-		table.TextColumn("protocol_settings"),
-		// table.TextColumn("protocol_settings_smb"),
-		// table.TextColumn("protocol_settings_smb_authentication_methods"),
-		// table.TextColumn("protocol_settings_smb_channel_encryption"),
-		// table.TextColumn("protocol_settings_smb_kerberos_ticket_encryption"),
-		// table.TextColumn("protocol_settings_smb_multichannel"),
-		// table.TextColumn("protocol_settings_smb_multichannel_enabled"),
-		// table.TextColumn("protocol_settings_smb_versions"),
-		table.TextColumn("share_delete_retention_policy"),
-		// table.IntegerColumn("share_delete_retention_policy_days"),
-		// table.TextColumn("share_delete_retention_policy_enabled"),
+		table.TextColumn("default_service_version"),
+		table.TextColumn("delete_retention_policy"),
+		// table.IntegerColumn("delete_retention_policy_days"),
+		// table.TextColumn("delete_retention_policy_enabled"),
+		table.TextColumn("is_versioning_enabled"),
+		table.TextColumn("last_access_time_tracking_policy"),
+		// table.TextColumn("last_access_time_tracking_policy_blob_type"),
+		// table.TextColumn("last_access_time_tracking_policy_enable"),
+		// table.TextColumn("last_access_time_tracking_policy_name"),
+		// table.IntegerColumn("last_access_time_tracking_policy_tracking_granularity_in_days"),
+		table.TextColumn("restore_policy"),
+		// table.IntegerColumn("restore_policy_days"),
+		// table.TextColumn("restore_policy_enabled"),
+		// table.TextColumn("restore_policy_last_enabled_time"),
+		// table.TextColumn("restore_policy_min_restore_time"),
 		table.TextColumn("sku"),
 		table.TextColumn("sku_name"),
 		table.TextColumn("sku_tier"),
@@ -50,15 +60,15 @@ func StorageFileServiceColumns() []table.ColumnDefinition {
 	}
 }
 
-// StorageFileServicesGenerate returns the rows in the table for all configured accounts
-func StorageFileServicesGenerate(osqCtx context.Context, queryContext table.QueryContext) ([]map[string]string, error) {
+// StorageBlobServicesGenerate returns the rows in the table for all configured accounts
+func StorageBlobServicesGenerate(osqCtx context.Context, queryContext table.QueryContext) ([]map[string]string, error) {
 	resultMap := make([]map[string]string, 0)
 	if len(utilities.ExtConfiguration.ExtConfAzure.Accounts) == 0 {
 		utilities.GetLogger().WithFields(log.Fields{
-			"tableName": storageFileService,
+			"tableName": storageBlobService,
 			"account":   "default",
 		}).Info("processing account")
-		results, err := processAccountStorageFileServices(nil)
+		results, err := processAccountStorageBlobServices(nil)
 		if err != nil {
 			return resultMap, err
 		}
@@ -66,10 +76,10 @@ func StorageFileServicesGenerate(osqCtx context.Context, queryContext table.Quer
 	} else {
 		for _, account := range utilities.ExtConfiguration.ExtConfAzure.Accounts {
 			utilities.GetLogger().WithFields(log.Fields{
-				"tableName": storageFileService,
+				"tableName": storageBlobService,
 				"account":   account.SubscriptionID,
 			}).Info("processing account")
-			results, err := processAccountStorageFileServices(&account)
+			results, err := processAccountStorageBlobServices(&account)
 			if err != nil {
 				continue
 			}
@@ -80,7 +90,7 @@ func StorageFileServicesGenerate(osqCtx context.Context, queryContext table.Quer
 	return resultMap, nil
 }
 
-func processAccountStorageFileServices(account *utilities.ExtensionConfigurationAzureAccount) ([]map[string]string, error) {
+func processAccountStorageBlobServices(account *utilities.ExtensionConfigurationAzureAccount) ([]map[string]string, error) {
 	resultMap := make([]map[string]string, 0)
 	var wg sync.WaitGroup
 	session, err := azure.GetAuthSession(account)
@@ -95,30 +105,30 @@ func processAccountStorageFileServices(account *utilities.ExtensionConfiguration
 
 	wg.Add(len(groups))
 
-	tableConfig, ok := utilities.TableConfigurationMap[storageFileService]
+	tableConfig, ok := utilities.TableConfigurationMap[storageBlobService]
 	if !ok {
 		utilities.GetLogger().WithFields(log.Fields{
-			"tableName": storageFileService,
+			"tableName": storageBlobService,
 		}).Error("failed to get table configuration")
 		return resultMap, fmt.Errorf("table configuration not found")
 	}
 
 	for _, group := range groups {
-		go getAccountsForStorageFileServices(session, group, &wg, &resultMap, tableConfig)
+		go getAccountsForStorageBlobServices(session, group, &wg, &resultMap, tableConfig)
 	}
 	wg.Wait()
 	return resultMap, nil
 }
 
-func getAccountsForStorageFileServices(session *azure.AzureSession, rg string, wg *sync.WaitGroup, resultMap *[]map[string]string, tableConfig *utilities.TableConfig) {
+func getAccountsForStorageBlobServices(session *azure.AzureSession, rg string, wg *sync.WaitGroup, resultMap *[]map[string]string, tableConfig *utilities.TableConfig) {
 	defer wg.Done()
 	svcClient := storage.NewAccountsClient(session.SubscriptionId)
 	svcClient.Authorizer = session.Authorizer
-	var fileServices []storage.FileServiceProperties
+	var blobServices []storage.BlobServiceProperties
 	for resourceItr, err := svcClient.ListByResourceGroupComplete(context.Background(), rg); resourceItr.NotDone(); err = resourceItr.Next() {
 		if err != nil {
 			utilities.GetLogger().WithFields(log.Fields{
-				"tableName":     storageFileService,
+				"tableName":     storageBlobService,
 				"resourceGroup": rg,
 				"errString":     err.Error(),
 			}).Error("failed to get resource list")
@@ -126,24 +136,24 @@ func getAccountsForStorageFileServices(session *azure.AzureSession, rg string, w
 		}
 
 		resource := resourceItr.Value()
-		fileService, err := getStorageFileServicesHelper(session, rg, wg, resultMap, tableConfig, *resource.Name)
+		blobService, err := getStorageBlobServicesHelper(session, rg, wg, resultMap, tableConfig, *resource.Name)
 		if err != nil {
 			utilities.GetLogger().WithFields(log.Fields{
-				"tableName":     storageFileService,
+				"tableName":     storageBlobService,
 				"resourceGroup": rg,
 				"errString":     err.Error(),
 			}).Error("failed to get resource list")
 			continue
 		}
-		fileServices = append(fileServices, *fileService...)
+		blobServices = append(blobServices, *blobService...)
 	}
-	for _, fileService := range fileServices {
+	for _, blobService := range blobServices {
 		structs.DefaultTagName = "json"
-		resMap := structs.Map(fileService)
+		resMap := structs.Map(blobService)
 		byteArr, err := json.Marshal(resMap)
 		if err != nil {
 			utilities.GetLogger().WithFields(log.Fields{
-				"tableName":     storageFileService,
+				"tableName":     storageBlobService,
 				"resourceGroup": rg,
 				"errString":     err.Error(),
 			}).Error("failed to marshal response")
@@ -157,15 +167,15 @@ func getAccountsForStorageFileServices(session *azure.AzureSession, rg string, w
 	}
 
 }
-func getStorageFileServicesHelper(session *azure.AzureSession, rg string, wg *sync.WaitGroup, resultMap *[]map[string]string, tableConfig *utilities.TableConfig, accountName string) (*[]storage.FileServiceProperties, error) {
+func getStorageBlobServicesHelper(session *azure.AzureSession, rg string, wg *sync.WaitGroup, resultMap *[]map[string]string, tableConfig *utilities.TableConfig, accountName string) (*[]storage.BlobServiceProperties, error) {
 
-	svcClient := storage.NewFileServicesClient(session.SubscriptionId)
+	svcClient := storage.NewBlobServicesClient(session.SubscriptionId)
 	svcClient.Authorizer = session.Authorizer
 
 	resourceItr, err := svcClient.List(context.Background(), rg, accountName)
 	if err != nil {
 		utilities.GetLogger().WithFields(log.Fields{
-			"tableName":     storageFileService,
+			"tableName":     storageBlobService,
 			"resourceGroup": rg,
 			"errString":     err.Error(),
 		}).Error("failed to get resource list")
