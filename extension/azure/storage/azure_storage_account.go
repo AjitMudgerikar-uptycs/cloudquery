@@ -235,19 +235,16 @@ func processAccountStorageAccounts(account *utilities.ExtensionConfigurationAzur
 	}
 
 	for _, group := range groups {
-		go getStorageAccounts(session, group, &wg, &resultMap, tableConfig)
+		go setStorageAccountDataToTable(session, group, &wg, &resultMap, tableConfig)
 	}
 	wg.Wait()
 	return resultMap, nil
 }
 
-func getStorageAccounts(session *azure.AzureSession, rg string, wg *sync.WaitGroup, resultMap *[]map[string]string, tableConfig *utilities.TableConfig) {
+func setStorageAccountDataToTable(session *azure.AzureSession, rg string, wg *sync.WaitGroup, resultMap *[]map[string]string, tableConfig *utilities.TableConfig) {
 	defer wg.Done()
 
-	svcClient := storage.NewAccountsClient(session.SubscriptionId)
-	svcClient.Authorizer = session.Authorizer
-
-	for resourceItr, err := svcClient.ListByResourceGroupComplete(context.Background(), rg); resourceItr.NotDone(); err = resourceItr.Next() {
+	for resourceItr, err := getStorageAccountData(session, rg); resourceItr.NotDone(); err = resourceItr.Next() {
 		if err != nil {
 			utilities.GetLogger().WithFields(log.Fields{
 				"tableName":     storageAccount,
@@ -277,4 +274,10 @@ func getStorageAccounts(session *azure.AzureSession, rg string, wg *sync.WaitGro
 			*resultMap = append(*resultMap, result)
 		}
 	}
+}
+
+func getStorageAccountData(session *azure.AzureSession, rg string) (result storage.AccountListResultIterator, err error) {
+	svcClient := storage.NewAccountsClient(session.SubscriptionId)
+	svcClient.Authorizer = session.Authorizer
+	return svcClient.ListByResourceGroupComplete(context.Background(), rg)
 }

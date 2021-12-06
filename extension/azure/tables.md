@@ -8,3 +8,4 @@
   - azure_compute_disk
   - azure_compute_security_group
   - azure_storage_file_service
+  - azure_storage_blob
