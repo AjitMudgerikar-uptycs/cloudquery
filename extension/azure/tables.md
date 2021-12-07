@@ -10,3 +10,4 @@
   - azure_storage_file_service
   - azure_storage_blob_service
   - azure_storage_blob
+  - azure_mysql_server
