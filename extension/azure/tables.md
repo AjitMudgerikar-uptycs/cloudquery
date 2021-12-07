@@ -9,3 +9,4 @@
   - azure_compute_security_group
   - azure_storage_file_service
   - azure_storage_blob_service
+  - azure_storage_blob

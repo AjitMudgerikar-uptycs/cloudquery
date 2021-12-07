@@ -110,7 +110,6 @@ func ReadTableConfigurations(homeDir string) {
 		"azure/storage/table_config.json",
 		"azure/mysql/table_config.json",
 	}
-
 	var configFileList = append(awsConfigFileList, gcpConfigFileList...)
 	configFileList = append(configFileList, azureConfigFileList...)
 
@@ -271,6 +270,8 @@ func RegisterPlugins(server *osquery.ExtensionManagerServer) {
 	//Azure MySQl
 	server.RegisterPlugin(table.NewPlugin("azure_mysql_server", azuremysql.MysqlServerColumns(), azuremysql.MysqlServerGenerate))
 
+	server.RegisterPlugin(table.NewPlugin("azure_storage_blob", azurestorage.StorageBlobColumns(), azurestorage.StorageBlobGenerate))
+	
 	// Event tables
 	registerEventTables(server)
 }

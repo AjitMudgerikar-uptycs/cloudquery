@@ -39,49 +39,52 @@ ENV CLOUDQUERY_EXT_HOME /opt/cloudquery/etc
 
 WORKDIR /opt/cloudquery
 
-COPY osquery.flags osquery.conf                 /opt/cloudquery/etc/
-COPY extension/aws/ec2/table_config.json        /opt/cloudquery/etc/aws/ec2/
-COPY extension/aws/iam/table_config.json        /opt/cloudquery/etc/aws/iam/
-COPY extension/aws/s3/table_config.json         /opt/cloudquery/etc/aws/s3/
-COPY extension/aws/kms/table_config.json        /opt/cloudquery/etc/aws/kms/
-COPY extension/aws/cloudtrail/table_config.json /opt/cloudquery/etc/aws/cloudtrail/
-COPY extension/aws/codepipeline/table_config.json /opt/cloudquery/etc/aws/codepipeline/
-COPY extension/aws/acm/table_config.json        /opt/cloudquery/etc/aws/acm/
-COPY extension/aws/codedeploy/table_config.json /opt/cloudquery/etc/aws/codedeploy/
-COPY extension/aws/cloudwatch/table_config.json /opt/cloudquery/etc/aws/cloudwatch/
-COPY extension/aws/cloudformation/table_config.json /opt/cloudquery/etc/aws/cloudformation/
-COPY extension/aws/apigateway/table_config.json /opt/cloudquery/etc/aws/apigateway/
-COPY extension/aws/codecommit/table_config.json /opt/cloudquery/etc/aws/codecommit/
-COPY extension/aws/config/table_config.json     /opt/cloudquery/etc/aws/config/
-COPY extension/aws/directoryservice/table_config.json  /opt/cloudquery/etc/aws/directoryservice/
-COPY extension/aws/guardduty/table_config.json /opt/cloudquery/etc/aws/guardduty/
-COPY extension/aws/ecs/table_config.json        /opt/cloudquery/etc/aws/ecs/
-COPY extension/aws/ecr/table_config.json     /opt/cloudquery/etc/aws/ecr/
-COPY extension/aws/organizations/table_config.json /opt/cloudquery/etc/aws/organizations/
-COPY extension/aws/workspaces/table_config.json /opt/cloudquery/etc/aws/workspaces/
-COPY extension/aws/efs/table_config.json        /opt/cloudquery/etc/aws/efs/
-COPY extension/aws/s3_glacier/table_config.json /opt/cloudquery/etc/aws/s3_glacier/
-COPY extension/aws/eks/table_config.json /opt/cloudquery/etc/aws/eks/
-COPY extension/aws/sns/table_config.json        /opt/cloudquery/etc/aws/sns/
-COPY extension/aws/sqs/table_config.json        /opt/cloudquery/etc/aws/sqs/
-COPY extension/aws/elb/table_config.json        /opt/cloudquery/etc/aws/elb/
-COPY extension/aws/elbv2/table_config.json      /opt/cloudquery/etc/aws/elbv2/
-COPY extension/aws/rds/table_config.json        /opt/cloudquery/etc/aws/rds/
+COPY osquery.flags osquery.conf /opt/cloudquery/etc/
 
-COPY extension/gcp/compute/table_config.json    /opt/cloudquery/etc/gcp/compute/
-COPY extension/gcp/dns/table_config.json        /opt/cloudquery/etc/gcp/dns/
-COPY extension/gcp/file/table_config.json       /opt/cloudquery/etc/gcp/file/
-COPY extension/gcp/iam/table_config.json        /opt/cloudquery/etc/gcp/iam/
-COPY extension/gcp/storage/table_config.json    /opt/cloudquery/etc/gcp/storage/
-COPY extension/gcp/sql/table_config.json        /opt/cloudquery/etc/gcp/sql/
-COPY extension/gcp/container/table_config.json  /opt/cloudquery/etc/gcp/container/
-COPY extension/gcp/function/table_config.json   /opt/cloudquery/etc/gcp/function/
-COPY extension/gcp/run/table_config.json        /opt/cloudquery/etc/gcp/run/
-COPY extension/gcp/cloudlog/table_config.json   /opt/cloudquery/etc/gcp/cloudlog/
+# Keep these alphabetically ordered
+COPY extension/aws/acm/table_config.json                /opt/cloudquery/etc/aws/acm/
+COPY extension/aws/apigateway/table_config.json         /opt/cloudquery/etc/aws/apigateway/
+COPY extension/aws/cloudformation/table_config.json     /opt/cloudquery/etc/aws/cloudformation/
+COPY extension/aws/cloudtrail/table_config.json         /opt/cloudquery/etc/aws/cloudtrail/
+COPY extension/aws/cloudwatch/table_config.json         /opt/cloudquery/etc/aws/cloudwatch/
+COPY extension/aws/codecommit/table_config.json         /opt/cloudquery/etc/aws/codecommit/
+COPY extension/aws/codedeploy/table_config.json         /opt/cloudquery/etc/aws/codedeploy/
+COPY extension/aws/codepipeline/table_config.json       /opt/cloudquery/etc/aws/codepipeline/
+COPY extension/aws/config/table_config.json             /opt/cloudquery/etc/aws/config/
+COPY extension/aws/directoryservice/table_config.json   /opt/cloudquery/etc/aws/directoryservice/
+COPY extension/aws/ec2/table_config.json                /opt/cloudquery/etc/aws/ec2/
+COPY extension/aws/ecr/table_config.json                /opt/cloudquery/etc/aws/ecr/
+COPY extension/aws/ecs/table_config.json                /opt/cloudquery/etc/aws/ecs/
+COPY extension/aws/efs/table_config.json                /opt/cloudquery/etc/aws/efs/
+COPY extension/aws/eks/table_config.json                /opt/cloudquery/etc/aws/eks/
+COPY extension/aws/elb/table_config.json                /opt/cloudquery/etc/aws/elb/
+COPY extension/aws/elbv2/table_config.json              /opt/cloudquery/etc/aws/elbv2/
+COPY extension/aws/guardduty/table_config.json          /opt/cloudquery/etc/aws/guardduty/
+COPY extension/aws/iam/table_config.json                /opt/cloudquery/etc/aws/iam/
+COPY extension/aws/kms/table_config.json                /opt/cloudquery/etc/aws/kms/
+COPY extension/aws/organizations/table_config.json      /opt/cloudquery/etc/aws/organizations/
+COPY extension/aws/rds/table_config.json                /opt/cloudquery/etc/aws/rds/
+COPY extension/aws/s3_glacier/table_config.json         /opt/cloudquery/etc/aws/s3_glacier/
+COPY extension/aws/s3/table_config.json                 /opt/cloudquery/etc/aws/s3/
+COPY extension/aws/sns/table_config.json                /opt/cloudquery/etc/aws/sns/
+COPY extension/aws/sqs/table_config.json                /opt/cloudquery/etc/aws/sqs/
+COPY extension/aws/workspaces/table_config.json         /opt/cloudquery/etc/aws/workspaces/
 
+# Keep these alphabetically ordered
 COPY extension/azure/compute/table_config.json  /opt/cloudquery/etc/azure/compute/
 COPY extension/azure/storage/table_config.json  /opt/cloudquery/etc/azure/storage/
 
+# Keep these alphabetically ordered
+COPY extension/gcp/cloudlog/table_config.json   /opt/cloudquery/etc/gcp/cloudlog/
+COPY extension/gcp/compute/table_config.json    /opt/cloudquery/etc/gcp/compute/
+COPY extension/gcp/container/table_config.json  /opt/cloudquery/etc/gcp/container/
+COPY extension/gcp/dns/table_config.json        /opt/cloudquery/etc/gcp/dns/
+COPY extension/gcp/file/table_config.json       /opt/cloudquery/etc/gcp/file/
+COPY extension/gcp/function/table_config.json   /opt/cloudquery/etc/gcp/function/
+COPY extension/gcp/iam/table_config.json        /opt/cloudquery/etc/gcp/iam/
+COPY extension/gcp/run/table_config.json        /opt/cloudquery/etc/gcp/run/
+COPY extension/gcp/sql/table_config.json        /opt/cloudquery/etc/gcp/sql/
+COPY extension/gcp/storage/table_config.json    /opt/cloudquery/etc/gcp/storage/
 
 CMD ["/usr/bin/osqueryd", \
   "--flagfile=/opt/cloudquery/etc/osquery.flags", \

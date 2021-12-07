@@ -136,10 +136,7 @@ func processStorageBlobContainer(account *utilities.ExtensionConfigurationAzureA
 func getStorageAccountsForBlobContainer(session *azure.AzureSession, rg string, wg *sync.WaitGroup, resultMap *[]map[string]string, tableConfig *utilities.TableConfig) {
 	defer wg.Done()
 
-	svcClient := storage.NewAccountsClient(session.SubscriptionId)
-	svcClient.Authorizer = session.Authorizer
-
-	for resourceItr, err := svcClient.ListByResourceGroupComplete(context.Background(), rg); resourceItr.NotDone(); err = resourceItr.Next() {
+	for resourceItr, err := getStorageAccountData(session, rg); resourceItr.NotDone(); err = resourceItr.Next() {
 		if err != nil {
 			utilities.GetLogger().WithFields(log.Fields{
 				"tableName":     storageBlobContainer,
@@ -150,15 +147,13 @@ func getStorageAccountsForBlobContainer(session *azure.AzureSession, rg string, 
 		}
 
 		resource := resourceItr.Value()
-		getStorageBlobContainer(session, rg, wg, resultMap, tableConfig, *resource.Name)
+		setStorageBlobContainerToTable(session, rg, wg, resultMap, tableConfig, *resource.Name)
 	}
 }
 
-func getStorageBlobContainer(session *azure.AzureSession, rg string, wg *sync.WaitGroup, resultMap *[]map[string]string, tableConfig *utilities.TableConfig, accountName string) {
-	svcClient := storage.NewBlobContainersClient(session.SubscriptionId)
-	svcClient.Authorizer = session.Authorizer
+func setStorageBlobContainerToTable(session *azure.AzureSession, rg string, wg *sync.WaitGroup, resultMap *[]map[string]string, tableConfig *utilities.TableConfig, accountName string) {
 
-	for resourceItr, err := svcClient.ListComplete(context.Background(), rg, accountName, "", "", storage.ListContainersIncludeDeleted); resourceItr.NotDone(); err = resourceItr.Next() {
+	for resourceItr, err := getStorageBlobContainerData(session, rg, accountName); resourceItr.NotDone(); err = resourceItr.Next() {
 		if err != nil {
 			utilities.GetLogger().WithFields(log.Fields{
 				"tableName":     storageBlobContainer,
@@ -188,4 +183,10 @@ func getStorageBlobContainer(session *azure.AzureSession, rg string, wg *sync.Wa
 			*resultMap = append(*resultMap, result)
 		}
 	}
+}
+
+func getStorageBlobContainerData(session *azure.AzureSession, rg string, accountName string) (result storage.ListContainerItemsIterator, err error) {
+	svcClient := storage.NewBlobContainersClient(session.SubscriptionId)
+	svcClient.Authorizer = session.Authorizer
+	return svcClient.ListComplete(context.Background(), rg, accountName, "", "", storage.ListContainersIncludeDeleted)
 }
