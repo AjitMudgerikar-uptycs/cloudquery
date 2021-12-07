@@ -1,0 +1,275 @@
+{
+    "azure_mysql_server": {
+        "aws": {},
+        "gcp": {},
+        "azure": {
+          "subscriptionIdAttribute": "subscription_id"
+        },
+        "parsedAttributes": [
+          {
+            "sourceName": "id",
+            "targetName": "id",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "identity",
+            "targetName": "identity",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "identity_principalId",
+            "targetName": "identity_principal_id",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "identity_tenantId",
+            "targetName": "identity_tenant_id",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "identity_type",
+            "targetName": "identity_type",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "location",
+            "targetName": "location",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "name",
+            "targetName": "name",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "properties",
+            "targetName": "properties",
+            "targetType": "TEXT",
+            "enabled": false
+          },
+          {
+            "sourceName": "properties_administratorLogin",
+            "targetName": "administrator_login",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "properties_byokEnforcement",
+            "targetName": "byok_enforcement",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "properties_earliestRestoreDate",
+            "targetName": "earliest_restore_date",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "properties_fullyQualifiedDomainName",
+            "targetName": "fully_qualified_domain_name",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "properties_infrastructureEncryption",
+            "targetName": "infrastructure_encryption",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "properties_masterServerId",
+            "targetName": "master_server_id",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "properties_minimalTlsVersion",
+            "targetName": "minimal_tls_version",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "properties_privateEndpointConnections",
+            "targetName": "private_endpoint_connections",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "properties_privateEndpointConnections_id",
+            "targetName": "private_endpoint_connections_id",
+            "targetType": "TEXT",
+            "enabled": false
+          },
+          {
+            "sourceName": "properties_privateEndpointConnections_properties",
+            "targetName": "private_endpoint_connections_properties",
+            "targetType": "TEXT",
+            "enabled": false
+          },
+          {
+            "sourceName": "properties_privateEndpointConnections_properties_privateEndpoint",
+            "targetName": "private_endpoint_connections_properties_private_endpoint",
+            "targetType": "TEXT",
+            "enabled": false
+          },
+          {
+            "sourceName": "properties_privateEndpointConnections_properties_privateEndpoint_id",
+            "targetName": "private_endpoint_connections_properties_private_endpoint_id",
+            "targetType": "TEXT",
+            "enabled": false
+          },
+          {
+            "sourceName": "properties_privateEndpointConnections_properties_privateLinkServiceConnectionState",
+            "targetName": "private_endpoint_connections_properties_private_link_service_connection_state",
+            "targetType": "TEXT",
+            "enabled": false
+          },
+          {
+            "sourceName": "properties_privateEndpointConnections_properties_privateLinkServiceConnectionState_actionsRequired",
+            "targetName": "private_endpoint_connections_properties_private_link_service_connection_state_actions_required",
+            "targetType": "TEXT",
+            "enabled": false
+          },
+          {
+            "sourceName": "properties_privateEndpointConnections_properties_privateLinkServiceConnectionState_description",
+            "targetName": "private_endpoint_connections_properties_private_link_service_connection_state_description",
+            "targetType": "TEXT",
+            "enabled": false
+          },
+          {
+            "sourceName": "properties_privateEndpointConnections_properties_privateLinkServiceConnectionState_status",
+            "targetName": "private_endpoint_connections_properties_private_link_service_connection_state_status",
+            "targetType": "TEXT",
+            "enabled": false
+          },
+          {
+            "sourceName": "properties_privateEndpointConnections_properties_provisioningState",
+            "targetName": "private_endpoint_connections_properties_provisioning_state",
+            "targetType": "TEXT",
+            "enabled": false
+          },
+          {
+            "sourceName": "properties_publicNetworkAccess",
+            "targetName": "public_network_access",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "properties_replicaCapacity",
+            "targetName": "replica_capacity",
+            "targetType": "INTEGER",
+            "enabled": true
+          },
+          {
+            "sourceName": "properties_replicationRole",
+            "targetName": "replication_role",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "properties_sslEnforcement",
+            "targetName": "ssl_enforcement",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "properties_storageProfile",
+            "targetName": "storage_profile",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "properties_storageProfile_backupRetentionDays",
+            "targetName": "storage_profile_backup_retention_days",
+            "targetType": "INTEGER",
+            "enabled": false
+          },
+          {
+            "sourceName": "properties_storageProfile_geoRedundantBackup",
+            "targetName": "storage_profile_geo_redundant_backup",
+            "targetType": "TEXT",
+            "enabled": false
+          },
+          {
+            "sourceName": "properties_storageProfile_storageAutogrow",
+            "targetName": "storage_profile_storage_autogrow",
+            "targetType": "TEXT",
+            "enabled": false
+          },
+          {
+            "sourceName": "properties_storageProfile_storageMB",
+            "targetName": "storage_profile_storage_mb",
+            "targetType": "INTEGER",
+            "enabled": false
+          },
+          {
+            "sourceName": "properties_userVisibleState",
+            "targetName": "user_visible_state",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "properties_version",
+            "targetName": "version",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "sku",
+            "targetName": "sku",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "sku_capacity",
+            "targetName": "sku_capacity",
+            "targetType": "INTEGER",
+            "enabled": true
+          },
+          {
+            "sourceName": "sku_family",
+            "targetName": "sku_family",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "sku_name",
+            "targetName": "sku_name",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "sku_size",
+            "targetName": "sku_size",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "sku_tier",
+            "targetName": "sku_tier",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "tags",
+            "targetName": "tags",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "type",
+            "targetName": "type",
+            "targetType": "TEXT",
+            "enabled": true
+          }
+        ]
+      }
+}
