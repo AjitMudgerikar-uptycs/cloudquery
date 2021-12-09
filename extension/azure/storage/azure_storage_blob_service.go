@@ -119,13 +119,10 @@ func processAccountStorageBlobServices(account *utilities.ExtensionConfiguration
 	wg.Wait()
 	return resultMap, nil
 }
-
 func getAccountsForStorageBlobServices(session *azure.AzureSession, rg string, wg *sync.WaitGroup, resultMap *[]map[string]string, tableConfig *utilities.TableConfig) {
 	defer wg.Done()
-	svcClient := storage.NewAccountsClient(session.SubscriptionId)
-	svcClient.Authorizer = session.Authorizer
-	var blobServices []storage.BlobServiceProperties
-	for resourceItr, err := svcClient.ListByResourceGroupComplete(context.Background(), rg); resourceItr.NotDone(); err = resourceItr.Next() {
+
+	for resourceItr, err := getStorageAccountData(session, rg); resourceItr.NotDone(); err = resourceItr.Next() {
 		if err != nil {
 			utilities.GetLogger().WithFields(log.Fields{
 				"tableName":     storageBlobService,
@@ -136,21 +133,21 @@ func getAccountsForStorageBlobServices(session *azure.AzureSession, rg string, w
 		}
 
 		resource := resourceItr.Value()
-		blobService, err := getStorageBlobServicesHelper(session, rg, wg, resultMap, tableConfig, *resource.Name)
-		if err != nil {
-			utilities.GetLogger().WithFields(log.Fields{
-				"tableName":     storageBlobService,
-				"resourceGroup": rg,
-				"errString":     err.Error(),
-			}).Error("failed to get resource list")
-			continue
-		}
-		blobServices = append(blobServices, *blobService...)
+		setStorageBlobServicesToTable(session, rg, wg, resultMap, tableConfig, *resource.Name)
 	}
-	for _, blobService := range blobServices {
+}
+func setStorageBlobServicesToTable(session *azure.AzureSession, rg string, wg *sync.WaitGroup, resultMap *[]map[string]string, tableConfig *utilities.TableConfig, accountName string) {
+
+	Blobservices := make([]storage.BlobServiceProperties, 0)
+
+	getStorageBlobServicesData(session, rg, accountName, &Blobservices)
+
+	for _, BlobService := range Blobservices {
+
 		structs.DefaultTagName = "json"
-		resMap := structs.Map(blobService)
+		resMap := structs.Map(BlobService)
 		byteArr, err := json.Marshal(resMap)
+
 		if err != nil {
 			utilities.GetLogger().WithFields(log.Fields{
 				"tableName":     storageBlobService,
@@ -159,15 +156,16 @@ func getAccountsForStorageBlobServices(session *azure.AzureSession, rg string, w
 			}).Error("failed to marshal response")
 			continue
 		}
+
 		table := utilities.NewTable(byteArr, tableConfig)
 		for _, row := range table.Rows {
 			result := azure.RowToMap(row, session.SubscriptionId, "", rg, tableConfig)
 			*resultMap = append(*resultMap, result)
 		}
 	}
-
 }
-func getStorageBlobServicesHelper(session *azure.AzureSession, rg string, wg *sync.WaitGroup, resultMap *[]map[string]string, tableConfig *utilities.TableConfig, accountName string) (*[]storage.BlobServiceProperties, error) {
+
+func getStorageBlobServicesData(session *azure.AzureSession, rg string, accountName string, BlobService *[]storage.BlobServiceProperties) {
 
 	svcClient := storage.NewBlobServicesClient(session.SubscriptionId)
 	svcClient.Authorizer = session.Authorizer
@@ -178,9 +176,10 @@ func getStorageBlobServicesHelper(session *azure.AzureSession, rg string, wg *sy
 			"tableName":     storageBlobService,
 			"resourceGroup": rg,
 			"errString":     err.Error(),
-		}).Error("failed to get resource list")
-		return nil, err
+		}).Error("failed to get list from api")
+
 	}
 	resource := resourceItr.Value
-	return resource, nil
+	*BlobService = append(*BlobService, *resource...)
+
 }

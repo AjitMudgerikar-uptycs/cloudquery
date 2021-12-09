@@ -112,10 +112,8 @@ func processAccountStorageFileServices(account *utilities.ExtensionConfiguration
 
 func getAccountsForStorageFileServices(session *azure.AzureSession, rg string, wg *sync.WaitGroup, resultMap *[]map[string]string, tableConfig *utilities.TableConfig) {
 	defer wg.Done()
-	svcClient := storage.NewAccountsClient(session.SubscriptionId)
-	svcClient.Authorizer = session.Authorizer
-	var fileServices []storage.FileServiceProperties
-	for resourceItr, err := svcClient.ListByResourceGroupComplete(context.Background(), rg); resourceItr.NotDone(); err = resourceItr.Next() {
+
+	for resourceItr, err := getStorageAccountData(session, rg); resourceItr.NotDone(); err = resourceItr.Next() {
 		if err != nil {
 			utilities.GetLogger().WithFields(log.Fields{
 				"tableName":     storageFileService,
@@ -126,21 +124,21 @@ func getAccountsForStorageFileServices(session *azure.AzureSession, rg string, w
 		}
 
 		resource := resourceItr.Value()
-		fileService, err := getStorageFileServicesHelper(session, rg, wg, resultMap, tableConfig, *resource.Name)
-		if err != nil {
-			utilities.GetLogger().WithFields(log.Fields{
-				"tableName":     storageFileService,
-				"resourceGroup": rg,
-				"errString":     err.Error(),
-			}).Error("failed to get resource list")
-			continue
-		}
-		fileServices = append(fileServices, *fileService...)
+		setStorageFileServicesToTable(session, rg, wg, resultMap, tableConfig, *resource.Name)
 	}
-	for _, fileService := range fileServices {
+}
+func setStorageFileServicesToTable(session *azure.AzureSession, rg string, wg *sync.WaitGroup, resultMap *[]map[string]string, tableConfig *utilities.TableConfig, accountName string) {
+
+	Fileservices := make([]storage.FileServiceProperties, 0)
+
+	getStorageFileServicesData(session, rg, accountName, &Fileservices)
+
+	for _, Fileservice := range Fileservices {
+
 		structs.DefaultTagName = "json"
-		resMap := structs.Map(fileService)
+		resMap := structs.Map(Fileservice)
 		byteArr, err := json.Marshal(resMap)
+
 		if err != nil {
 			utilities.GetLogger().WithFields(log.Fields{
 				"tableName":     storageFileService,
@@ -149,15 +147,16 @@ func getAccountsForStorageFileServices(session *azure.AzureSession, rg string, w
 			}).Error("failed to marshal response")
 			continue
 		}
+
 		table := utilities.NewTable(byteArr, tableConfig)
 		for _, row := range table.Rows {
 			result := azure.RowToMap(row, session.SubscriptionId, "", rg, tableConfig)
 			*resultMap = append(*resultMap, result)
 		}
 	}
-
 }
-func getStorageFileServicesHelper(session *azure.AzureSession, rg string, wg *sync.WaitGroup, resultMap *[]map[string]string, tableConfig *utilities.TableConfig, accountName string) (*[]storage.FileServiceProperties, error) {
+
+func getStorageFileServicesData(session *azure.AzureSession, rg string, accountName string, Fileservice *[]storage.FileServiceProperties) {
 
 	svcClient := storage.NewFileServicesClient(session.SubscriptionId)
 	svcClient.Authorizer = session.Authorizer
@@ -168,9 +167,10 @@ func getStorageFileServicesHelper(session *azure.AzureSession, rg string, wg *sy
 			"tableName":     storageFileService,
 			"resourceGroup": rg,
 			"errString":     err.Error(),
-		}).Error("failed to get resource list")
-		return nil, err
+		}).Error("failed to get list from api")
+
 	}
 	resource := resourceItr.Value
-	return resource, nil
+	*Fileservice = append(*Fileservice, *resource...)
+
 }
