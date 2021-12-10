@@ -15,6 +15,7 @@ import (
 
 	// "github.com/Azure/azure-sdk-for-go/profiles/latest/storage/mgmt/storage"
 	"github.com/Azure/azure-sdk-for-go/services/cosmos-db/mgmt/2021-10-15/documentdb"
+	"github.com/fatih/structs"
 )
 
 const cosmosdbMongodb string = "azure_cosmosdb_mongodb"
@@ -101,49 +102,48 @@ func processAccountCosmosdbMongodb(account *utilities.ExtensionConfigurationAzur
 
 func getCosmosdbAccountsForMongodb(session *azure.AzureSession, rg string, wg *sync.WaitGroup, resultMap *[]map[string]string, tableConfig *utilities.TableConfig) {
 	defer wg.Done()
-	svcClient := documentdb.NewDatabaseAccountsClient(session.SubscriptionId)
-	svcClient.Authorizer = session.Authorizer
-	Listresult, err := svcClient.List(context.Background())
+	accoutnamelist, err := getCosmosdbAccountData(session, rg)
 	if err != nil {
 		utilities.GetLogger().WithFields(log.Fields{
-			"tableName":     cosmosdbMongodb,
-			"resourceGroup": rg,
-			"errString":     err.Error(),
-		}).Error("failed to get resource list")
-
+			"tableName":      cosmosdbMongodb,
+			"rescourceGroup": rg,
+			"errString":      err.Error(),
+		}).Error("failed to get cosmosdb account list from api")
+	}
+	for _, accountnameinfo := range *accoutnamelist.Value {
+		setCosmosdbMongodbToTable(session, rg, wg, resultMap, tableConfig, *accountnameinfo.Name)
 	}
 
-	resourceptr := Listresult.Value
-	for _, resource := range *resourceptr {
-		setCosmosdbMongodbToTable(session, rg, wg, resultMap, tableConfig, *resource.Name)
-	}
 }
 
 func setCosmosdbMongodbToTable(session *azure.AzureSession, rg string, wg *sync.WaitGroup, resultMap *[]map[string]string, tableConfig *utilities.TableConfig, accountName string) {
-
-	resourceItr, err := getCosmosdbMongodbData(session, rg, accountName)
+	mongodblist, err := getCosmosdbMongodbData(session, rg, accountName)
 	if err != nil {
 		utilities.GetLogger().WithFields(log.Fields{
 			"tableName":     cosmosdbMongodb,
 			"resourceGroup": rg,
 			"errString":     err.Error(),
-		}).Error("failed to get resource list")
+		}).Error("failed to get sql database list")
 	}
 
-	resource := resourceItr.Value
-	utilities.GetLogger().Error(resource)
-	byteArr, err := json.Marshal(resource)
-	if err != nil {
-		utilities.GetLogger().WithFields(log.Fields{
-			"tableName":     cosmosdbMongodb,
-			"resourceGroup": rg,
-			"errString":     err.Error(),
-		}).Error("failed to marshal response")
-	}
-	table := utilities.NewTable(byteArr, tableConfig)
-	for _, row := range table.Rows {
-		result := azure.RowToMap(row, session.SubscriptionId, "", rg, tableConfig)
-		*resultMap = append(*resultMap, result)
+	for _, mongodb := range *mongodblist.Value {
+		structs.DefaultTagName = "json"
+		resMap := structs.Map(mongodb)
+		byteArr, err := json.Marshal(resMap)
+		if err != nil {
+			utilities.GetLogger().WithFields(log.Fields{
+				"tableName":     cosmosdbMongodb,
+				"resourceGroup": rg,
+				"errString":     err.Error(),
+			}).Error("failed to marshal response")
+			continue
+		}
+		table := utilities.NewTable(byteArr, tableConfig)
+
+		for _, row := range table.Rows {
+			result := azure.RowToMap(row, session.SubscriptionId, "", rg, tableConfig)
+			*resultMap = append(*resultMap, result)
+		}
 	}
 }
 
@@ -151,4 +151,11 @@ func getCosmosdbMongodbData(session *azure.AzureSession, rg string, accountName 
 	svcClient := documentdb.NewMongoDBResourcesClient(session.SubscriptionId)
 	svcClient.Authorizer = session.Authorizer
 	return svcClient.ListMongoDBDatabases(context.Background(), rg, accountName)
+}
+func getCosmosdbAccountData(session *azure.AzureSession, rg string) (result documentdb.DatabaseAccountsListResult, err error) {
+
+	svcClient := documentdb.NewDatabaseAccountsClient(session.SubscriptionId)
+	svcClient.Authorizer = session.Authorizer
+	return svcClient.ListByResourceGroup(context.Background(), rg)
+
 }
