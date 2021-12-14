@@ -2066,7 +2066,157 @@
             }
         ]
     },
-    "azure_storage_blob_service": {
+    "azure_storage_table_service": {
+        "aws": {},
+        "gcp": {},
+        "azure": {
+          "subscriptionIdAttribute": "subscription_id"
+        },
+        "parsedAttributes":[
+            {
+              "sourceName": "id",
+              "targetName": "id",
+              "targetType": "TEXT",
+              "enabled": true
+            },
+            {
+              "sourceName": "name",
+              "targetName": "name",
+              "targetType": "TEXT",
+              "enabled": true
+            },
+            {
+              "sourceName": "properties",
+              "targetName": "properties",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_cors",
+              "targetName": "cors",
+              "targetType": "TEXT",
+              "enabled": true
+            },
+            {
+              "sourceName": "properties_cors_corsRules",
+              "targetName": "cors_cors_rules",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_cors_corsRules_allowedHeaders",
+              "targetName": "cors_cors_rules_allowed_headers",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_cors_corsRules_allowedMethods",
+              "targetName": "cors_cors_rules_allowed_methods",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_cors_corsRules_allowedOrigins",
+              "targetName": "cors_cors_rules_allowed_origins",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_cors_corsRules_exposedHeaders",
+              "targetName": "cors_cors_rules_exposed_headers",
+              "targetType": "TEXT",
+              "enabled": false
+            },
+            {
+              "sourceName": "properties_cors_corsRules_maxAgeInSeconds",
+              "targetName": "cors_cors_rules_max_age_in_seconds",
+              "targetType": "INTEGER",
+              "enabled": false
+            },
+            {
+              "sourceName": "type",
+              "targetName": "type",
+              "targetType": "TEXT",
+              "enabled": true
+            }
+          ]
+        },
+    "azure_storage_queue_service": {
+    "aws": {},
+    "gcp": {},
+    "azure": {
+      "subscriptionIdAttribute": "subscription_id"
+    },
+    "parsedAttributes":[
+        {
+          "sourceName": "id",
+          "targetName": "id",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "name",
+          "targetName": "name",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties",
+          "targetName": "properties",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_cors",
+          "targetName": "cors",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_cors_corsRules",
+          "targetName": "cors_cors_rules",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_cors_corsRules_allowedHeaders",
+          "targetName": "cors_cors_rules_allowed_headers",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_cors_corsRules_allowedMethods",
+          "targetName": "cors_cors_rules_allowed_methods",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_cors_corsRules_allowedOrigins",
+          "targetName": "cors_cors_rules_allowed_origins",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_cors_corsRules_exposedHeaders",
+          "targetName": "cors_cors_rules_exposed_headers",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_cors_corsRules_maxAgeInSeconds",
+          "targetName": "cors_cors_rules_max_age_in_seconds",
+          "targetType": "INTEGER",
+          "enabled": false
+        },
+        {
+          "sourceName": "type",
+          "targetName": "type",
+          "targetType": "TEXT",
+          "enabled": true
+        }
+      ]
+    },
+        "azure_storage_blob_service": {
         "aws": {},
         "gcp": {},
         "azure": {
