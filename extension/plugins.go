@@ -48,6 +48,7 @@ import (
 	azureappservice "github.com/Uptycs/cloudquery/extension/azure/appservice"
 	azurecompute "github.com/Uptycs/cloudquery/extension/azure/compute"
 	azurecosmosdb "github.com/Uptycs/cloudquery/extension/azure/cosmosdb"
+	azurekeyvault "github.com/Uptycs/cloudquery/extension/azure/keyvault"
 	azuremysql "github.com/Uptycs/cloudquery/extension/azure/mysql"
 	azurepostgresql "github.com/Uptycs/cloudquery/extension/azure/postgresql"
 	azuresql "github.com/Uptycs/cloudquery/extension/azure/sql"
@@ -114,9 +115,10 @@ func ReadTableConfigurations(homeDir string) {
 		"azure/appservice/table_config.json",
 		"azure/compute/table_config.json",
 		"azure/cosmosdb/table_config.json",
+		"azure/keyvault/table_config.json",
+		"azure/mysql/table_config.json",
 		"azure/postgresql/table_config.json",
 		"azure/storage/table_config.json",
-		"azure/mysql/table_config.json",
 		"azure/sql/table_config.json",
 	}
 	var configFileList = append(awsConfigFileList, gcpConfigFileList...)
@@ -273,6 +275,7 @@ func RegisterPlugins(server *osquery.ExtensionManagerServer) {
 	server.RegisterPlugin(table.NewPlugin("azure_compute_security_group", azurecompute.SecurityGroupsColumns(), azurecompute.SecurityGroupsGenerate))
 	// Azure Cosmosdb
 	server.RegisterPlugin(table.NewPlugin("azure_cosmosdb_account", azurecosmosdb.CosmosdbAccountColumns(), azurecosmosdb.CosmosdbAccountsGenerate))
+	server.RegisterPlugin(table.NewPlugin("azure_cosmosdb_sqldb", azurecosmosdb.CosmosdbSqldbsColumns(), azurecosmosdb.CosmosdbSqldbsGenerate))
 	// Azure Postgresql
 	server.RegisterPlugin(table.NewPlugin("azure_postgresql_server", azurepostgresql.PostgresqlServerColumns(), azurepostgresql.PostgresqlServersGenerate))
 	// Azure Storage
@@ -291,8 +294,8 @@ func RegisterPlugins(server *osquery.ExtensionManagerServer) {
 	server.RegisterPlugin(table.NewPlugin("azure_appservice_site", azureappservice.AppserviceSiteColumns(), azureappservice.AppserviceSitesGenerate))
 	// Azure SQL
 	server.RegisterPlugin(table.NewPlugin("azure_sql_server", azuresql.SqlServerCloumns(), azuresql.SqlServerGenerate))
-
-	server.RegisterPlugin(table.NewPlugin("azure_cosmosdb_sqldb", azurecosmosdb.CosmosdbSqldbsColumns(), azurecosmosdb.CosmosdbSqldbsGenerate))
+	// Azure Keyvault
+	server.RegisterPlugin(table.NewPlugin("azure_keyvault_vault", azurekeyvault.KeyvaultVaultColumns(), azurekeyvault.KeyvaultVaultsGenerate))
 
 	// Event tables
 	registerEventTables(server)

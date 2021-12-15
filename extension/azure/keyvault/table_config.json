@@ -1,0 +1,227 @@
+{
+    "azure_keyvault_vault": {
+      "aws": {},
+      "gcp": {},
+      "azure": {
+        "subscriptionIdAttribute": "subscription_id"
+      },
+      "parsedAttributes": [
+        {
+          "sourceName": "id",
+          "targetName": "id",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "location",
+          "targetName": "location",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "name",
+          "targetName": "name",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties",
+          "targetName": "properties",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_accessPolicies",
+          "targetName": "properties_access_policies",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_accessPolicies_applicationId",
+          "targetName": "properties_access_policies_application_id",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_accessPolicies_objectId",
+          "targetName": "properties_access_policies_object_id",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_accessPolicies_permissions",
+          "targetName": "properties_access_policies_permissions",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_accessPolicies_permissions_certificates",
+          "targetName": "properties_access_policies_permissions_certificates",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_accessPolicies_permissions_keys",
+          "targetName": "properties_access_policies_permissions_keys",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_accessPolicies_permissions_secrets",
+          "targetName": "properties_access_policies_permissions_secrets",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_accessPolicies_permissions_storage",
+          "targetName": "properties_access_policies_permissions_storage",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_accessPolicies_tenantId",
+          "targetName": "properties_access_policies_tenant_id",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_createMode",
+          "targetName": "properties_create_mode",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_enablePurgeProtection",
+          "targetName": "properties_enable_purge_protection",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_enableRbacAuthorization",
+          "targetName": "properties_enable_rbac_authorization",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_enableSoftDelete",
+          "targetName": "properties_enable_soft_delete",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_enabledForDeployment",
+          "targetName": "properties_enabled_for_deployment",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_enabledForDiskEncryption",
+          "targetName": "properties_enabled_for_disk_encryption",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_enabledForTemplateDeployment",
+          "targetName": "properties_enabled_for_template_deployment",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_networkAcls",
+          "targetName": "properties_network_acls",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_networkAcls_bypass",
+          "targetName": "properties_network_acls_bypass",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_networkAcls_defaultAction",
+          "targetName": "properties_network_acls_default_action",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_networkAcls_ipRules",
+          "targetName": "properties_network_acls_ip_rules",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_networkAcls_ipRules_value",
+          "targetName": "properties_network_acls_ip_rules_value",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_networkAcls_virtualNetworkRules",
+          "targetName": "properties_network_acls_virtual_network_rules",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_networkAcls_virtualNetworkRules_id",
+          "targetName": "properties_network_acls_virtual_network_rules_id",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_privateEndpointConnections",
+          "targetName": "properties_private_endpoint_connections",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_sku",
+          "targetName": "properties_sku",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_sku_family",
+          "targetName": "properties_sku_family",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_sku_name",
+          "targetName": "properties_sku_name",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_softDeleteRetentionInDays",
+          "targetName": "properties_soft_delete_retention_in_days",
+          "targetType": "INTEGER",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_tenantId",
+          "targetName": "properties_tenant_id",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_vaultUri",
+          "targetName": "properties_vault_uri",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "tags",
+          "targetName": "tags",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "type",
+          "targetName": "type",
+          "targetType": "TEXT",
+          "enabled": true
+        }
+      ]
+    }
+  }
