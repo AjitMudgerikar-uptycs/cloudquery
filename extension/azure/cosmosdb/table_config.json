@@ -1,5 +1,602 @@
 {
-    "azure_cosmosdb_account": {
+  "azure_cosmosdb_account": {
+    "aws": {},
+    "gcp": {},
+    "azure": {
+      "subscriptionIdAttribute": "subscription_id"
+    },
+    "parsedAttributes":[
+      {
+        "sourceName": "id",
+        "targetName": "id",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "identity",
+        "targetName": "identity",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "identity_principalId",
+        "targetName": "identity_principal_id",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "identity_tenantId",
+        "targetName": "identity_tenant_id",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "identity_type",
+        "targetName": "identity_type",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "identity_userAssignedIdentities",
+        "targetName": "identity_user_assigned_identities",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "kind",
+        "targetName": "kind",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "location",
+        "targetName": "location",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "name",
+        "targetName": "name",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties",
+        "targetName": "properties",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_analyticalStorageConfiguration",
+        "targetName": "analytical_storage_configuration",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_analyticalStorageConfiguration_schemaType",
+        "targetName": "analytical_storage_configuration_schema_type",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_apiProperties",
+        "targetName": "api_properties",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_apiProperties_serverVersion",
+        "targetName": "api_properties_server_version",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_backupPolicy",
+        "targetName": "backup_policy",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_capabilities",
+        "targetName": "capabilities",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_capabilities_name",
+        "targetName": "capabilities_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_capacity",
+        "targetName": "capacity",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_capacity_totalThroughputLimit",
+        "targetName": "capacity_total_throughput_limit",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_connectorOffer",
+        "targetName": "connector_offer",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_consistencyPolicy",
+        "targetName": "consistency_policy",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_consistencyPolicy_defaultConsistencyLevel",
+        "targetName": "consistency_policy_default_consistency_level",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_consistencyPolicy_maxIntervalInSeconds",
+        "targetName": "consistency_policy_max_interval_in_seconds",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_consistencyPolicy_maxStalenessPrefix",
+        "targetName": "consistency_policy_max_staleness_prefix",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_cors",
+        "targetName": "cors",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_cors_allowedHeaders",
+        "targetName": "cors_allowed_headers",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_cors_allowedMethods",
+        "targetName": "cors_allowed_methods",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_cors_allowedOrigins",
+        "targetName": "cors_allowed_origins",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_cors_exposedHeaders",
+        "targetName": "cors_exposed_headers",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_cors_maxAgeInSeconds",
+        "targetName": "cors_max_age_in_seconds",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_createMode",
+        "targetName": "create_mode",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_databaseAccountOfferType",
+        "targetName": "database_account_offer_type",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_defaultIdentity",
+        "targetName": "default_identity",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_disableKeyBasedMetadataWriteAccess",
+        "targetName": "disable_key_based_metadata_write_access",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_disableLocalAuth",
+        "targetName": "disable_local_auth",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_documentEndpoint",
+        "targetName": "document_endpoint",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_enableAnalyticalStorage",
+        "targetName": "enable_analytical_storage",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_enableAutomaticFailover",
+        "targetName": "enable_automatic_failover",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_enableCassandraConnector",
+        "targetName": "enable_cassandra_connector",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_enableFreeTier",
+        "targetName": "enable_free_tier",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_enableMultipleWriteLocations",
+        "targetName": "enable_multiple_write_locations",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_failoverPolicies",
+        "targetName": "failover_policies",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_failoverPolicies_failoverPriority",
+        "targetName": "failover_policies_failover_priority",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_failoverPolicies_id",
+        "targetName": "failover_policies_id",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_failoverPolicies_locationName",
+        "targetName": "failover_policies_location_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_instanceId",
+        "targetName": "instance_id",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_ipRules",
+        "targetName": "ip_rules",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_ipRules_ipAddressOrRange",
+        "targetName": "ip_rules_ip_address_or_range",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_isVirtualNetworkFilterEnabled",
+        "targetName": "is_virtual_network_filter_enabled",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_keyVaultKeyUri",
+        "targetName": "key_vault_key_uri",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_locations",
+        "targetName": "locations",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_locations_documentEndpoint",
+        "targetName": "locations_document_endpoint",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_locations_failoverPriority",
+        "targetName": "locations_failover_priority",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_locations_id",
+        "targetName": "locations_id",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_locations_isZoneRedundant",
+        "targetName": "locations_is_zone_redundant",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_locations_locationName",
+        "targetName": "locations_location_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_locations_provisioningState",
+        "targetName": "locations_provisioning_state",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_networkAclBypass",
+        "targetName": "network_acl_bypass",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_networkAclBypassResourceIds",
+        "targetName": "network_acl_bypass_resource_ids",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_privateEndpointConnections",
+        "targetName": "private_endpoint_connections",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_privateEndpointConnections_id",
+        "targetName": "private_endpoint_connections_id",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_privateEndpointConnections_name",
+        "targetName": "private_endpoint_connections_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_privateEndpointConnections_type",
+        "targetName": "private_endpoint_connections_type",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_provisioningState",
+        "targetName": "provisioning_state",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_publicNetworkAccess",
+        "targetName": "public_network_access",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_readLocations",
+        "targetName": "read_locations",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_readLocations_documentEndpoint",
+        "targetName": "read_locations_document_endpoint",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_readLocations_failoverPriority",
+        "targetName": "read_locations_failover_priority",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_readLocations_id",
+        "targetName": "read_locations_id",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_readLocations_isZoneRedundant",
+        "targetName": "read_locations_is_zone_redundant",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_readLocations_locationName",
+        "targetName": "read_locations_location_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_readLocations_provisioningState",
+        "targetName": "read_locations_provisioning_state",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_restoreParameters",
+        "targetName": "restore_parameters",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_restoreParameters_databasesToRestore",
+        "targetName": "restore_parameters_databases_to_restore",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_restoreParameters_databasesToRestore_collectionNames",
+        "targetName": "restore_parameters_databases_to_restore_collection_names",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_restoreParameters_databasesToRestore_databaseName",
+        "targetName": "restore_parameters_databases_to_restore_database_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_restoreParameters_restoreMode",
+        "targetName": "restore_parameters_restore_mode",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_restoreParameters_restoreSource",
+        "targetName": "restore_parameters_restore_source",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_restoreParameters_restoreTimestampInUtc",
+        "targetName": "restore_parameters_restore_timestamp_in_utc",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_virtualNetworkRules",
+        "targetName": "virtual_network_rules",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_virtualNetworkRules_id",
+        "targetName": "virtual_network_rules_id",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_virtualNetworkRules_ignoreMissingVNetServiceEndpoint",
+        "targetName": "virtual_network_rules_ignore_missing_v_net_service_endpoint",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_writeLocations",
+        "targetName": "write_locations",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_writeLocations_documentEndpoint",
+        "targetName": "write_locations_document_endpoint",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_writeLocations_failoverPriority",
+        "targetName": "write_locations_failover_priority",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_writeLocations_id",
+        "targetName": "write_locations_id",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_writeLocations_isZoneRedundant",
+        "targetName": "write_locations_is_zone_redundant",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_writeLocations_locationName",
+        "targetName": "write_locations_location_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_writeLocations_provisioningState",
+        "targetName": "write_locations_provisioning_state",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "systemData",
+        "targetName": "system_data",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "systemData_createdAt",
+        "targetName": "system_data_created_at",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "systemData_createdBy",
+        "targetName": "system_data_created_by",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "systemData_createdByType",
+        "targetName": "system_data_created_by_type",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "systemData_lastModifiedAt",
+        "targetName": "system_data_last_modified_at",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "systemData_lastModifiedBy",
+        "targetName": "system_data_last_modified_by",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "systemData_lastModifiedByType",
+        "targetName": "system_data_last_modified_by_type",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "tags",
+        "targetName": "tags",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "type",
+        "targetName": "type",
+        "targetType": "TEXT",
+        "enabled": true
+      }
+    ]
+    },
+  "azure_cosmosdb_sqldb": {
       "aws": {},
       "gcp": {},
       "azure": {
@@ -9,42 +606,6 @@
         {
           "sourceName": "id",
           "targetName": "id",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "identity",
-          "targetName": "identity",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "identity_principalId",
-          "targetName": "identity_principal_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "identity_tenantId",
-          "targetName": "identity_tenant_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "identity_type",
-          "targetName": "identity_type",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "identity_userAssignedIdentities",
-          "targetName": "identity_user_assigned_identities",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "kind",
-          "targetName": "kind",
           "targetType": "TEXT",
           "enabled": true
         },
@@ -67,518 +628,68 @@
           "enabled": false
         },
         {
-          "sourceName": "properties_analyticalStorageConfiguration",
-          "targetName": "analytical_storage_configuration",
+          "sourceName": "properties_options",
+          "targetName": "options",
           "targetType": "TEXT",
           "enabled": true
         },
         {
-          "sourceName": "properties_analyticalStorageConfiguration_schemaType",
-          "targetName": "analytical_storage_configuration_schema_type",
+          "sourceName": "properties_options_autoscaleSettings",
+          "targetName": "options_autoscale_settings",
           "targetType": "TEXT",
           "enabled": false
         },
         {
-          "sourceName": "properties_apiProperties",
-          "targetName": "api_properties",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_apiProperties_serverVersion",
-          "targetName": "api_properties_server_version",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_backupPolicy",
-          "targetName": "backup_policy",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_capabilities",
-          "targetName": "capabilities",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_capabilities_name",
-          "targetName": "capabilities_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_capacity",
-          "targetName": "capacity",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_capacity_totalThroughputLimit",
-          "targetName": "capacity_total_throughput_limit",
+          "sourceName": "properties_options_autoscaleSettings_maxThroughput",
+          "targetName": "options_autoscale_settings_max_throughput",
           "targetType": "INTEGER",
           "enabled": false
         },
         {
-          "sourceName": "properties_connectorOffer",
-          "targetName": "connector_offer",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_consistencyPolicy",
-          "targetName": "consistency_policy",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_consistencyPolicy_defaultConsistencyLevel",
-          "targetName": "consistency_policy_default_consistency_level",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_consistencyPolicy_maxIntervalInSeconds",
-          "targetName": "consistency_policy_max_interval_in_seconds",
+          "sourceName": "properties_options_throughput",
+          "targetName": "options_throughput",
           "targetType": "INTEGER",
           "enabled": false
         },
         {
-          "sourceName": "properties_consistencyPolicy_maxStalenessPrefix",
-          "targetName": "consistency_policy_max_staleness_prefix",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_cors",
-          "targetName": "cors",
+          "sourceName": "properties_resource",
+          "targetName": "resource",
           "targetType": "TEXT",
           "enabled": true
         },
         {
-          "sourceName": "properties_cors_allowedHeaders",
-          "targetName": "cors_allowed_headers",
+          "sourceName": "properties_resource__colls",
+          "targetName": "resource__colls",
           "targetType": "TEXT",
           "enabled": false
         },
         {
-          "sourceName": "properties_cors_allowedMethods",
-          "targetName": "cors_allowed_methods",
+          "sourceName": "properties_resource__etag",
+          "targetName": "resource__etag",
           "targetType": "TEXT",
           "enabled": false
         },
         {
-          "sourceName": "properties_cors_allowedOrigins",
-          "targetName": "cors_allowed_origins",
+          "sourceName": "properties_resource__rid",
+          "targetName": "resource__rid",
           "targetType": "TEXT",
           "enabled": false
         },
         {
-          "sourceName": "properties_cors_exposedHeaders",
-          "targetName": "cors_exposed_headers",
+          "sourceName": "properties_resource__ts",
+          "targetName": "resource__ts",
+          "targetType": "DOUBLE",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_resource__users",
+          "targetName": "resource__users",
           "targetType": "TEXT",
           "enabled": false
         },
         {
-          "sourceName": "properties_cors_maxAgeInSeconds",
-          "targetName": "cors_max_age_in_seconds",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_createMode",
-          "targetName": "create_mode",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_databaseAccountOfferType",
-          "targetName": "database_account_offer_type",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_defaultIdentity",
-          "targetName": "default_identity",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_disableKeyBasedMetadataWriteAccess",
-          "targetName": "disable_key_based_metadata_write_access",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_disableLocalAuth",
-          "targetName": "disable_local_auth",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_documentEndpoint",
-          "targetName": "document_endpoint",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_enableAnalyticalStorage",
-          "targetName": "enable_analytical_storage",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_enableAutomaticFailover",
-          "targetName": "enable_automatic_failover",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_enableCassandraConnector",
-          "targetName": "enable_cassandra_connector",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_enableFreeTier",
-          "targetName": "enable_free_tier",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_enableMultipleWriteLocations",
-          "targetName": "enable_multiple_write_locations",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_failoverPolicies",
-          "targetName": "failover_policies",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_failoverPolicies_failoverPriority",
-          "targetName": "failover_policies_failover_priority",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_failoverPolicies_id",
-          "targetName": "failover_policies_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_failoverPolicies_locationName",
-          "targetName": "failover_policies_location_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_instanceId",
-          "targetName": "instance_id",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_ipRules",
-          "targetName": "ip_rules",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_ipRules_ipAddressOrRange",
-          "targetName": "ip_rules_ip_address_or_range",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_isVirtualNetworkFilterEnabled",
-          "targetName": "is_virtual_network_filter_enabled",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_keyVaultKeyUri",
-          "targetName": "key_vault_key_uri",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_locations",
-          "targetName": "locations",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_locations_documentEndpoint",
-          "targetName": "locations_document_endpoint",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_locations_failoverPriority",
-          "targetName": "locations_failover_priority",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_locations_id",
-          "targetName": "locations_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_locations_isZoneRedundant",
-          "targetName": "locations_is_zone_redundant",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_locations_locationName",
-          "targetName": "locations_location_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_locations_provisioningState",
-          "targetName": "locations_provisioning_state",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_networkAclBypass",
-          "targetName": "network_acl_bypass",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_networkAclBypassResourceIds",
-          "targetName": "network_acl_bypass_resource_ids",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_privateEndpointConnections",
-          "targetName": "private_endpoint_connections",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_privateEndpointConnections_id",
-          "targetName": "private_endpoint_connections_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_privateEndpointConnections_name",
-          "targetName": "private_endpoint_connections_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_privateEndpointConnections_type",
-          "targetName": "private_endpoint_connections_type",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_provisioningState",
-          "targetName": "provisioning_state",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_publicNetworkAccess",
-          "targetName": "public_network_access",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_readLocations",
-          "targetName": "read_locations",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_readLocations_documentEndpoint",
-          "targetName": "read_locations_document_endpoint",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_readLocations_failoverPriority",
-          "targetName": "read_locations_failover_priority",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_readLocations_id",
-          "targetName": "read_locations_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_readLocations_isZoneRedundant",
-          "targetName": "read_locations_is_zone_redundant",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_readLocations_locationName",
-          "targetName": "read_locations_location_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_readLocations_provisioningState",
-          "targetName": "read_locations_provisioning_state",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_restoreParameters",
-          "targetName": "restore_parameters",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_restoreParameters_databasesToRestore",
-          "targetName": "restore_parameters_databases_to_restore",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_restoreParameters_databasesToRestore_collectionNames",
-          "targetName": "restore_parameters_databases_to_restore_collection_names",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_restoreParameters_databasesToRestore_databaseName",
-          "targetName": "restore_parameters_databases_to_restore_database_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_restoreParameters_restoreMode",
-          "targetName": "restore_parameters_restore_mode",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_restoreParameters_restoreSource",
-          "targetName": "restore_parameters_restore_source",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_restoreParameters_restoreTimestampInUtc",
-          "targetName": "restore_parameters_restore_timestamp_in_utc",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_virtualNetworkRules",
-          "targetName": "virtual_network_rules",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_virtualNetworkRules_id",
-          "targetName": "virtual_network_rules_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_virtualNetworkRules_ignoreMissingVNetServiceEndpoint",
-          "targetName": "virtual_network_rules_ignore_missing_v_net_service_endpoint",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_writeLocations",
-          "targetName": "write_locations",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_writeLocations_documentEndpoint",
-          "targetName": "write_locations_document_endpoint",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_writeLocations_failoverPriority",
-          "targetName": "write_locations_failover_priority",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_writeLocations_id",
-          "targetName": "write_locations_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_writeLocations_isZoneRedundant",
-          "targetName": "write_locations_is_zone_redundant",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_writeLocations_locationName",
-          "targetName": "write_locations_location_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_writeLocations_provisioningState",
-          "targetName": "write_locations_provisioning_state",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "systemData",
-          "targetName": "system_data",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "systemData_createdAt",
-          "targetName": "system_data_created_at",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "systemData_createdBy",
-          "targetName": "system_data_created_by",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "systemData_createdByType",
-          "targetName": "system_data_created_by_type",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "systemData_lastModifiedAt",
-          "targetName": "system_data_last_modified_at",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "systemData_lastModifiedBy",
-          "targetName": "system_data_last_modified_by",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "systemData_lastModifiedByType",
-          "targetName": "system_data_last_modified_by_type",
+          "sourceName": "properties_resource_id",
+          "targetName": "resource_id",
           "targetType": "TEXT",
           "enabled": false
         },
@@ -596,115 +707,103 @@
         }
       ]
       },
-    "azure_cosmosdb_sqldb": {
-        "aws": {},
-        "gcp": {},
-        "azure": {
-          "subscriptionIdAttribute": "subscription_id"
-        },
-        "parsedAttributes":[
-          {
-            "sourceName": "id",
-            "targetName": "id",
-            "targetType": "TEXT",
-            "enabled": true
-          },
-          {
-            "sourceName": "location",
-            "targetName": "location",
-            "targetType": "TEXT",
-            "enabled": true
-          },
-          {
-            "sourceName": "name",
-            "targetName": "name",
-            "targetType": "TEXT",
-            "enabled": true
-          },
-          {
-            "sourceName": "properties",
-            "targetName": "properties",
-            "targetType": "TEXT",
-            "enabled": false
-          },
-          {
-            "sourceName": "properties_options",
-            "targetName": "options",
-            "targetType": "TEXT",
-            "enabled": true
-          },
-          {
-            "sourceName": "properties_options_autoscaleSettings",
-            "targetName": "options_autoscale_settings",
-            "targetType": "TEXT",
-            "enabled": false
-          },
-          {
-            "sourceName": "properties_options_autoscaleSettings_maxThroughput",
-            "targetName": "options_autoscale_settings_max_throughput",
-            "targetType": "INTEGER",
-            "enabled": false
-          },
-          {
-            "sourceName": "properties_options_throughput",
-            "targetName": "options_throughput",
-            "targetType": "INTEGER",
-            "enabled": false
-          },
-          {
-            "sourceName": "properties_resource",
-            "targetName": "resource",
-            "targetType": "TEXT",
-            "enabled": true
-          },
-          {
-            "sourceName": "properties_resource__colls",
-            "targetName": "resource__colls",
-            "targetType": "TEXT",
-            "enabled": false
-          },
-          {
-            "sourceName": "properties_resource__etag",
-            "targetName": "resource__etag",
-            "targetType": "TEXT",
-            "enabled": false
-          },
-          {
-            "sourceName": "properties_resource__rid",
-            "targetName": "resource__rid",
-            "targetType": "TEXT",
-            "enabled": false
-          },
-          {
-            "sourceName": "properties_resource__ts",
-            "targetName": "resource__ts",
-            "targetType": "DOUBLE",
-            "enabled": false
-          },
-          {
-            "sourceName": "properties_resource__users",
-            "targetName": "resource__users",
-            "targetType": "TEXT",
-            "enabled": false
-          },
-          {
-            "sourceName": "properties_resource_id",
-            "targetName": "resource_id",
-            "targetType": "TEXT",
-            "enabled": false
-          },
-          {
-            "sourceName": "tags",
-            "targetName": "tags",
-            "targetType": "TEXT",
-            "enabled": true
-          },
-          {
-            "sourceName": "type",
-            "targetName": "type",
-            "targetType": "TEXT",
-            "enabled": true
-          }
-        ]
-        }
-    } 
+"azure_cosmosdb_mongodb": {
+  "aws": {},
+  "gcp": {},
+  "azure": {
+    "subscriptionIdAttribute": "subscription_id"
+  },
+  "parsedAttributes": [
+    {
+      "sourceName": "id",
+      "targetName": "id",
+      "targetType": "TEXT",
+      "enabled": true
+    },
+    {
+      "sourceName": "location",
+      "targetName": "location",
+      "targetType": "TEXT",
+      "enabled": true
+    },
+    {
+      "sourceName": "name",
+      "targetName": "name",
+      "targetType": "TEXT",
+      "enabled": true
+    },
+    {
+      "sourceName": "properties",
+      "targetName": "properties",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_options",
+      "targetName": "options",
+      "targetType": "TEXT",
+      "enabled": true
+    },
+    {
+      "sourceName": "properties_options_autoscaleSettings",
+      "targetName": "options_autoscale_settings",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_options_autoscaleSettings_maxThroughput",
+      "targetName": "options_autoscale_settings_max_throughput",
+      "targetType": "INTEGER",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_options_throughput",
+      "targetName": "options_throughput",
+      "targetType": "INTEGER",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_resource",
+      "targetName": "resource",
+      "targetType": "TEXT",
+      "enabled": true
+    },
+    {
+      "sourceName": "properties_resource__etag",
+      "targetName": "resource__etag",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_resource__rid",
+      "targetName": "resource__rid",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_resource__ts",
+      "targetName": "resource__ts",
+      "targetType": "DOUBLE",
+      "enabled": false
+    },
+    {
+      "sourceName": "properties_resource_id",
+      "targetName": "resource_id",
+      "targetType": "TEXT",
+      "enabled": false
+    },
+    {
+      "sourceName": "tags",
+      "targetName": "tags",
+      "targetType": "TEXT",
+      "enabled": true
+    },
+    {
+      "sourceName": "type",
+      "targetName": "type",
+      "targetType": "TEXT",
+      "enabled": true
+    }
+  ]
+}
+}

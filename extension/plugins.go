@@ -275,6 +275,7 @@ func RegisterPlugins(server *osquery.ExtensionManagerServer) {
 	server.RegisterPlugin(table.NewPlugin("azure_compute_security_group", azurecompute.SecurityGroupsColumns(), azurecompute.SecurityGroupsGenerate))
 	// Azure Cosmosdb
 	server.RegisterPlugin(table.NewPlugin("azure_cosmosdb_account", azurecosmosdb.CosmosdbAccountColumns(), azurecosmosdb.CosmosdbAccountsGenerate))
+	server.RegisterPlugin(table.NewPlugin("azure_cosmosdb_mongodb", azurecosmosdb.CosmosdbMongodbColumns(), azurecosmosdb.CosmosdbMongodbGenerate))
 	server.RegisterPlugin(table.NewPlugin("azure_cosmosdb_sqldb", azurecosmosdb.CosmosdbSqldbsColumns(), azurecosmosdb.CosmosdbSqldbsGenerate))
 	// Azure Postgresql
 	server.RegisterPlugin(table.NewPlugin("azure_postgresql_server", azurepostgresql.PostgresqlServerColumns(), azurepostgresql.PostgresqlServersGenerate))
