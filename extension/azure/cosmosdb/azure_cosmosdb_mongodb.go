@@ -152,10 +152,3 @@ func getCosmosdbMongodbData(session *azure.AzureSession, rg string, accountName 
 	svcClient.Authorizer = session.Authorizer
 	return svcClient.ListMongoDBDatabases(context.Background(), rg, accountName)
 }
-func getCosmosdbAccountData(session *azure.AzureSession, rg string) (result documentdb.DatabaseAccountsListResult, err error) {
-
-	svcClient := documentdb.NewDatabaseAccountsClient(session.SubscriptionId)
-	svcClient.Authorizer = session.Authorizer
-	return svcClient.ListByResourceGroup(context.Background(), rg)
-
-}
