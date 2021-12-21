@@ -133,9 +133,9 @@ func setKeyvaultVaultToTable(session *azure.AzureSession, rg string, wg *sync.Wa
 		}).Error("failed to get keyvault vault list from api")
 	}
 
-	for _, server := range *resources.Response().Value {
+	for _, vault := range *resources.Response().Value {
 		structs.DefaultTagName = "json"
-		resMap := structs.Map(server)
+		resMap := structs.Map(vault)
 		byteArr, err := json.Marshal(resMap)
 		if err != nil {
 			utilities.GetLogger().WithFields(log.Fields{
