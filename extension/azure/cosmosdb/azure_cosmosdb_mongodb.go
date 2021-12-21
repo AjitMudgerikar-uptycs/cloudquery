@@ -13,7 +13,6 @@ import (
 	"github.com/Uptycs/basequery-go/plugin/table"
 	"github.com/Uptycs/cloudquery/utilities"
 
-	// "github.com/Azure/azure-sdk-for-go/profiles/latest/storage/mgmt/storage"
 	"github.com/Azure/azure-sdk-for-go/services/cosmos-db/mgmt/2021-10-15/documentdb"
 	"github.com/fatih/structs"
 )
@@ -34,7 +33,7 @@ func CosmosdbMongodbColumns() []table.ColumnDefinition {
 		table.TextColumn("resource"),
 		// table.TextColumn("resource__etag"),
 		// table.TextColumn("resource__rid"),
-		// // table.TextColumn("resource_id"),
+		// table.TextColumn("resource_id"),
 		table.TextColumn("tags"),
 		table.TextColumn("type"),
 	}
