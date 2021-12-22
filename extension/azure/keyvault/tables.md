@@ -1,1 +1,2 @@
 - azure_keyvault_vault
+- azure_keyvault_key

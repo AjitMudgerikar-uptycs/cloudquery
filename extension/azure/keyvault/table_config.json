@@ -223,5 +223,128 @@
           "enabled": true
         }
       ]
+    },
+    "azure_keyvault_key": {
+      "aws": {},
+      "gcp": {},
+      "azure": {
+        "subscriptionIdAttribute": "subscription_id"
+      },
+      "parsedAttributes": [
+        {
+          "sourceName": "id",
+          "targetName": "id",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "location",
+          "targetName": "location",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "name",
+          "targetName": "name",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties",
+          "targetName": "properties",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_attributes",
+          "targetName": "attributes",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_attributes_created",
+          "targetName": "attributes_created",
+          "targetType": "BIGINT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_attributes_enabled",
+          "targetName": "attributes_enabled",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_attributes_exp",
+          "targetName": "attributes_exp",
+          "targetType": "BIGINT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_attributes_nbf",
+          "targetName": "attributes_nbf",
+          "targetType": "BIGINT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_attributes_recoveryLevel",
+          "targetName": "attributes_recovery_level",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_attributes_updated",
+          "targetName": "attributes_updated",
+          "targetType": "BIGINT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_curveName",
+          "targetName": "curve_name",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_keyOps",
+          "targetName": "key_ops",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_keySize",
+          "targetName": "key_size",
+          "targetType": "INTEGER",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_keyUri",
+          "targetName": "key_uri",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_keyUriWithVersion",
+          "targetName": "key_uri_with_version",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_kty",
+          "targetName": "kty",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "tags",
+          "targetName": "tags",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "type",
+          "targetName": "type",
+          "targetType": "TEXT",
+          "enabled": true
+        }
+      ]
     }
   }
