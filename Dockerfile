@@ -73,7 +73,6 @@ COPY extension/aws/workspaces/table_config.json         /opt/cloudquery/etc/aws/
 # Keep these alphabetically ordered
 COPY extension/azure/appservice/table_config.json  /opt/cloudquery/etc/azure/appservice/
 COPY extension/azure/compute/table_config.json  /opt/cloudquery/etc/azure/compute/
-COPY extension/azure/storage/table_config.json  /opt/cloudquery/etc/azure/storage/
 COPY extension/azure/monitor/table_config.json  /opt/cloudquery/etc/azure/monitor/
 COPY extension/azure/cosmosdb/table_config.json  /opt/cloudquery/etc/azure/cosmosdb/
 COPY extension/azure/keyvault/table_config.json  /opt/cloudquery/etc/azure/keyvault/
