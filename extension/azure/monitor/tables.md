@@ -1,1 +1,2 @@
 - azure_monitor_diagnostic_settings_resource
+- azure_monitor_activity_log_alert
