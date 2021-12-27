@@ -38,3 +38,4 @@
   - azure_graphrbac_user
   - azure_network_load_balancer
   - azure_graphrbac_group
+  - azure_keyvault_secret

@@ -346,5 +346,578 @@
           "enabled": true
         }
       ]
+    },
+    "azure_keyvault_secret": {
+      "aws": {},
+      "gcp": {},
+      "azure": {
+        "subscriptionIdAttribute": "subscription_id"
+      },
+      "parsedAttributes": [
+        {
+          "sourceName": "attributes",
+          "targetName": "attributes",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "attributes_created",
+          "targetName": "attributes_created",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "attributes_created_ext",
+          "targetName": "attributes_created_ext",
+          "targetType": "BIGINT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_created_loc",
+          "targetName": "attributes_created_loc",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_created_loc_cacheEnd",
+          "targetName": "attributes_created_loc_cache_end",
+          "targetType": "BIGINT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_created_loc_cacheStart",
+          "targetName": "attributes_created_loc_cache_start",
+          "targetType": "BIGINT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_created_loc_cacheZone",
+          "targetName": "attributes_created_loc_cache_zone",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_created_loc_cacheZone_isDST",
+          "targetName": "attributes_created_loc_cache_zone_is_dst",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_created_loc_cacheZone_name",
+          "targetName": "attributes_created_loc_cache_zone_name",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_created_loc_cacheZone_offset",
+          "targetName": "attributes_created_loc_cache_zone_offset",
+          "targetType": "INTEGER",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_created_loc_extend",
+          "targetName": "attributes_created_loc_extend",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_created_loc_name",
+          "targetName": "attributes_created_loc_name",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_created_loc_tx",
+          "targetName": "attributes_created_loc_tx",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_created_loc_tx_index",
+          "targetName": "attributes_created_loc_tx_index",
+          "targetType": "INTEGER",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_created_loc_tx_isstd",
+          "targetName": "attributes_created_loc_tx_isstd",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_created_loc_tx_isutc",
+          "targetName": "attributes_created_loc_tx_isutc",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_created_loc_tx_when",
+          "targetName": "attributes_created_loc_tx_when",
+          "targetType": "BIGINT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_created_loc_zone",
+          "targetName": "attributes_created_loc_zone",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_created_loc_zone_isDST",
+          "targetName": "attributes_created_loc_zone_is_dst",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_created_loc_zone_name",
+          "targetName": "attributes_created_loc_zone_name",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_created_loc_zone_offset",
+          "targetName": "attributes_created_loc_zone_offset",
+          "targetType": "INTEGER",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_created_wall",
+          "targetName": "attributes_created_wall",
+          "targetType": "BIGINT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_enabled",
+          "targetName": "attributes_enabled",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "attributes_exp",
+          "targetName": "attributes_exp",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "attributes_exp_ext",
+          "targetName": "attributes_exp_ext",
+          "targetType": "BIGINT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_exp_loc",
+          "targetName": "attributes_exp_loc",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_exp_loc_cacheEnd",
+          "targetName": "attributes_exp_loc_cache_end",
+          "targetType": "BIGINT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_exp_loc_cacheStart",
+          "targetName": "attributes_exp_loc_cache_start",
+          "targetType": "BIGINT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_exp_loc_cacheZone",
+          "targetName": "attributes_exp_loc_cache_zone",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_exp_loc_cacheZone_isDST",
+          "targetName": "attributes_exp_loc_cache_zone_is_dst",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_exp_loc_cacheZone_name",
+          "targetName": "attributes_exp_loc_cache_zone_name",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_exp_loc_cacheZone_offset",
+          "targetName": "attributes_exp_loc_cache_zone_offset",
+          "targetType": "INTEGER",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_exp_loc_extend",
+          "targetName": "attributes_exp_loc_extend",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_exp_loc_name",
+          "targetName": "attributes_exp_loc_name",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_exp_loc_tx",
+          "targetName": "attributes_exp_loc_tx",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_exp_loc_tx_index",
+          "targetName": "attributes_exp_loc_tx_index",
+          "targetType": "INTEGER",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_exp_loc_tx_isstd",
+          "targetName": "attributes_exp_loc_tx_isstd",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_exp_loc_tx_isutc",
+          "targetName": "attributes_exp_loc_tx_isutc",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_exp_loc_tx_when",
+          "targetName": "attributes_exp_loc_tx_when",
+          "targetType": "BIGINT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_exp_loc_zone",
+          "targetName": "attributes_exp_loc_zone",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_exp_loc_zone_isDST",
+          "targetName": "attributes_exp_loc_zone_is_dst",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_exp_loc_zone_name",
+          "targetName": "attributes_exp_loc_zone_name",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_exp_loc_zone_offset",
+          "targetName": "attributes_exp_loc_zone_offset",
+          "targetType": "INTEGER",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_exp_wall",
+          "targetName": "attributes_exp_wall",
+          "targetType": "BIGINT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_nbf",
+          "targetName": "attributes_nbf",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "attributes_nbf_ext",
+          "targetName": "attributes_nbf_ext",
+          "targetType": "BIGINT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_nbf_loc",
+          "targetName": "attributes_nbf_loc",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_nbf_loc_cacheEnd",
+          "targetName": "attributes_nbf_loc_cache_end",
+          "targetType": "BIGINT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_nbf_loc_cacheStart",
+          "targetName": "attributes_nbf_loc_cache_start",
+          "targetType": "BIGINT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_nbf_loc_cacheZone",
+          "targetName": "attributes_nbf_loc_cache_zone",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_nbf_loc_cacheZone_isDST",
+          "targetName": "attributes_nbf_loc_cache_zone_is_dst",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_nbf_loc_cacheZone_name",
+          "targetName": "attributes_nbf_loc_cache_zone_name",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_nbf_loc_cacheZone_offset",
+          "targetName": "attributes_nbf_loc_cache_zone_offset",
+          "targetType": "INTEGER",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_nbf_loc_extend",
+          "targetName": "attributes_nbf_loc_extend",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_nbf_loc_name",
+          "targetName": "attributes_nbf_loc_name",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_nbf_loc_tx",
+          "targetName": "attributes_nbf_loc_tx",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_nbf_loc_tx_index",
+          "targetName": "attributes_nbf_loc_tx_index",
+          "targetType": "INTEGER",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_nbf_loc_tx_isstd",
+          "targetName": "attributes_nbf_loc_tx_isstd",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_nbf_loc_tx_isutc",
+          "targetName": "attributes_nbf_loc_tx_isutc",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_nbf_loc_tx_when",
+          "targetName": "attributes_nbf_loc_tx_when",
+          "targetType": "BIGINT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_nbf_loc_zone",
+          "targetName": "attributes_nbf_loc_zone",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_nbf_loc_zone_isDST",
+          "targetName": "attributes_nbf_loc_zone_is_dst",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_nbf_loc_zone_name",
+          "targetName": "attributes_nbf_loc_zone_name",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_nbf_loc_zone_offset",
+          "targetName": "attributes_nbf_loc_zone_offset",
+          "targetType": "INTEGER",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_nbf_wall",
+          "targetName": "attributes_nbf_wall",
+          "targetType": "BIGINT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_recoverableDays",
+          "targetName": "attributes_recoverable_days",
+          "targetType": "INTEGER",
+          "enabled": true
+        },
+        {
+          "sourceName": "attributes_recoveryLevel",
+          "targetName": "attributes_recovery_level",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "attributes_updated",
+          "targetName": "attributes_updated",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "attributes_updated_ext",
+          "targetName": "attributes_updated_ext",
+          "targetType": "BIGINT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_updated_loc",
+          "targetName": "attributes_updated_loc",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_updated_loc_cacheEnd",
+          "targetName": "attributes_updated_loc_cache_end",
+          "targetType": "BIGINT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_updated_loc_cacheStart",
+          "targetName": "attributes_updated_loc_cache_start",
+          "targetType": "BIGINT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_updated_loc_cacheZone",
+          "targetName": "attributes_updated_loc_cache_zone",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_updated_loc_cacheZone_isDST",
+          "targetName": "attributes_updated_loc_cache_zone_is_dst",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_updated_loc_cacheZone_name",
+          "targetName": "attributes_updated_loc_cache_zone_name",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_updated_loc_cacheZone_offset",
+          "targetName": "attributes_updated_loc_cache_zone_offset",
+          "targetType": "INTEGER",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_updated_loc_extend",
+          "targetName": "attributes_updated_loc_extend",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_updated_loc_name",
+          "targetName": "attributes_updated_loc_name",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_updated_loc_tx",
+          "targetName": "attributes_updated_loc_tx",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_updated_loc_tx_index",
+          "targetName": "attributes_updated_loc_tx_index",
+          "targetType": "INTEGER",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_updated_loc_tx_isstd",
+          "targetName": "attributes_updated_loc_tx_isstd",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_updated_loc_tx_isutc",
+          "targetName": "attributes_updated_loc_tx_isutc",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_updated_loc_tx_when",
+          "targetName": "attributes_updated_loc_tx_when",
+          "targetType": "BIGINT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_updated_loc_zone",
+          "targetName": "attributes_updated_loc_zone",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_updated_loc_zone_isDST",
+          "targetName": "attributes_updated_loc_zone_is_dst",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_updated_loc_zone_name",
+          "targetName": "attributes_updated_loc_zone_name",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_updated_loc_zone_offset",
+          "targetName": "attributes_updated_loc_zone_offset",
+          "targetType": "INTEGER",
+          "enabled": false
+        },
+        {
+          "sourceName": "attributes_updated_wall",
+          "targetName": "attributes_updated_wall",
+          "targetType": "BIGINT",
+          "enabled": false
+        },
+        {
+          "sourceName": "contentType",
+          "targetName": "content_type",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "id",
+          "targetName": "id",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "kid",
+          "targetName": "kid",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "managed",
+          "targetName": "managed",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "tags",
+          "targetName": "tags",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "value",
+          "targetName": "value",
+          "targetType": "TEXT",
+          "enabled": true
+        }
+      ]
     }
   }

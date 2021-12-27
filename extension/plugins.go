@@ -320,6 +320,7 @@ func RegisterPlugins(server *osquery.ExtensionManagerServer) {
 	// Azure Keyvault
 	server.RegisterPlugin(table.NewPlugin("azure_keyvault_vault", azurekeyvault.KeyvaultVaultColumns(), azurekeyvault.KeyvaultVaultsGenerate))
 	server.RegisterPlugin(table.NewPlugin("azure_keyvault_key", azurekeyvault.KeyvaultKeyColumns(), azurekeyvault.KeyvaultKeysGenerate))
+	server.RegisterPlugin(table.NewPlugin("azure_keyvault_secret", azurekeyvault.KeyvaultSecretColumns(), azurekeyvault.KeyvaultSecretsGenerate))
 	// Azure Network
 	server.RegisterPlugin(table.NewPlugin("azure_network_watcher_flow_log", azurenetwork.AzureNetworkWatcherFlowLogColumns(), azurenetwork.AzureNetworkWatcherFlowLogsGenerate))
   server.RegisterPlugin(table.NewPlugin("azure_network_load_balancer", azurenetwork.NetworkLoadBalancerColumns(), azurenetwork.NetworkLoadBalancersGenerate))

@@ -14,6 +14,7 @@ import (
 	"encoding/json"
 	"io/ioutil"
 	"os"
+	"strings"
 	"sync"
 
 	"github.com/Azure/azure-sdk-for-go/services/resources/mgmt/2018-02-01/resources"
@@ -29,6 +30,7 @@ type AzureSession struct {
 	SubscriptionId  string
 	Authorizer      autorest.Authorizer
 	GraphAuthorizer autorest.Authorizer
+	VaultAuthorizer autorest.Authorizer
 }
 
 var (
@@ -70,14 +72,20 @@ func GetAuthSession(account *utilities.ExtensionConfigurationAzureAccount) (*Azu
 	if err != nil {
 		return nil, errors.Wrap(err, "Can't initialize graph authorizer")
 	}
+	vaultAuthorizer, err := auth.NewAuthorizerFromFile(strings.Trim(azure.PublicCloud.KeyVaultEndpoint, "/"))
+	if err != nil {
+		return nil, errors.Wrap(err, "Can't initialize vault authorizer")
+	}
 	authInfo, err := readJSON(os.Getenv("AZURE_AUTH_LOCATION"))
 	if err != nil {
 		return nil, errors.Wrap(err, "Can't get authinfo")
 	}
+
 	session := AzureSession{
 		SubscriptionId:  (*authInfo)["subscriptionId"].(string),
 		Authorizer:      authorizer,
 		GraphAuthorizer: graphrbacAuthorizer,
+		VaultAuthorizer: vaultAuthorizer,
 	}
 
 	return &session, nil
