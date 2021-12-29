@@ -77,6 +77,7 @@ COPY extension/azure/monitor/table_config.json  /opt/cloudquery/etc/azure/monito
 COPY extension/azure/cosmosdb/table_config.json  /opt/cloudquery/etc/azure/cosmosdb/
 COPY extension/azure/keyvault/table_config.json  /opt/cloudquery/etc/azure/keyvault/
 COPY extension/azure/mysql/table_config.json  /opt/cloudquery/etc/azure/mysql/
+COPY extension/azure/network/table_config.json  /opt/cloudquery/etc/azure/network/
 COPY extension/azure/postgresql/table_config.json  /opt/cloudquery/etc/azure/postgresql/
 COPY extension/azure/sql/table_config.json  /opt/cloudquery/etc/azure/sql/
 COPY extension/azure/storage/table_config.json  /opt/cloudquery/etc/azure/storage/

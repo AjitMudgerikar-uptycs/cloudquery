@@ -24,3 +24,4 @@
   - azure_cosmosdb_mongodb
   - azure_keyvault_vault
   - azure_keyvault_key
+  - azure_network_watcher_flow_log
