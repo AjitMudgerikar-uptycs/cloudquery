@@ -128,7 +128,7 @@ func getWatcherNameForFlowLogs(session *azure.AzureSession, rg string, wg *sync.
 			"tableName":      azureNetworkWatcherFlowLog,
 			"rescourceGroup": rg,
 			"errString":      err.Error(),
-		}).Error("failed to get keyvault vault list from api")
+		}).Error("failed to get list from api")
 	}
 
 	for _, watcher := range *resources.Value {
