@@ -126,6 +126,7 @@ func ReadTableConfigurations(homeDir string) {
 		"azure/keyvault/table_config.json",
 		"azure/mysql/table_config.json",
 		"azure/monitor/table_config.json",
+		"azure/network/table_config.json",
 		"azure/postgresql/table_config.json",
 		"azure/securitycenter/table_config.json",
 		"azure/storage/table_config.json",
@@ -307,6 +308,8 @@ func RegisterPlugins(server *osquery.ExtensionManagerServer) {
 	//Azure Monitor
 	server.RegisterPlugin(table.NewPlugin("azure_monitor_diagnostic_settings_resource", azuremonitor.DiagnosticSettingsResourceColumns(), azuremonitor.DiagnosticSettingsResourceGenerate))
 	server.RegisterPlugin(table.NewPlugin("azure_monitor_diagnostic_settings_subscription", azuremonitor.DiagnosticSettingsSubscriptionColumns(), azuremonitor.DiagnosticSettingsSubscriptionGenerate))
+	//Azure Network
+	server.RegisterPlugin(table.NewPlugin("azure_network_load_balancer", azurenetwork.NetworkLoadBalancerColumns(), azurenetwork.NetworkLoadBalancersGenerate))
 	// Azure Appservice
 	server.RegisterPlugin(table.NewPlugin("azure_appservice_site", azureappservice.AppserviceSiteColumns(), azureappservice.AppserviceSitesGenerate))
 	// Azure SQL
