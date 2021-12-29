@@ -6,9 +6,9 @@ require (
 	cloud.google.com/go/storage v1.18.2
 	github.com/Azure/azure-sdk-for-go v60.1.0+incompatible
 	github.com/Azure/azure-storage-blob-go v0.14.0
-	github.com/Azure/go-autorest/autorest v0.11.17
-	github.com/Azure/go-autorest/autorest/adal v0.9.13 // indirect
-	github.com/Azure/go-autorest/autorest/azure/auth v0.5.6
+	github.com/Azure/go-autorest/autorest v0.11.19
+	github.com/Azure/go-autorest/autorest/adal v0.9.18 // indirect
+	github.com/Azure/go-autorest/autorest/azure/auth v0.5.10
 	github.com/Uptycs/basequery-go v0.8.0
 	github.com/aws/aws-sdk-go-v2 v1.11.2
 	github.com/aws/aws-sdk-go-v2/config v1.1.0
@@ -94,7 +94,7 @@ require (
 	github.com/prometheus/common v0.26.0 // indirect
 	github.com/prometheus/procfs v0.6.0 // indirect
 	go.opencensus.io v0.23.0 // indirect
-	golang.org/x/crypto v0.0.0-20201221181555-eec23a3978ad // indirect
+	golang.org/x/crypto v0.0.0-20210921155107-089bfa567519 // indirect
 	golang.org/x/lint v0.0.0-20210508222113-6edffad5e616 // indirect
 	golang.org/x/mod v0.4.2 // indirect
 	golang.org/x/net v0.0.0-20210503060351-7fd8e65b6420 // indirect
@@ -113,4 +113,5 @@ require (
 require (
 	github.com/Azure/azure-sdk-for-go/sdk/azcore v0.17.0 // indirect
 	github.com/Azure/azure-sdk-for-go/sdk/internal v0.5.1 // indirect
+	github.com/golang-jwt/jwt/v4 v4.0.0 // indirect
 )

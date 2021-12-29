@@ -72,7 +72,7 @@ func GetAuthSession(account *utilities.ExtensionConfigurationAzureAccount) (*Azu
 	if err != nil {
 		return nil, errors.Wrap(err, "Can't initialize graph authorizer")
 	}
-	vaultAuthorizer, err := auth.NewAuthorizerFromFile(strings.Trim(azure.PublicCloud.KeyVaultEndpoint, "/"))
+	vaultAuthorizer, err := auth.NewAuthorizerFromFileWithResource(strings.Trim(azure.PublicCloud.KeyVaultEndpoint, "/"))
 	if err != nil {
 		return nil, errors.Wrap(err, "Can't initialize vault authorizer")
 	}
