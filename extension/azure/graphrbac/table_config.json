@@ -307,5 +307,110 @@
                 "enabled":true
             }
         ]
-    }
+    },
+    "azure_graphrbac_user": {
+        "aws": {},
+        "gcp": {},
+        "azure": {
+          "subscriptionIdAttribute": "subscription_id"
+        },
+        "parsedAttributes": [
+          {
+            "sourceName": "accountEnabled",
+            "targetName": "account_enabled",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "deletionTimestamp",
+            "targetName": "deletion_timestamp",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "displayName",
+            "targetName": "display_name",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "givenName",
+            "targetName": "given_name",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "immutableId",
+            "targetName": "immutable_id",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "mail",
+            "targetName": "mail",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "mailNickname",
+            "targetName": "mail_nickname",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "objectId",
+            "targetName": "object_id",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "objectType",
+            "targetName": "object_type",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "signInNames",
+            "targetName": "sign_in_names",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "signInNames_type",
+            "targetName": "sign_in_names_type",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "signInNames_value",
+            "targetName": "sign_in_names_value",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "surname",
+            "targetName": "surname",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "usageLocation",
+            "targetName": "usage_location",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "userPrincipalName",
+            "targetName": "user_principal_name",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "userType",
+            "targetName": "user_type",
+            "targetType": "TEXT",
+            "enabled": true
+          }
+        ]
+      }
 }

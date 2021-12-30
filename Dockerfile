@@ -78,6 +78,7 @@ COPY extension/azure/dns/table_config.json  /opt/cloudquery/etc/azure/dns/
 COPY extension/azure/graphrbac/table_config.json  /opt/cloudquery/etc/azure/graphrbac/
 COPY extension/azure/monitor/table_config.json  /opt/cloudquery/etc/azure/monitor/
 COPY extension/azure/cosmosdb/table_config.json  /opt/cloudquery/etc/azure/cosmosdb/
+COPY extension/azure/graphrbac/table_config.json  /opt/cloudquery/etc/azure/graphrbac/
 COPY extension/azure/keyvault/table_config.json  /opt/cloudquery/etc/azure/keyvault/
 COPY extension/azure/mysql/table_config.json  /opt/cloudquery/etc/azure/mysql/
 COPY extension/azure/network/table_config.json  /opt/cloudquery/etc/azure/network/

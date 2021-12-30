@@ -123,6 +123,7 @@ func ReadTableConfigurations(homeDir string) {
 		"azure/compute/table_config.json",
 		"azure/containerservice/table_config.json",
 		"azure/cosmosdb/table_config.json",
+		"azure/graphrbac/table_config.json",
 		"azure/keyvault/table_config.json",
 		"azure/mysql/table_config.json",
 		"azure/monitor/table_config.json",
@@ -291,6 +292,8 @@ func RegisterPlugins(server *osquery.ExtensionManagerServer) {
 	server.RegisterPlugin(table.NewPlugin("azure_cosmosdb_account", azurecosmosdb.CosmosdbAccountColumns(), azurecosmosdb.CosmosdbAccountsGenerate))
 	server.RegisterPlugin(table.NewPlugin("azure_cosmosdb_mongodb", azurecosmosdb.CosmosdbMongodbColumns(), azurecosmosdb.CosmosdbMongodbGenerate))
 	server.RegisterPlugin(table.NewPlugin("azure_cosmosdb_sqldb", azurecosmosdb.CosmosdbSqldbsColumns(), azurecosmosdb.CosmosdbSqldbsGenerate))
+	// Azure Graphrbac
+	server.RegisterPlugin(table.NewPlugin("azure_graphrbac_user", azuregraphrbac.GraphrbacUserColumns(), azuregraphrbac.GraphrbacUsersGenerate))
 	// Azure Postgresql
 	server.RegisterPlugin(table.NewPlugin("azure_postgresql_server", azurepostgresql.PostgresqlServerColumns(), azurepostgresql.PostgresqlServersGenerate))
 	// Azure Storage
