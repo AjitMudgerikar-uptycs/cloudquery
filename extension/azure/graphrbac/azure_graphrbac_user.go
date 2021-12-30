@@ -13,7 +13,6 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"sync"
 
 	log "github.com/sirupsen/logrus"
 
@@ -80,21 +79,13 @@ func GraphrbacUsersGenerate(osqCtx context.Context, queryContext table.QueryCont
 
 	return resultMap, nil
 }
-
 func processAccountGraphrbacUsers(account *utilities.ExtensionConfigurationAzureAccount) ([]map[string]string, error) {
 	resultMap := make([]map[string]string, 0)
-	var wg sync.WaitGroup
+
 	session, err := azure.GetAuthSession(account)
 	if err != nil {
 		return resultMap, err
 	}
-	groups, err := azure.GetGroups(session)
-
-	if err != nil {
-		return resultMap, err
-	}
-
-	wg.Add(len(groups))
 
 	tableConfig, ok := utilities.TableConfigurationMap[azureGraphrbacUser]
 	if !ok {
@@ -104,46 +95,44 @@ func processAccountGraphrbacUsers(account *utilities.ExtensionConfigurationAzure
 		return resultMap, fmt.Errorf("table configuration not found")
 	}
 
-	for _, group := range groups {
-		go getGraphrbacUsers(session, group, &wg, &resultMap, tableConfig)
-	}
-	wg.Wait()
+	setGraphrbacUserstoTable(account.TenantID, session, &resultMap, tableConfig)
+
 	return resultMap, nil
 }
 
-func getGraphrbacUsers(session *azure.AzureSession, rg string, wg *sync.WaitGroup, resultMap *[]map[string]string, tableConfig *utilities.TableConfig) {
-	defer wg.Done()
+func setGraphrbacUserstoTable(tenantId string, session *azure.AzureSession, resultMap *[]map[string]string, tableConfig *utilities.TableConfig) {
 
-	svcClient := graphrbac.NewUsersClient(session.SubscriptionId)
-	svcClient.Authorizer = session.Authorizer
-
-	for resourceItr, err := svcClient.ListComplete(context.Background(), "", ""); resourceItr.NotDone(); err = resourceItr.Next() {
+	for resourcesItr, err := getGraphrbacUsersData(session, tenantId); resourcesItr.NotDone(); resourcesItr.Next() {
 		if err != nil {
 			utilities.GetLogger().WithFields(log.Fields{
-				"tableName":     azureGraphrbacUser,
-				"resourceGroup": rg,
-				"errString":     err.Error(),
-			}).Error("failed to get resource list")
-			continue
+				"tableName": azureGraphrbacUser,
+				"TenantId":  tenantId,
+				"errString": err.Error(),
+			}).Error("failed to get DNS zones")
 		}
 
-		resource := resourceItr.Value()
+		resource := resourcesItr.Value()
+
 		structs.DefaultTagName = "json"
 		resMap := structs.Map(resource)
-
 		byteArr, err := json.Marshal(resMap)
 		if err != nil {
 			utilities.GetLogger().WithFields(log.Fields{
-				"tableName":     azureGraphrbacUser,
-				"resourceGroup": rg,
-				"errString":     err.Error(),
+				"tableName": azureGraphrbacUser,
+				"TenantId":  tenantId,
+				"errString": err.Error(),
 			}).Error("failed to marshal response")
 			continue
 		}
 		table := utilities.NewTable(byteArr, tableConfig)
 		for _, row := range table.Rows {
-			result := azure.RowToMap(row, session.SubscriptionId, "", rg, tableConfig)
+			result := azure.RowToMap(row, session.SubscriptionId, "", "", tableConfig)
 			*resultMap = append(*resultMap, result)
 		}
 	}
+}
+func getGraphrbacUsersData(session *azure.AzureSession, tenantId string) (result graphrbac.UserListResultIterator, err error) {
+	svcClient := graphrbac.NewUsersClient(tenantId)
+	svcClient.Authorizer = session.GraphAuthorizer
+	return svcClient.ListComplete(context.Background(), "", "")
 }
