@@ -1,0 +1,107 @@
+{
+  "azure_dns_zone": {
+    "aws": {},
+    "gcp": {},
+    "azure": {
+      "subscriptionIdAttribute": "subscription_id"
+    },
+    "parsedAttributes": [
+      {
+        "sourceName": "etag",
+        "targetName": "etag",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "id",
+        "targetName": "id",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "location",
+        "targetName": "location",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "name",
+        "targetName": "name",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties",
+        "targetName": "properties",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_maxNumberOfRecordSets",
+        "targetName": "max_number_of_record_sets",
+        "targetType": "BIGINT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_maxNumberOfRecordsPerRecordSet",
+        "targetName": "max_number_of_records_per_record_set",
+        "targetType": "BIGINT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_nameServers",
+        "targetName": "name_servers",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_numberOfRecordSets",
+        "targetName": "number_of_record_sets",
+        "targetType": "BIGINT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_registrationVirtualNetworks",
+        "targetName": "registration_virtual_networks",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_registrationVirtualNetworks_id",
+        "targetName": "registration_virtual_networks_id",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_resolutionVirtualNetworks",
+        "targetName": "resolution_virtual_networks",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_resolutionVirtualNetworks_id",
+        "targetName": "resolution_virtual_networks_id",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_zoneType",
+        "targetName": "zone_type",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "tags",
+        "targetName": "tags",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "type",
+        "targetName": "type",
+        "targetType": "TEXT",
+        "enabled": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,773 @@
+{
+    "azure_containerservice_managed_cluster": {
+      "aws": {},
+      "gcp": {},
+      "azure": {
+        "subscriptionIdAttribute": "subscription_id"
+      },
+      "parsedAttributes":[
+        {
+          "sourceName": "APIServerAccessProfile",
+          "targetName": "api_server_access_profile",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "APIServerAccessProfile_authorizedIPRanges",
+          "targetName": "api_server_access_profile_authorized_ip_ranges",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "APIServerAccessProfile_disableRunCommand",
+          "targetName": "api_server_access_profile_disable_run_command",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "APIServerAccessProfile_enablePrivateCluster",
+          "targetName": "api_server_access_profile_enable_private_cluster",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "APIServerAccessProfile_enablePrivateClusterPublicFQDN",
+          "targetName": "api_server_access_profile_enable_private_cluster_public_fqdn",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "APIServerAccessProfile_privateDNSZone",
+          "targetName": "api_server_access_profile_private_dns_zone",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "AadProfile",
+          "targetName": "aad_profile",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "AadProfile_adminGroupObjectIDs",
+          "targetName": "aad_profile_admin_group_object_i_ds",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "AadProfile_clientAppID",
+          "targetName": "aad_profile_client_app_id",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "AadProfile_enableAzureRBAC",
+          "targetName": "aad_profile_enable_azure_rbac",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "AadProfile_managed",
+          "targetName": "aad_profile_managed",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "AadProfile_serverAppID",
+          "targetName": "aad_profile_server_app_id",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "AadProfile_serverAppSecret",
+          "targetName": "aad_profile_server_app_secret",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "AadProfile_tenantID",
+          "targetName": "aad_profile_tenant_id",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "AutoScalerProfile",
+          "targetName": "auto_scaler_profile",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "AutoScalerProfile_balance-similar-node-groups",
+          "targetName": "auto_scaler_profile_balance-similar-node-groups",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "AutoScalerProfile_expander",
+          "targetName": "auto_scaler_profile_expander",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "AutoScalerProfile_max-empty-bulk-delete",
+          "targetName": "auto_scaler_profile_max-empty-bulk-delete",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "AutoScalerProfile_max-graceful-termination-sec",
+          "targetName": "auto_scaler_profile_max-graceful-termination-sec",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "AutoScalerProfile_max-node-provision-time",
+          "targetName": "auto_scaler_profile_max-node-provision-time",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "AutoScalerProfile_max-total-unready-percentage",
+          "targetName": "auto_scaler_profile_max-total-unready-percentage",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "AutoScalerProfile_new-pod-scale-up-delay",
+          "targetName": "auto_scaler_profile_new-pod-scale-up-delay",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "AutoScalerProfile_ok-total-unready-count",
+          "targetName": "auto_scaler_profile_ok-total-unready-count",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "AutoScalerProfile_scale-down-delay-after-add",
+          "targetName": "auto_scaler_profile_scale-down-delay-after-add",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "AutoScalerProfile_scale-down-delay-after-delete",
+          "targetName": "auto_scaler_profile_scale-down-delay-after-delete",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "AutoScalerProfile_scale-down-delay-after-failure",
+          "targetName": "auto_scaler_profile_scale-down-delay-after-failure",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "AutoScalerProfile_scale-down-unneeded-time",
+          "targetName": "auto_scaler_profile_scale-down-unneeded-time",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "AutoScalerProfile_scale-down-unready-time",
+          "targetName": "auto_scaler_profile_scale-down-unready-time",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "AutoScalerProfile_scale-down-utilization-threshold",
+          "targetName": "auto_scaler_profile_scale-down-utilization-threshold",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "AutoScalerProfile_scan-interval",
+          "targetName": "auto_scaler_profile_scan-interval",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "AutoScalerProfile_skip-nodes-with-local-storage",
+          "targetName": "auto_scaler_profile_skip-nodes-with-local-storage",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "AutoScalerProfile_skip-nodes-with-system-pods",
+          "targetName": "auto_scaler_profile_skip-nodes-with-system-pods",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "AutoUpgradeProfile",
+          "targetName": "auto_upgrade_profile",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "AutoUpgradeProfile_upgradeChannel",
+          "targetName": "auto_upgrade_profile_upgrade_channel",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "AzurePortalFQDN",
+          "targetName": "azure_portal_fqdn",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "DNSPrefix",
+          "targetName": "dns_prefix",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "DisableLocalAccounts",
+          "targetName": "disable_local_accounts",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "DiskEncryptionSetID",
+          "targetName": "disk_encryption_set_id",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "EnablePodSecurityPolicy",
+          "targetName": "enable_pod_security_policy",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "EnableRBAC",
+          "targetName": "enable_rbac",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "ExtendedLocation",
+          "targetName": "extended_location",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "ExtendedLocation_name",
+          "targetName": "extended_location_name",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "ExtendedLocation_type",
+          "targetName": "extended_location_type",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "Fqdn",
+          "targetName": "fqdn",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "FqdnSubdomain",
+          "targetName": "fqdn_subdomain",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "HTTPProxyConfig",
+          "targetName": "http_proxy_config",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "HTTPProxyConfig_httpProxy",
+          "targetName": "http_proxy_config_http_proxy",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "HTTPProxyConfig_httpsProxy",
+          "targetName": "http_proxy_config_https_proxy",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "HTTPProxyConfig_noProxy",
+          "targetName": "http_proxy_config_no_proxy",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "HTTPProxyConfig_trustedCa",
+          "targetName": "http_proxy_config_trusted_ca",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "ID",
+          "targetName": "id",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "Identity",
+          "targetName": "identity",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "IdentityProfile",
+          "targetName": "identity_profile",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "Identity_principalId",
+          "targetName": "identity_principal_id",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "Identity_tenantId",
+          "targetName": "identity_tenant_id",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "Identity_type",
+          "targetName": "identity_type",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "Identity_userAssignedIdentities",
+          "targetName": "identity_user_assigned_identities",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "KubernetesVersion",
+          "targetName": "kubernetes_version",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "AgentPoolProfiles",
+          "targetName": "agent_pool_profiles",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "WindowsProfile ",
+          "targetName": "windows_profile",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "ServicePrincipalProfile",
+          "targetName": "service_principal_profile",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "AddonProfiles",
+          "targetName": "addon_profiles",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "PodIdentityProfile ",
+          "targetName": "pod_identity_profile",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "LinuxProfile",
+          "targetName": "linux_profile",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "LinuxProfile_adminUsername",
+          "targetName": "linux_profile_admin_username",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "LinuxProfile_ssh",
+          "targetName": "linux_profile_ssh",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "LinuxProfile_ssh_publicKeys",
+          "targetName": "linux_profile_ssh_public_keys",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "LinuxProfile_ssh_publicKeys_keyData",
+          "targetName": "linux_profile_ssh_public_keys_key_data",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "Location",
+          "targetName": "location",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "MaxAgentPools",
+          "targetName": "max_agent_pools",
+          "targetType": "INTEGER",
+          "enabled": true
+        },
+        {
+          "sourceName": "Name",
+          "targetName": "name",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "NetworkProfile",
+          "targetName": "network_profile",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "NetworkProfile_dnsServiceIP",
+          "targetName": "network_profile_dns_service_ip",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_dockerBridgeCidr",
+          "targetName": "network_profile_docker_bridge_cidr",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_ipFamilies",
+          "targetName": "network_profile_ip_families",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_loadBalancerProfile",
+          "targetName": "network_profile_load_balancer_profile",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_loadBalancerProfile_allocatedOutboundPorts",
+          "targetName": "network_profile_load_balancer_profile_allocated_outbound_ports",
+          "targetType": "INTEGER",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_loadBalancerProfile_effectiveOutboundIPs",
+          "targetName": "network_profile_load_balancer_profile_effective_outbound_i_ps",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_loadBalancerProfile_effectiveOutboundIPs_id",
+          "targetName": "network_profile_load_balancer_profile_effective_outbound_i_ps_id",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_loadBalancerProfile_enableMultipleStandardLoadBalancers",
+          "targetName": "network_profile_load_balancer_profile_enable_multiple_standard_load_balancers",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_loadBalancerProfile_idleTimeoutInMinutes",
+          "targetName": "network_profile_load_balancer_profile_idle_timeout_in_minutes",
+          "targetType": "INTEGER",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_loadBalancerProfile_managedOutboundIPs",
+          "targetName": "network_profile_load_balancer_profile_managed_outbound_i_ps",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_loadBalancerProfile_managedOutboundIPs_count",
+          "targetName": "network_profile_load_balancer_profile_managed_outbound_i_ps_count",
+          "targetType": "INTEGER",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_loadBalancerProfile_managedOutboundIPs_countIPv6",
+          "targetName": "network_profile_load_balancer_profile_managed_outbound_i_ps_count_i_pv6",
+          "targetType": "INTEGER",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_loadBalancerProfile_outboundIPPrefixes",
+          "targetName": "network_profile_load_balancer_profile_outbound_ip_prefixes",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_loadBalancerProfile_outboundIPPrefixes_publicIPPrefixes",
+          "targetName": "network_profile_load_balancer_profile_outbound_ip_prefixes_public_ip_prefixes",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_loadBalancerProfile_outboundIPPrefixes_publicIPPrefixes_id",
+          "targetName": "network_profile_load_balancer_profile_outbound_ip_prefixes_public_ip_prefixes_id",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_loadBalancerProfile_outboundIPs",
+          "targetName": "network_profile_load_balancer_profile_outbound_i_ps",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_loadBalancerProfile_outboundIPs_publicIPs",
+          "targetName": "network_profile_load_balancer_profile_outbound_i_ps_public_i_ps",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_loadBalancerProfile_outboundIPs_publicIPs_id",
+          "targetName": "network_profile_load_balancer_profile_outbound_i_ps_public_i_ps_id",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_loadBalancerSku",
+          "targetName": "network_profile_load_balancer_sku",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_natGatewayProfile",
+          "targetName": "network_profile_nat_gateway_profile",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_natGatewayProfile_effectiveOutboundIPs",
+          "targetName": "network_profile_nat_gateway_profile_effective_outbound_i_ps",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_natGatewayProfile_effectiveOutboundIPs_id",
+          "targetName": "network_profile_nat_gateway_profile_effective_outbound_i_ps_id",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_natGatewayProfile_idleTimeoutInMinutes",
+          "targetName": "network_profile_nat_gateway_profile_idle_timeout_in_minutes",
+          "targetType": "INTEGER",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_natGatewayProfile_managedOutboundIPProfile",
+          "targetName": "network_profile_nat_gateway_profile_managed_outbound_ip_profile",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_natGatewayProfile_managedOutboundIPProfile_count",
+          "targetName": "network_profile_nat_gateway_profile_managed_outbound_ip_profile_count",
+          "targetType": "INTEGER",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_networkMode",
+          "targetName": "network_profile_network_mode",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_networkPlugin",
+          "targetName": "network_profile_network_plugin",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_networkPolicy",
+          "targetName": "network_profile_network_policy",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_outboundType",
+          "targetName": "network_profile_outbound_type",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_podCidr",
+          "targetName": "network_profile_pod_cidr",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_podCidrs",
+          "targetName": "network_profile_pod_cidrs",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_serviceCidr",
+          "targetName": "network_profile_service_cidr",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "NetworkProfile_serviceCidrs",
+          "targetName": "network_profile_service_cidrs",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "NodeResourceGroup",
+          "targetName": "node_resource_group",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "PowerState",
+          "targetName": "power_state",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "PowerState_code",
+          "targetName": "power_state_code",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "PrivateFQDN",
+          "targetName": "private_fqdn",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "PrivateLinkResources",
+          "targetName": "private_link_resources",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "PrivateLinkResources_groupId",
+          "targetName": "private_link_resources_group_id",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "PrivateLinkResources_id",
+          "targetName": "private_link_resources_id",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "PrivateLinkResources_name",
+          "targetName": "private_link_resources_name",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "PrivateLinkResources_privateLinkServiceID",
+          "targetName": "private_link_resources_private_link_service_id",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "PrivateLinkResources_requiredMembers",
+          "targetName": "private_link_resources_required_members",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "PrivateLinkResources_type",
+          "targetName": "private_link_resources_type",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "ProvisioningState",
+          "targetName": "provisioning_state",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "PublicNetworkAccess",
+          "targetName": "public_network_access",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "SecurityProfile",
+          "targetName": "security_profile",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "SecurityProfile_azureDefender",
+          "targetName": "security_profile_azure_defender",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "SecurityProfile_azureDefender_enabled",
+          "targetName": "security_profile_azure_defender_enabled",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "SecurityProfile_azureDefender_logAnalyticsWorkspaceResourceId",
+          "targetName": "security_profile_azure_defender_log_analytics_workspace_resource_id",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "Sku",
+          "targetName": "sku",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "Sku_name",
+          "targetName": "sku_name",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "Sku_tier",
+          "targetName": "sku_tier",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "Tags",
+          "targetName": "tags",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "Type",
+          "targetName": "type",
+          "targetType": "TEXT",
+          "enabled": true
+        }
+      ]
+      }
+    }

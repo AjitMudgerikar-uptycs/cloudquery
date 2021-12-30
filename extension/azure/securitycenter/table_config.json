@@ -1,0 +1,137 @@
+{
+    "azure_securitycenter_security_contact": {
+      "aws": {},
+      "gcp": {},
+      "azure": {
+        "subscriptionIdAttribute": "subscription_id"
+      },
+      "parsedAttributes":[
+        {
+          "sourceName": "id",
+          "targetName": "id",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "name",
+          "targetName": "name",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties",
+          "targetName": "properties",
+          "targetType": "TEXT",
+          "enabled": false
+        },
+        {
+          "sourceName": "properties_alertNotifications",
+          "targetName": "alert_notifications",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_alertsToAdmins",
+          "targetName": "alerts_to_admins",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_email",
+          "targetName": "email",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "properties_phone",
+          "targetName": "phone",
+          "targetType": "TEXT",
+          "enabled": true
+        },
+        {
+          "sourceName": "type",
+          "targetName": "type",
+          "targetType": "TEXT",
+          "enabled": true
+        }
+      ]
+      },
+      "azure_securitycenter_setting": {
+        "aws": {},
+        "gcp": {},
+        "azure": {
+          "subscriptionIdAttribute": "subscription_id"
+        },
+        "parsedAttributes":[
+          {
+            "sourceName": "id",
+            "targetName": "id",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "kind",
+            "targetName": "kind",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "name",
+            "targetName": "name",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "type",
+            "targetName": "type",
+            "targetType": "TEXT",
+            "enabled": true
+          }
+        ]
+      },
+      "azure_securitycenter_subscription_pricing": {
+        "aws": {},
+        "gcp": {},
+        "azure": {
+          "subscriptionIdAttribute": "subscription_id"
+        },
+        "parsedAttributes":[
+          {
+            "sourceName": "id",
+            "targetName": "id",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "name",
+            "targetName": "name",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "properties",
+            "targetName": "properties",
+            "targetType": "TEXT",
+            "enabled": false
+          },
+          {
+            "sourceName": "properties_freeTrialRemainingTime",
+            "targetName": "free_trial_remaining_time",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "properties_pricingTier",
+            "targetName": "pricing_tier",
+            "targetType": "TEXT",
+            "enabled": true
+          },
+          {
+            "sourceName": "type",
+            "targetName": "type",
+            "targetType": "TEXT",
+            "enabled": true
+          }
+        ]
+      }
+    }

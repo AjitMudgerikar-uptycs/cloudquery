@@ -1,0 +1,1 @@
+- azure_containerservice_managed_cluster
