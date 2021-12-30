@@ -181,7 +181,6 @@ func setKeyvaultSecretToTable(session *azure.AzureSession, rg string, wg *sync.W
 	defer wg.Done()
 
 	resources, err := getKeyvaultVaultData(session, rg)
-	fmt.Println(1, err)
 	if err != nil {
 		utilities.GetLogger().WithFields(log.Fields{
 			"tableName":      keyvaultSecret,
@@ -198,12 +197,8 @@ func setKeyvaultSecretToTable(session *azure.AzureSession, rg string, wg *sync.W
 func setKeyvaultSecretToTableHelper(session *azure.AzureSession, rg string, wg *sync.WaitGroup, resultMap *[]map[string]string, tableConfig *utilities.TableConfig, vaultName string) {
 
 	SecretsList := make([]keyvault.SecretListResult, 0)
-
 	vaultBaseURL := "https://" + vaultName + ".vault.azure.net"
-	fmt.Println(vaultBaseURL)
 	resourceItr, err := getKeyvaultSecretHelperData(session, rg, vaultBaseURL)
-	a, _ := json.MarshalIndent(resourceItr, " ", "")
-	fmt.Println(string(a))
 	if err != nil {
 		utilities.GetLogger().WithFields(log.Fields{
 			"tableName":     keyvaultSecret,
@@ -238,7 +233,7 @@ func setKeyvaultSecretToTableHelper(session *azure.AzureSession, rg string, wg *
 }
 func getKeyvaultSecretHelperData(session *azure.AzureSession, rg string, vaultBaseURL string) (result keyvault.SecretListResultPage, err error) {
 
-	var top int32 = 1
+	var top int32 = 25
 	svcClient := keyvault.New()
 	svcClient.Authorizer = session.VaultAuthorizer
 	return svcClient.GetSecrets(context.Background(), vaultBaseURL, &top)

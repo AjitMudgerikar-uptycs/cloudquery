@@ -355,7 +355,7 @@
       },
       "parsedAttributes": [
         {
-          "sourceName": "attributes",
+          "sourceName": "value_attributes",
           "targetName": "attributes",
           "targetType": "TEXT",
           "enabled": true
@@ -487,13 +487,13 @@
           "enabled": false
         },
         {
-          "sourceName": "attributes_enabled",
+          "sourceName": "value_attributes_enabled",
           "targetName": "attributes_enabled",
           "targetType": "TEXT",
           "enabled": true
         },
         {
-          "sourceName": "attributes_exp",
+          "sourceName": "value_attributes_exp",
           "targetName": "attributes_exp",
           "targetType": "TEXT",
           "enabled": true
@@ -889,7 +889,7 @@
           "enabled": true
         },
         {
-          "sourceName": "id",
+          "sourceName": "value_id",
           "targetName": "id",
           "targetType": "TEXT",
           "enabled": true
@@ -907,7 +907,7 @@
           "enabled": true
         },
         {
-          "sourceName": "tags",
+          "sourceName": "value_tags",
           "targetName": "tags",
           "targetType": "TEXT",
           "enabled": true
