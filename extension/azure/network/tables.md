@@ -1,1 +1,2 @@
 - azure_network_watcher_flow_log
+- azure_network_load_balancer

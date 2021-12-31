@@ -1,161 +1,476 @@
 {
-    "azure_network_watcher_flow_log": {
-      "aws": {},
-      "gcp": {},
-      "azure": {
-        "subscriptionIdAttribute": "subscription_id"
+  "azure_network_watcher_flow_log": {
+    "aws": {},
+    "gcp": {},
+    "azure": {
+      "subscriptionIdAttribute": "subscription_id"
+    },
+    "parsedAttributes": [
+      {
+        "sourceName": "etag",
+        "targetName": "etag",
+        "targetType": "TEXT",
+        "enabled": true
       },
-      "parsedAttributes": [
-        {
-          "sourceName": "etag",
-          "targetName": "etag",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "id",
-          "targetName": "id",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "location",
-          "targetName": "location",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "name",
-          "targetName": "name",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties",
-          "targetName": "properties",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_enabled",
-          "targetName": "enabled",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_flowAnalyticsConfiguration",
-          "targetName": "flow_analytics_configuration",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_flowAnalyticsConfiguration_networkWatcherFlowAnalyticsConfiguration",
-          "targetName": "flow_analytics_configuration_network_watcher_flow_analytics_configuration",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_flowAnalyticsConfiguration_networkWatcherFlowAnalyticsConfiguration_enabled",
-          "targetName": "flow_analytics_configuration_network_watcher_flow_analytics_configuration_enabled",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_flowAnalyticsConfiguration_networkWatcherFlowAnalyticsConfiguration_trafficAnalyticsInterval",
-          "targetName": "flow_analytics_configuration_network_watcher_flow_analytics_configuration_traffic_analytics_interval",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_flowAnalyticsConfiguration_networkWatcherFlowAnalyticsConfiguration_workspaceId",
-          "targetName": "flow_analytics_configuration_network_watcher_flow_analytics_configuration_workspace_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_flowAnalyticsConfiguration_networkWatcherFlowAnalyticsConfiguration_workspaceRegion",
-          "targetName": "flow_analytics_configuration_network_watcher_flow_analytics_configuration_workspace_region",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_flowAnalyticsConfiguration_networkWatcherFlowAnalyticsConfiguration_workspaceResourceId",
-          "targetName": "flow_analytics_configuration_network_watcher_flow_analytics_configuration_workspace_resource_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_format",
-          "targetName": "format",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_format_type",
-          "targetName": "format_type",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_format_version",
-          "targetName": "format_version",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_provisioningState",
-          "targetName": "provisioning_state",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_retentionPolicy",
-          "targetName": "retention_policy",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_retentionPolicy_days",
-          "targetName": "retention_policy_days",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_retentionPolicy_enabled",
-          "targetName": "retention_policy_enabled",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_storageId",
-          "targetName": "storage_id",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_targetResourceGuid",
-          "targetName": "target_resource_guid",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_targetResourceId",
-          "targetName": "target_resource_id",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "tags",
-          "targetName": "tags",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "type",
-          "targetName": "type",
-          "targetType": "TEXT",
-          "enabled": true
-        }
-      ]
-    }
+      {
+        "sourceName": "id",
+        "targetName": "id",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "location",
+        "targetName": "location",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "name",
+        "targetName": "name",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties",
+        "targetName": "properties",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_enabled",
+        "targetName": "enabled",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_flowAnalyticsConfiguration",
+        "targetName": "flow_analytics_configuration",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_flowAnalyticsConfiguration_networkWatcherFlowAnalyticsConfiguration",
+        "targetName": "flow_analytics_configuration_network_watcher_flow_analytics_configuration",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_flowAnalyticsConfiguration_networkWatcherFlowAnalyticsConfiguration_enabled",
+        "targetName": "flow_analytics_configuration_network_watcher_flow_analytics_configuration_enabled",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_flowAnalyticsConfiguration_networkWatcherFlowAnalyticsConfiguration_trafficAnalyticsInterval",
+        "targetName": "flow_analytics_configuration_network_watcher_flow_analytics_configuration_traffic_analytics_interval",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_flowAnalyticsConfiguration_networkWatcherFlowAnalyticsConfiguration_workspaceId",
+        "targetName": "flow_analytics_configuration_network_watcher_flow_analytics_configuration_workspace_id",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_flowAnalyticsConfiguration_networkWatcherFlowAnalyticsConfiguration_workspaceRegion",
+        "targetName": "flow_analytics_configuration_network_watcher_flow_analytics_configuration_workspace_region",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_flowAnalyticsConfiguration_networkWatcherFlowAnalyticsConfiguration_workspaceResourceId",
+        "targetName": "flow_analytics_configuration_network_watcher_flow_analytics_configuration_workspace_resource_id",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_format",
+        "targetName": "format",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_format_type",
+        "targetName": "format_type",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_format_version",
+        "targetName": "format_version",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_provisioningState",
+        "targetName": "provisioning_state",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_retentionPolicy",
+        "targetName": "retention_policy",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_retentionPolicy_days",
+        "targetName": "retention_policy_days",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_retentionPolicy_enabled",
+        "targetName": "retention_policy_enabled",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_storageId",
+        "targetName": "storage_id",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_targetResourceGuid",
+        "targetName": "target_resource_guid",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_targetResourceId",
+        "targetName": "target_resource_id",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "tags",
+        "targetName": "tags",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "type",
+        "targetName": "type",
+        "targetType": "TEXT",
+        "enabled": true
+      }
+    ]
+  },
+  "azure_network_load_balancer": {
+    "aws": {},
+    "gcp": {},
+    "azure": {
+      "subscriptionIdAttribute": "subscription_id"
+    },
+    "parsedAttributes": [
+      {
+        "sourceName": "etag",
+        "targetName": "etag",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "extendedLocation",
+        "targetName": "extended_location",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "extendedLocation_name",
+        "targetName": "extended_location_name",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "extendedLocation_type",
+        "targetName": "extended_location_type",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "id",
+        "targetName": "id",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "location",
+        "targetName": "location",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "name",
+        "targetName": "name",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties",
+        "targetName": "properties",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_backendAddressPools",
+        "targetName": "backend_address_pools",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_backendAddressPools_etag",
+        "targetName": "backend_address_pools_etag",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_backendAddressPools_id",
+        "targetName": "backend_address_pools_id",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_backendAddressPools_name",
+        "targetName": "backend_address_pools_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_backendAddressPools_type",
+        "targetName": "backend_address_pools_type",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_frontendIPConfigurations",
+        "targetName": "frontend_ip_configurations",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_frontendIPConfigurations_etag",
+        "targetName": "frontend_ip_configurations_etag",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_frontendIPConfigurations_id",
+        "targetName": "frontend_ip_configurations_id",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_frontendIPConfigurations_name",
+        "targetName": "frontend_ip_configurations_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_frontendIPConfigurations_type",
+        "targetName": "frontend_ip_configurations_type",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_frontendIPConfigurations_zones",
+        "targetName": "frontend_ip_configurations_zones",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_inboundNatPools",
+        "targetName": "inbound_nat_pools",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_inboundNatPools_etag",
+        "targetName": "inbound_nat_pools_etag",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_inboundNatPools_id",
+        "targetName": "inbound_nat_pools_id",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_inboundNatPools_name",
+        "targetName": "inbound_nat_pools_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_inboundNatPools_type",
+        "targetName": "inbound_nat_pools_type",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_inboundNatRules",
+        "targetName": "inbound_nat_rules",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_inboundNatRules_etag",
+        "targetName": "inbound_nat_rules_etag",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_inboundNatRules_id",
+        "targetName": "inbound_nat_rules_id",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_inboundNatRules_name",
+        "targetName": "inbound_nat_rules_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_inboundNatRules_type",
+        "targetName": "inbound_nat_rules_type",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_loadBalancingRules",
+        "targetName": "load_balancing_rules",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_loadBalancingRules_etag",
+        "targetName": "load_balancing_rules_etag",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_loadBalancingRules_id",
+        "targetName": "load_balancing_rules_id",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_loadBalancingRules_name",
+        "targetName": "load_balancing_rules_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_loadBalancingRules_type",
+        "targetName": "load_balancing_rules_type",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_outboundRules",
+        "targetName": "outbound_rules",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_outboundRules_etag",
+        "targetName": "outbound_rules_etag",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_outboundRules_id",
+        "targetName": "outbound_rules_id",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_outboundRules_name",
+        "targetName": "outbound_rules_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_outboundRules_type",
+        "targetName": "outbound_rules_type",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_probes",
+        "targetName": "probes",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_probes_etag",
+        "targetName": "probes_etag",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_probes_id",
+        "targetName": "probes_id",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_probes_name",
+        "targetName": "probes_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_probes_type",
+        "targetName": "probes_type",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_provisioningState",
+        "targetName": "provisioning_state",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_resourceGuid",
+        "targetName": "resource_guid",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "sku",
+        "targetName": "sku",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "sku_name",
+        "targetName": "sku_name",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "sku_tier",
+        "targetName": "sku_tier",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "tags",
+        "targetName": "tags",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "type",
+        "targetName": "type",
+        "targetType": "TEXT",
+        "enabled": true
+      }
+    ]
   }
+}
