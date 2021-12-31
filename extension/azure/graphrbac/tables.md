@@ -1,0 +1,1 @@
+- azure_graphrbac_service_principal

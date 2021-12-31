@@ -26,8 +26,9 @@ import (
 
 // AzureSession is an object representing session for subscription
 type AzureSession struct {
-	SubscriptionId string
-	Authorizer     autorest.Authorizer
+	SubscriptionId  string
+	Authorizer      autorest.Authorizer
+	GraphAuthorizer autorest.Authorizer
 }
 
 var (
@@ -65,13 +66,18 @@ func GetAuthSession(account *utilities.ExtensionConfigurationAzureAccount) (*Azu
 	if err != nil {
 		return nil, errors.Wrap(err, "Can't initialize authorizer")
 	}
+	graphrbacAuthorizer, err := auth.NewAuthorizerFromFile(azure.PublicCloud.GraphEndpoint)
+	if err != nil {
+		return nil, errors.Wrap(err, "Can't initialize graph authorizer")
+	}
 	authInfo, err := readJSON(os.Getenv("AZURE_AUTH_LOCATION"))
 	if err != nil {
 		return nil, errors.Wrap(err, "Can't get authinfo")
 	}
 	session := AzureSession{
-		SubscriptionId: (*authInfo)["subscriptionId"].(string),
-		Authorizer:     authorizer,
+		SubscriptionId:  (*authInfo)["subscriptionId"].(string),
+		Authorizer:      authorizer,
+		GraphAuthorizer: graphrbacAuthorizer,
 	}
 
 	return &session, nil

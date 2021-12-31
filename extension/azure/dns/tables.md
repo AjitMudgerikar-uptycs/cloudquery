@@ -1,1 +1,2 @@
 - azure_dns_zone
+- azure_dns_record_set
