@@ -308,8 +308,7 @@ func RegisterPlugins(server *osquery.ExtensionManagerServer) {
 	//Azure Monitor
 	server.RegisterPlugin(table.NewPlugin("azure_monitor_diagnostic_settings_resource", azuremonitor.DiagnosticSettingsResourceColumns(), azuremonitor.DiagnosticSettingsResourceGenerate))
 	server.RegisterPlugin(table.NewPlugin("azure_monitor_diagnostic_settings_subscription", azuremonitor.DiagnosticSettingsSubscriptionColumns(), azuremonitor.DiagnosticSettingsSubscriptionGenerate))
-	//Azure Network
-	server.RegisterPlugin(table.NewPlugin("azure_network_load_balancer", azurenetwork.NetworkLoadBalancerColumns(), azurenetwork.NetworkLoadBalancersGenerate))
+	server.RegisterPlugin(table.NewPlugin("azure_monitor_activity_log_alert", azuremonitor.MonitorActivityLogAlertColumns(), azuremonitor.MonitorActivityLogAlertsGenerate))
 	// Azure Appservice
 	server.RegisterPlugin(table.NewPlugin("azure_appservice_site", azureappservice.AppserviceSiteColumns(), azureappservice.AppserviceSitesGenerate))
 	// Azure SQL
@@ -320,6 +319,7 @@ func RegisterPlugins(server *osquery.ExtensionManagerServer) {
 	server.RegisterPlugin(table.NewPlugin("azure_keyvault_key", azurekeyvault.KeyvaultKeyColumns(), azurekeyvault.KeyvaultKeysGenerate))
 	// Azure Network
 	server.RegisterPlugin(table.NewPlugin("azure_network_watcher_flow_log", azurenetwork.AzureNetworkWatcherFlowLogColumns(), azurenetwork.AzureNetworkWatcherFlowLogsGenerate))
+  server.RegisterPlugin(table.NewPlugin("azure_network_load_balancer", azurenetwork.NetworkLoadBalancerColumns(), azurenetwork.NetworkLoadBalancersGenerate))
 	//Azure Securitycenter
 	server.RegisterPlugin(table.NewPlugin("azure_securitycenter_security_contact", azuresecurity.SecuritycenterSecurityContactColumns(), azuresecurity.SecuritycenterSecurityContactsGenerate))
 	server.RegisterPlugin(table.NewPlugin("azure_securitycenter_setting", azuresecurity.SecuritycenterSettingColumns(), azuresecurity.SecuritycenterSettingGenerate))

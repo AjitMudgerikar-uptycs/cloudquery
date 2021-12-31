@@ -32,6 +32,7 @@
   - azure_dns_record_set
   - azure_securitycenter_subscription_pricing
   - azure_securitycenter_auto_provisioning
+  - azure_monitor_activity_log_alert
   - azure_redis_cache
   - azure_graphrbac_service_principal
   - azure_network_load_balancer
