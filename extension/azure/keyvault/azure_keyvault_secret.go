@@ -21,7 +21,7 @@ const keyvaultSecret string = "azure_keyvault_secret"
 // KeyvaultSecretColumns returns the list of columns in the table
 func KeyvaultSecretColumns() []table.ColumnDefinition {
 	return []table.ColumnDefinition{
-		table.TextColumn("attributes"),
+		// table.TextColumn("attributes"),
 		table.TextColumn("attributes_created"),
 		// table.BigIntColumn("attributes_created_ext"),
 		// table.TextColumn("attributes_created_loc"),
@@ -114,7 +114,6 @@ func KeyvaultSecretColumns() []table.ColumnDefinition {
 		table.TextColumn("kid"),
 		table.TextColumn("managed"),
 		table.TextColumn("tags"),
-		table.TextColumn("value"),
 	}
 }
 
@@ -196,7 +195,6 @@ func setKeyvaultSecretToTable(session *azure.AzureSession, rg string, wg *sync.W
 }
 func setKeyvaultSecretToTableHelper(session *azure.AzureSession, rg string, wg *sync.WaitGroup, resultMap *[]map[string]string, tableConfig *utilities.TableConfig, vaultName string) {
 
-	SecretsList := make([]keyvault.SecretListResult, 0)
 	vaultBaseURL := "https://" + vaultName + ".vault.azure.net"
 	resourceItr, err := getKeyvaultSecretHelperData(session, rg, vaultBaseURL)
 	if err != nil {
@@ -205,14 +203,13 @@ func setKeyvaultSecretToTableHelper(session *azure.AzureSession, rg string, wg *
 			"resourceGroup": rg,
 			"errString":     err.Error(),
 		}).Error("failed to get list from api")
-
+		return
 	}
-	resource := resourceItr.Response()
-	SecretsList = append(SecretsList, resource)
-	for _, SecretList := range SecretsList {
+
+	for _, secret := range *resourceItr.Response().Value {
 
 		structs.DefaultTagName = "json"
-		resMap := structs.Map(SecretList)
+		resMap := structs.Map(secret)
 		byteArr, err := json.Marshal(resMap)
 
 		if err != nil {

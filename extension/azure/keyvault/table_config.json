@@ -1,923 +1,917 @@
 {
-    "azure_keyvault_vault": {
-      "aws": {},
-      "gcp": {},
-      "azure": {
-        "subscriptionIdAttribute": "subscription_id"
-      },
-      "parsedAttributes": [
-        {
-          "sourceName": "id",
-          "targetName": "id",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "location",
-          "targetName": "location",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "name",
-          "targetName": "name",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties",
-          "targetName": "properties",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_accessPolicies",
-          "targetName": "properties_access_policies",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_accessPolicies_applicationId",
-          "targetName": "properties_access_policies_application_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_accessPolicies_objectId",
-          "targetName": "properties_access_policies_object_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_accessPolicies_permissions",
-          "targetName": "properties_access_policies_permissions",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_accessPolicies_permissions_certificates",
-          "targetName": "properties_access_policies_permissions_certificates",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_accessPolicies_permissions_keys",
-          "targetName": "properties_access_policies_permissions_keys",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_accessPolicies_permissions_secrets",
-          "targetName": "properties_access_policies_permissions_secrets",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_accessPolicies_permissions_storage",
-          "targetName": "properties_access_policies_permissions_storage",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_accessPolicies_tenantId",
-          "targetName": "properties_access_policies_tenant_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_createMode",
-          "targetName": "properties_create_mode",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_enablePurgeProtection",
-          "targetName": "properties_enable_purge_protection",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_enableRbacAuthorization",
-          "targetName": "properties_enable_rbac_authorization",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_enableSoftDelete",
-          "targetName": "properties_enable_soft_delete",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_enabledForDeployment",
-          "targetName": "properties_enabled_for_deployment",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_enabledForDiskEncryption",
-          "targetName": "properties_enabled_for_disk_encryption",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_enabledForTemplateDeployment",
-          "targetName": "properties_enabled_for_template_deployment",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_networkAcls",
-          "targetName": "properties_network_acls",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_networkAcls_bypass",
-          "targetName": "properties_network_acls_bypass",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_networkAcls_defaultAction",
-          "targetName": "properties_network_acls_default_action",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_networkAcls_ipRules",
-          "targetName": "properties_network_acls_ip_rules",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_networkAcls_ipRules_value",
-          "targetName": "properties_network_acls_ip_rules_value",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_networkAcls_virtualNetworkRules",
-          "targetName": "properties_network_acls_virtual_network_rules",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_networkAcls_virtualNetworkRules_id",
-          "targetName": "properties_network_acls_virtual_network_rules_id",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_privateEndpointConnections",
-          "targetName": "properties_private_endpoint_connections",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_sku",
-          "targetName": "properties_sku",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_sku_family",
-          "targetName": "properties_sku_family",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_sku_name",
-          "targetName": "properties_sku_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_softDeleteRetentionInDays",
-          "targetName": "properties_soft_delete_retention_in_days",
-          "targetType": "INTEGER",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_tenantId",
-          "targetName": "properties_tenant_id",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_vaultUri",
-          "targetName": "properties_vault_uri",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "tags",
-          "targetName": "tags",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "type",
-          "targetName": "type",
-          "targetType": "TEXT",
-          "enabled": true
-        }
-      ]
+  "azure_keyvault_vault": {
+    "aws": {},
+    "gcp": {},
+    "azure": {
+      "subscriptionIdAttribute": "subscription_id"
     },
-    "azure_keyvault_key": {
-      "aws": {},
-      "gcp": {},
-      "azure": {
-        "subscriptionIdAttribute": "subscription_id"
+    "parsedAttributes": [
+      {
+        "sourceName": "id",
+        "targetName": "id",
+        "targetType": "TEXT",
+        "enabled": true
       },
-      "parsedAttributes": [
-        {
-          "sourceName": "id",
-          "targetName": "id",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "location",
-          "targetName": "location",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "name",
-          "targetName": "name",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties",
-          "targetName": "properties",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_attributes",
-          "targetName": "attributes",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_attributes_created",
-          "targetName": "attributes_created",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_attributes_enabled",
-          "targetName": "attributes_enabled",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_attributes_exp",
-          "targetName": "attributes_exp",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_attributes_nbf",
-          "targetName": "attributes_nbf",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_attributes_recoveryLevel",
-          "targetName": "attributes_recovery_level",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_attributes_updated",
-          "targetName": "attributes_updated",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "properties_curveName",
-          "targetName": "curve_name",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_keyOps",
-          "targetName": "key_ops",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_keySize",
-          "targetName": "key_size",
-          "targetType": "INTEGER",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_keyUri",
-          "targetName": "key_uri",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_keyUriWithVersion",
-          "targetName": "key_uri_with_version",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "properties_kty",
-          "targetName": "kty",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "tags",
-          "targetName": "tags",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "type",
-          "targetName": "type",
-          "targetType": "TEXT",
-          "enabled": true
-        }
-      ]
+      {
+        "sourceName": "location",
+        "targetName": "location",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "name",
+        "targetName": "name",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties",
+        "targetName": "properties",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_accessPolicies",
+        "targetName": "properties_access_policies",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_accessPolicies_applicationId",
+        "targetName": "properties_access_policies_application_id",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_accessPolicies_objectId",
+        "targetName": "properties_access_policies_object_id",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_accessPolicies_permissions",
+        "targetName": "properties_access_policies_permissions",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_accessPolicies_permissions_certificates",
+        "targetName": "properties_access_policies_permissions_certificates",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_accessPolicies_permissions_keys",
+        "targetName": "properties_access_policies_permissions_keys",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_accessPolicies_permissions_secrets",
+        "targetName": "properties_access_policies_permissions_secrets",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_accessPolicies_permissions_storage",
+        "targetName": "properties_access_policies_permissions_storage",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_accessPolicies_tenantId",
+        "targetName": "properties_access_policies_tenant_id",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_createMode",
+        "targetName": "properties_create_mode",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_enablePurgeProtection",
+        "targetName": "properties_enable_purge_protection",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_enableRbacAuthorization",
+        "targetName": "properties_enable_rbac_authorization",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_enableSoftDelete",
+        "targetName": "properties_enable_soft_delete",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_enabledForDeployment",
+        "targetName": "properties_enabled_for_deployment",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_enabledForDiskEncryption",
+        "targetName": "properties_enabled_for_disk_encryption",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_enabledForTemplateDeployment",
+        "targetName": "properties_enabled_for_template_deployment",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_networkAcls",
+        "targetName": "properties_network_acls",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_networkAcls_bypass",
+        "targetName": "properties_network_acls_bypass",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_networkAcls_defaultAction",
+        "targetName": "properties_network_acls_default_action",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_networkAcls_ipRules",
+        "targetName": "properties_network_acls_ip_rules",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_networkAcls_ipRules_value",
+        "targetName": "properties_network_acls_ip_rules_value",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_networkAcls_virtualNetworkRules",
+        "targetName": "properties_network_acls_virtual_network_rules",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_networkAcls_virtualNetworkRules_id",
+        "targetName": "properties_network_acls_virtual_network_rules_id",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_privateEndpointConnections",
+        "targetName": "properties_private_endpoint_connections",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_sku",
+        "targetName": "properties_sku",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_sku_family",
+        "targetName": "properties_sku_family",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_sku_name",
+        "targetName": "properties_sku_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_softDeleteRetentionInDays",
+        "targetName": "properties_soft_delete_retention_in_days",
+        "targetType": "INTEGER",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_tenantId",
+        "targetName": "properties_tenant_id",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_vaultUri",
+        "targetName": "properties_vault_uri",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "tags",
+        "targetName": "tags",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "type",
+        "targetName": "type",
+        "targetType": "TEXT",
+        "enabled": true
+      }
+    ]
+  },
+  "azure_keyvault_key": {
+    "aws": {},
+    "gcp": {},
+    "azure": {
+      "subscriptionIdAttribute": "subscription_id"
     },
-    "azure_keyvault_secret": {
-      "aws": {},
-      "gcp": {},
-      "azure": {
-        "subscriptionIdAttribute": "subscription_id"
+    "parsedAttributes": [
+      {
+        "sourceName": "id",
+        "targetName": "id",
+        "targetType": "TEXT",
+        "enabled": true
       },
-      "parsedAttributes": [
-        {
-          "sourceName": "value_attributes",
-          "targetName": "attributes",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "attributes_created",
-          "targetName": "attributes_created",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "attributes_created_ext",
-          "targetName": "attributes_created_ext",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_created_loc",
-          "targetName": "attributes_created_loc",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_created_loc_cacheEnd",
-          "targetName": "attributes_created_loc_cache_end",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_created_loc_cacheStart",
-          "targetName": "attributes_created_loc_cache_start",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_created_loc_cacheZone",
-          "targetName": "attributes_created_loc_cache_zone",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_created_loc_cacheZone_isDST",
-          "targetName": "attributes_created_loc_cache_zone_is_dst",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_created_loc_cacheZone_name",
-          "targetName": "attributes_created_loc_cache_zone_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_created_loc_cacheZone_offset",
-          "targetName": "attributes_created_loc_cache_zone_offset",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_created_loc_extend",
-          "targetName": "attributes_created_loc_extend",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_created_loc_name",
-          "targetName": "attributes_created_loc_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_created_loc_tx",
-          "targetName": "attributes_created_loc_tx",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_created_loc_tx_index",
-          "targetName": "attributes_created_loc_tx_index",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_created_loc_tx_isstd",
-          "targetName": "attributes_created_loc_tx_isstd",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_created_loc_tx_isutc",
-          "targetName": "attributes_created_loc_tx_isutc",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_created_loc_tx_when",
-          "targetName": "attributes_created_loc_tx_when",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_created_loc_zone",
-          "targetName": "attributes_created_loc_zone",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_created_loc_zone_isDST",
-          "targetName": "attributes_created_loc_zone_is_dst",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_created_loc_zone_name",
-          "targetName": "attributes_created_loc_zone_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_created_loc_zone_offset",
-          "targetName": "attributes_created_loc_zone_offset",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_created_wall",
-          "targetName": "attributes_created_wall",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "value_attributes_enabled",
-          "targetName": "attributes_enabled",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "value_attributes_exp",
-          "targetName": "attributes_exp",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "attributes_exp_ext",
-          "targetName": "attributes_exp_ext",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_exp_loc",
-          "targetName": "attributes_exp_loc",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_exp_loc_cacheEnd",
-          "targetName": "attributes_exp_loc_cache_end",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_exp_loc_cacheStart",
-          "targetName": "attributes_exp_loc_cache_start",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_exp_loc_cacheZone",
-          "targetName": "attributes_exp_loc_cache_zone",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_exp_loc_cacheZone_isDST",
-          "targetName": "attributes_exp_loc_cache_zone_is_dst",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_exp_loc_cacheZone_name",
-          "targetName": "attributes_exp_loc_cache_zone_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_exp_loc_cacheZone_offset",
-          "targetName": "attributes_exp_loc_cache_zone_offset",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_exp_loc_extend",
-          "targetName": "attributes_exp_loc_extend",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_exp_loc_name",
-          "targetName": "attributes_exp_loc_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_exp_loc_tx",
-          "targetName": "attributes_exp_loc_tx",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_exp_loc_tx_index",
-          "targetName": "attributes_exp_loc_tx_index",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_exp_loc_tx_isstd",
-          "targetName": "attributes_exp_loc_tx_isstd",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_exp_loc_tx_isutc",
-          "targetName": "attributes_exp_loc_tx_isutc",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_exp_loc_tx_when",
-          "targetName": "attributes_exp_loc_tx_when",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_exp_loc_zone",
-          "targetName": "attributes_exp_loc_zone",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_exp_loc_zone_isDST",
-          "targetName": "attributes_exp_loc_zone_is_dst",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_exp_loc_zone_name",
-          "targetName": "attributes_exp_loc_zone_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_exp_loc_zone_offset",
-          "targetName": "attributes_exp_loc_zone_offset",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_exp_wall",
-          "targetName": "attributes_exp_wall",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_nbf",
-          "targetName": "attributes_nbf",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "attributes_nbf_ext",
-          "targetName": "attributes_nbf_ext",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_nbf_loc",
-          "targetName": "attributes_nbf_loc",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_nbf_loc_cacheEnd",
-          "targetName": "attributes_nbf_loc_cache_end",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_nbf_loc_cacheStart",
-          "targetName": "attributes_nbf_loc_cache_start",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_nbf_loc_cacheZone",
-          "targetName": "attributes_nbf_loc_cache_zone",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_nbf_loc_cacheZone_isDST",
-          "targetName": "attributes_nbf_loc_cache_zone_is_dst",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_nbf_loc_cacheZone_name",
-          "targetName": "attributes_nbf_loc_cache_zone_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_nbf_loc_cacheZone_offset",
-          "targetName": "attributes_nbf_loc_cache_zone_offset",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_nbf_loc_extend",
-          "targetName": "attributes_nbf_loc_extend",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_nbf_loc_name",
-          "targetName": "attributes_nbf_loc_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_nbf_loc_tx",
-          "targetName": "attributes_nbf_loc_tx",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_nbf_loc_tx_index",
-          "targetName": "attributes_nbf_loc_tx_index",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_nbf_loc_tx_isstd",
-          "targetName": "attributes_nbf_loc_tx_isstd",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_nbf_loc_tx_isutc",
-          "targetName": "attributes_nbf_loc_tx_isutc",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_nbf_loc_tx_when",
-          "targetName": "attributes_nbf_loc_tx_when",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_nbf_loc_zone",
-          "targetName": "attributes_nbf_loc_zone",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_nbf_loc_zone_isDST",
-          "targetName": "attributes_nbf_loc_zone_is_dst",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_nbf_loc_zone_name",
-          "targetName": "attributes_nbf_loc_zone_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_nbf_loc_zone_offset",
-          "targetName": "attributes_nbf_loc_zone_offset",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_nbf_wall",
-          "targetName": "attributes_nbf_wall",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_recoverableDays",
-          "targetName": "attributes_recoverable_days",
-          "targetType": "INTEGER",
-          "enabled": true
-        },
-        {
-          "sourceName": "attributes_recoveryLevel",
-          "targetName": "attributes_recovery_level",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "attributes_updated",
-          "targetName": "attributes_updated",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "attributes_updated_ext",
-          "targetName": "attributes_updated_ext",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_updated_loc",
-          "targetName": "attributes_updated_loc",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_updated_loc_cacheEnd",
-          "targetName": "attributes_updated_loc_cache_end",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_updated_loc_cacheStart",
-          "targetName": "attributes_updated_loc_cache_start",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_updated_loc_cacheZone",
-          "targetName": "attributes_updated_loc_cache_zone",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_updated_loc_cacheZone_isDST",
-          "targetName": "attributes_updated_loc_cache_zone_is_dst",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_updated_loc_cacheZone_name",
-          "targetName": "attributes_updated_loc_cache_zone_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_updated_loc_cacheZone_offset",
-          "targetName": "attributes_updated_loc_cache_zone_offset",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_updated_loc_extend",
-          "targetName": "attributes_updated_loc_extend",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_updated_loc_name",
-          "targetName": "attributes_updated_loc_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_updated_loc_tx",
-          "targetName": "attributes_updated_loc_tx",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_updated_loc_tx_index",
-          "targetName": "attributes_updated_loc_tx_index",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_updated_loc_tx_isstd",
-          "targetName": "attributes_updated_loc_tx_isstd",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_updated_loc_tx_isutc",
-          "targetName": "attributes_updated_loc_tx_isutc",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_updated_loc_tx_when",
-          "targetName": "attributes_updated_loc_tx_when",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_updated_loc_zone",
-          "targetName": "attributes_updated_loc_zone",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_updated_loc_zone_isDST",
-          "targetName": "attributes_updated_loc_zone_is_dst",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_updated_loc_zone_name",
-          "targetName": "attributes_updated_loc_zone_name",
-          "targetType": "TEXT",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_updated_loc_zone_offset",
-          "targetName": "attributes_updated_loc_zone_offset",
-          "targetType": "INTEGER",
-          "enabled": false
-        },
-        {
-          "sourceName": "attributes_updated_wall",
-          "targetName": "attributes_updated_wall",
-          "targetType": "BIGINT",
-          "enabled": false
-        },
-        {
-          "sourceName": "contentType",
-          "targetName": "content_type",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "value_id",
-          "targetName": "id",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "kid",
-          "targetName": "kid",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "managed",
-          "targetName": "managed",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "value_tags",
-          "targetName": "tags",
-          "targetType": "TEXT",
-          "enabled": true
-        },
-        {
-          "sourceName": "value",
-          "targetName": "value",
-          "targetType": "TEXT",
-          "enabled": true
-        }
-      ]
-    }
+      {
+        "sourceName": "location",
+        "targetName": "location",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "name",
+        "targetName": "name",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties",
+        "targetName": "properties",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_attributes",
+        "targetName": "attributes",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_attributes_created",
+        "targetName": "attributes_created",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_attributes_enabled",
+        "targetName": "attributes_enabled",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_attributes_exp",
+        "targetName": "attributes_exp",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_attributes_nbf",
+        "targetName": "attributes_nbf",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_attributes_recoveryLevel",
+        "targetName": "attributes_recovery_level",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_attributes_updated",
+        "targetName": "attributes_updated",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "properties_curveName",
+        "targetName": "curve_name",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_keyOps",
+        "targetName": "key_ops",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_keySize",
+        "targetName": "key_size",
+        "targetType": "INTEGER",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_keyUri",
+        "targetName": "key_uri",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_keyUriWithVersion",
+        "targetName": "key_uri_with_version",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "properties_kty",
+        "targetName": "kty",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "tags",
+        "targetName": "tags",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "type",
+        "targetName": "type",
+        "targetType": "TEXT",
+        "enabled": true
+      }
+    ]
+  },
+  "azure_keyvault_secret": {
+    "aws": {},
+    "gcp": {},
+    "azure": {
+      "subscriptionIdAttribute": "subscription_id"
+    },
+    "parsedAttributes": [
+      {
+        "sourceName": "attributes",
+        "targetName": "attributes",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_created",
+        "targetName": "attributes_created",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "attributes_created_ext",
+        "targetName": "attributes_created_ext",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_created_loc",
+        "targetName": "attributes_created_loc",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_created_loc_cacheEnd",
+        "targetName": "attributes_created_loc_cache_end",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_created_loc_cacheStart",
+        "targetName": "attributes_created_loc_cache_start",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_created_loc_cacheZone",
+        "targetName": "attributes_created_loc_cache_zone",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_created_loc_cacheZone_isDST",
+        "targetName": "attributes_created_loc_cache_zone_is_dst",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_created_loc_cacheZone_name",
+        "targetName": "attributes_created_loc_cache_zone_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_created_loc_cacheZone_offset",
+        "targetName": "attributes_created_loc_cache_zone_offset",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_created_loc_extend",
+        "targetName": "attributes_created_loc_extend",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_created_loc_name",
+        "targetName": "attributes_created_loc_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_created_loc_tx",
+        "targetName": "attributes_created_loc_tx",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_created_loc_tx_index",
+        "targetName": "attributes_created_loc_tx_index",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_created_loc_tx_isstd",
+        "targetName": "attributes_created_loc_tx_isstd",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_created_loc_tx_isutc",
+        "targetName": "attributes_created_loc_tx_isutc",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_created_loc_tx_when",
+        "targetName": "attributes_created_loc_tx_when",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_created_loc_zone",
+        "targetName": "attributes_created_loc_zone",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_created_loc_zone_isDST",
+        "targetName": "attributes_created_loc_zone_is_dst",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_created_loc_zone_name",
+        "targetName": "attributes_created_loc_zone_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_created_loc_zone_offset",
+        "targetName": "attributes_created_loc_zone_offset",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_created_wall",
+        "targetName": "attributes_created_wall",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_enabled",
+        "targetName": "attributes_enabled",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "attributes_exp",
+        "targetName": "attributes_exp",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "attributes_exp_ext",
+        "targetName": "attributes_exp_ext",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_exp_loc",
+        "targetName": "attributes_exp_loc",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_exp_loc_cacheEnd",
+        "targetName": "attributes_exp_loc_cache_end",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_exp_loc_cacheStart",
+        "targetName": "attributes_exp_loc_cache_start",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_exp_loc_cacheZone",
+        "targetName": "attributes_exp_loc_cache_zone",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_exp_loc_cacheZone_isDST",
+        "targetName": "attributes_exp_loc_cache_zone_is_dst",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_exp_loc_cacheZone_name",
+        "targetName": "attributes_exp_loc_cache_zone_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_exp_loc_cacheZone_offset",
+        "targetName": "attributes_exp_loc_cache_zone_offset",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_exp_loc_extend",
+        "targetName": "attributes_exp_loc_extend",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_exp_loc_name",
+        "targetName": "attributes_exp_loc_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_exp_loc_tx",
+        "targetName": "attributes_exp_loc_tx",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_exp_loc_tx_index",
+        "targetName": "attributes_exp_loc_tx_index",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_exp_loc_tx_isstd",
+        "targetName": "attributes_exp_loc_tx_isstd",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_exp_loc_tx_isutc",
+        "targetName": "attributes_exp_loc_tx_isutc",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_exp_loc_tx_when",
+        "targetName": "attributes_exp_loc_tx_when",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_exp_loc_zone",
+        "targetName": "attributes_exp_loc_zone",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_exp_loc_zone_isDST",
+        "targetName": "attributes_exp_loc_zone_is_dst",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_exp_loc_zone_name",
+        "targetName": "attributes_exp_loc_zone_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_exp_loc_zone_offset",
+        "targetName": "attributes_exp_loc_zone_offset",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_exp_wall",
+        "targetName": "attributes_exp_wall",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_nbf",
+        "targetName": "attributes_nbf",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "attributes_nbf_ext",
+        "targetName": "attributes_nbf_ext",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_nbf_loc",
+        "targetName": "attributes_nbf_loc",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_nbf_loc_cacheEnd",
+        "targetName": "attributes_nbf_loc_cache_end",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_nbf_loc_cacheStart",
+        "targetName": "attributes_nbf_loc_cache_start",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_nbf_loc_cacheZone",
+        "targetName": "attributes_nbf_loc_cache_zone",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_nbf_loc_cacheZone_isDST",
+        "targetName": "attributes_nbf_loc_cache_zone_is_dst",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_nbf_loc_cacheZone_name",
+        "targetName": "attributes_nbf_loc_cache_zone_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_nbf_loc_cacheZone_offset",
+        "targetName": "attributes_nbf_loc_cache_zone_offset",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_nbf_loc_extend",
+        "targetName": "attributes_nbf_loc_extend",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_nbf_loc_name",
+        "targetName": "attributes_nbf_loc_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_nbf_loc_tx",
+        "targetName": "attributes_nbf_loc_tx",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_nbf_loc_tx_index",
+        "targetName": "attributes_nbf_loc_tx_index",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_nbf_loc_tx_isstd",
+        "targetName": "attributes_nbf_loc_tx_isstd",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_nbf_loc_tx_isutc",
+        "targetName": "attributes_nbf_loc_tx_isutc",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_nbf_loc_tx_when",
+        "targetName": "attributes_nbf_loc_tx_when",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_nbf_loc_zone",
+        "targetName": "attributes_nbf_loc_zone",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_nbf_loc_zone_isDST",
+        "targetName": "attributes_nbf_loc_zone_is_dst",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_nbf_loc_zone_name",
+        "targetName": "attributes_nbf_loc_zone_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_nbf_loc_zone_offset",
+        "targetName": "attributes_nbf_loc_zone_offset",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_nbf_wall",
+        "targetName": "attributes_nbf_wall",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_recoverableDays",
+        "targetName": "attributes_recoverable_days",
+        "targetType": "INTEGER",
+        "enabled": true
+      },
+      {
+        "sourceName": "attributes_recoveryLevel",
+        "targetName": "attributes_recovery_level",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "attributes_updated",
+        "targetName": "attributes_updated",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "attributes_updated_ext",
+        "targetName": "attributes_updated_ext",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_updated_loc",
+        "targetName": "attributes_updated_loc",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_updated_loc_cacheEnd",
+        "targetName": "attributes_updated_loc_cache_end",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_updated_loc_cacheStart",
+        "targetName": "attributes_updated_loc_cache_start",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_updated_loc_cacheZone",
+        "targetName": "attributes_updated_loc_cache_zone",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_updated_loc_cacheZone_isDST",
+        "targetName": "attributes_updated_loc_cache_zone_is_dst",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_updated_loc_cacheZone_name",
+        "targetName": "attributes_updated_loc_cache_zone_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_updated_loc_cacheZone_offset",
+        "targetName": "attributes_updated_loc_cache_zone_offset",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_updated_loc_extend",
+        "targetName": "attributes_updated_loc_extend",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_updated_loc_name",
+        "targetName": "attributes_updated_loc_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_updated_loc_tx",
+        "targetName": "attributes_updated_loc_tx",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_updated_loc_tx_index",
+        "targetName": "attributes_updated_loc_tx_index",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_updated_loc_tx_isstd",
+        "targetName": "attributes_updated_loc_tx_isstd",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_updated_loc_tx_isutc",
+        "targetName": "attributes_updated_loc_tx_isutc",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_updated_loc_tx_when",
+        "targetName": "attributes_updated_loc_tx_when",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_updated_loc_zone",
+        "targetName": "attributes_updated_loc_zone",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_updated_loc_zone_isDST",
+        "targetName": "attributes_updated_loc_zone_is_dst",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_updated_loc_zone_name",
+        "targetName": "attributes_updated_loc_zone_name",
+        "targetType": "TEXT",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_updated_loc_zone_offset",
+        "targetName": "attributes_updated_loc_zone_offset",
+        "targetType": "INTEGER",
+        "enabled": false
+      },
+      {
+        "sourceName": "attributes_updated_wall",
+        "targetName": "attributes_updated_wall",
+        "targetType": "BIGINT",
+        "enabled": false
+      },
+      {
+        "sourceName": "contentType",
+        "targetName": "content_type",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "id",
+        "targetName": "id",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "kid",
+        "targetName": "kid",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "managed",
+        "targetName": "managed",
+        "targetType": "TEXT",
+        "enabled": true
+      },
+      {
+        "sourceName": "tags",
+        "targetName": "tags",
+        "targetType": "TEXT",
+        "enabled": true
+      }
+    ]
   }
+}
